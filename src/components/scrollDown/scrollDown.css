@@ -1,0 +1,29 @@
+.scrollDownSection {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .scrollDownSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .scrollDownSection a {
+    text-decoration: none;
+    text-align: center;
+  }
+  .scrollDownSection p {
+    font-family: Poppins;
+    font-size: 1.1458333333vw;
+    font-weight: 500;
+    line-height: 1.71875vw;
+    color: rgb(76, 41, 181);
+    cursor: pointer;
+  }
+  .scrollDownSection img {
+    width: 3.6979166667vw;
+    height: auto;
+    cursor: pointer;
+  }
+}

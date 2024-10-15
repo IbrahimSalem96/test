@@ -1,0 +1,239 @@
+.yourTrustedPartnerSection {
+  padding: 13.3333333333vw 0 9.0666666667vw;
+  position: relative;
+  height: 266.6666666667vw;
+}
+.yourTrustedPartnerSection p.subTitle {
+  font-family: Inter;
+  font-size: 5.3333333333vw;
+  font-weight: 500;
+  margin-bottom: 1.6vw;
+  text-align: center;
+  color: rgb(76, 41, 181);
+}
+.yourTrustedPartnerSection .titleSection {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.6vw;
+}
+.yourTrustedPartnerSection .titleSection h2 {
+  font-family: Inter;
+  font-size: 7.4666666667vw;
+  font-weight: 700;
+  color: rgb(76, 41, 181);
+}
+.yourTrustedPartnerSection .titleSection img {
+  display: none;
+  width: auto;
+  height: 4.2666666667vw;
+}
+.yourTrustedPartnerSection .descSection {
+  margin-bottom: 8vw;
+}
+.yourTrustedPartnerSection .descSection p {
+  text-align: center;
+  font-size: 4.8vw;
+  font-family: Inter;
+  font-weight: 500;
+  color: rgb(115, 80, 159);
+}
+.yourTrustedPartnerSection .descSection p span {
+  font-weight: 700;
+}
+.yourTrustedPartnerSection .towerImage {
+  position: absolute;
+  top: 112.5333333333vw;
+  height: auto;
+  left: 0vw;
+  z-index: -1;
+}
+.yourTrustedPartnerSection .towerImageDesktop {
+  display: none;
+}
+.yourTrustedPartnerSection .list .contnentBox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3.2vw;
+  border-radius: 4.2666666667vw;
+  background: rgba(137, 69, 236, 0.1);
+  padding: 3.2vw;
+  border: 2px solid white;
+  margin-bottom: 3.2vw;
+}
+.yourTrustedPartnerSection .list .contnentBox p {
+  margin: 0;
+  font-size: 4vw;
+  font-family: Inter;
+  font-weight: 400;
+  color: rgb(76, 41, 181);
+}
+.yourTrustedPartnerSection .list .contnentBox p span {
+  font-weight: 700;
+}
+.yourTrustedPartnerSection .list .contnentBox .imageHoverBox {
+  width: 24%;
+}
+.yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover {
+  width: 18.1333333333vw;
+  height: 18.1333333333vw;
+  border: 2px solid white;
+  border-radius: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(137, 69, 236);
+  transition: all 0.3s ease-in-out;
+}
+.yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover img {
+  width: 8.5333333333vw;
+  height: auto;
+}
+.yourTrustedPartnerSection .list .contnentBox:hover {
+  box-shadow: 0 0 80px rgba(137, 69, 236, 0.2);
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+.yourTrustedPartnerSection .list .contnentBox:hover .imageHover {
+  background: rgb(255, 0, 121);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .yourTrustedPartnerSection {
+    padding: 5.9952038369vw 0;
+    height: 125.8992805755vw;
+  }
+  .yourTrustedPartnerSection p.subTitle {
+    font-size: 2.3980815348vw;
+    margin-bottom: 0.7194244604vw;
+  }
+  .yourTrustedPartnerSection .titleSection {
+    margin-bottom: 0.7194244604vw;
+  }
+  .yourTrustedPartnerSection .titleSection h2 {
+    font-size: 4.1966426859vw;
+  }
+  .yourTrustedPartnerSection .titleSection img {
+    display: block;
+    height: 3.5971223022vw;
+  }
+  .yourTrustedPartnerSection .descSection {
+    margin-bottom: 3.5971223022vw;
+  }
+  .yourTrustedPartnerSection .descSection p {
+    font-size: 2.6378896882vw;
+  }
+  .yourTrustedPartnerSection .towerImage {
+    display: none;
+  }
+  .yourTrustedPartnerSection .towerImageDesktop {
+    position: absolute;
+    display: block;
+    top: 17.9856115108vw;
+    width: 95.9232613909vw;
+    height: 107.9136690647vw;
+    left: -45.9232613909vw;
+    z-index: -1;
+  }
+  .yourTrustedPartnerSection .list {
+    width: 80%;
+    margin: 0 16.5467625899vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox {
+    gap: 1.4388489209vw;
+    border-radius: 1.9184652278vw;
+    padding: 1.4388489209vw;
+    margin-bottom: 1.4388489209vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox img {
+    width: 5.9952038369vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox p {
+    font-size: 1.5587529976vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox {
+    width: 14%;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover {
+    width: 8.1534772182vw;
+    height: 8.1534772182vw;
+    border-radius: 1.7985611511vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover img {
+    width: 3.8369304556vw;
+  }
+}
+@media (min-width: 1024px) {
+  .yourTrustedPartnerSection {
+    overflow: hidden;
+    padding: 2.6041666667vw 0;
+    height: 44.7916666667vw;
+  }
+  .yourTrustedPartnerSection p.subTitle {
+    font-size: 1.0416666667vw;
+    margin-bottom: 0.3125vw;
+    text-align: start;
+  }
+  .yourTrustedPartnerSection .titleSection {
+    margin-bottom: 0.3125vw;
+    justify-content: start;
+    align-items: center;
+  }
+  .yourTrustedPartnerSection .titleSection h2 {
+    font-size: 2.4479166667vw;
+  }
+  .yourTrustedPartnerSection .titleSection img {
+    display: block;
+    width: 2.0833333333vw;
+    height: auto;
+    margin-top: -10px;
+  }
+  .yourTrustedPartnerSection .descSection {
+    margin-bottom: 1.5625vw;
+  }
+  .yourTrustedPartnerSection .descSection p {
+    font-size: 1.4583333333vw;
+    text-align: start;
+  }
+  .yourTrustedPartnerSection .towerImage {
+    display: none;
+  }
+  .yourTrustedPartnerSection .towerImageDesktop {
+    position: absolute;
+    display: block;
+    top: 5.2083333333vw;
+    width: 37.03125vw;
+    height: 39.5833333333vw;
+    left: 67%;
+  }
+  .yourTrustedPartnerSection .list {
+    width: 35%;
+  }
+  .yourTrustedPartnerSection .list .contnentBox {
+    background: rgba(137, 69, 236, 0.1);
+    gap: 0.625vw;
+    border-radius: 0.8333333333vw;
+    padding: 0.625vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox img {
+    width: 3.5416666667vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox p {
+    font-size: 1.0416666667vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox {
+    width: auto;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover {
+    width: 3.5416666667vw;
+    height: 3.5416666667vw;
+    border-radius: 0.78125vw;
+  }
+  .yourTrustedPartnerSection .list .contnentBox .imageHoverBox .imageHover img {
+    width: 1.6666666667vw;
+  }
+}

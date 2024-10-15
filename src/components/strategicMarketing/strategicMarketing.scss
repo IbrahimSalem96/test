@@ -1,0 +1,251 @@
+@use "../../css/functions" as c;
+
+.strategicMarketingSection {
+    padding: c.vw375(50) 0;
+
+    p.subTitle {
+        font-family: Inter;
+        font-size: c.vw375(20);
+        font-weight: 500;
+        margin-bottom: c.vw375(6);
+        text-align: center;
+        color: rgba(76, 41, 181, 1);
+    }
+
+    .titleSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: c.vw375(6);
+
+        h2 {
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            color: rgba(76, 41, 181, 1);
+        }
+
+        img {
+            display: none;
+            width: auto;
+            height: c.vw375(16);
+        }
+    }
+
+    .descSection {
+        margin-bottom: c.vw375(30);
+        p {
+            text-align: center;
+            font-size: c.vw375(18);
+            font-family: Inter;
+            font-weight: 500;
+            color: rgba(115, 80, 159, 1);
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .sliders {
+        .contentBox {
+            position: relative;
+            border-radius: 40px;
+            margin-bottom: c.vw375(50);
+            // &::before {
+            //     position: absolute;
+            //     content: " ";
+            //     top: 0;
+            //     left: 0;
+            //     background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5));
+            //     width: 100%;
+            //     height: 100%;
+            //     border-radius: 40px;
+            // }
+
+            p {
+                position: absolute;
+                bottom: c.vw375(58);
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: Inter;
+                font-size: c.vw375(18);
+                font-weight: 600;
+                line-height: c.vw375(27);
+                color: white;
+                width: c.vw375(300);
+                margin: 0;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background-color: rgba(76, 41, 181, 1);
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+
+    .slidersDesktop,
+    .arrowSliders {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .strategicMarketingSection {
+        padding: c.vw834(50) 0;
+
+        p.subTitle {
+            font-size: c.vw834(20);
+            margin-bottom: c.vw834(6);
+        }
+
+        .titleSection {
+            margin-bottom: c.vw834(6);
+
+            h2 {
+                font-size: c.vw834(35);
+            }
+
+            img {
+                display: block;
+                height: c.vw834(30);
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw834(30);
+            p {
+                font-size: c.vw834(22);
+            }
+        }
+
+        .sliders {
+            .contentBox {
+                margin-bottom: c.vw834(50);
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    bottom: c.vw834(134);
+                    font-size: c.vw834(28);
+                    line-height: c.vw834(42);
+                    width: c.vw834(470);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .strategicMarketingSection {
+        padding: c.vw1920(50) 0;
+
+        p.subTitle {
+            font-size: c.vw1920(20);
+            margin-bottom: c.vw1920(6);
+            text-align: start;
+        }
+
+        .titleSection {
+            margin-bottom: c.vw1920(6);
+            justify-content: start;
+            align-items: center;
+            h2 {
+                font-size: c.vw1920(47);
+            }
+
+            img {
+                display: block;
+                width: c.vw1920(40);
+                height: auto;
+                margin-top: -10px;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw1920(100);
+            p {
+                font-size: c.vw1920(28);
+                text-align: start;
+            }
+        }
+
+        .arrowSliders {
+            position: relative;
+
+            .containerBox {
+                position: absolute;
+                left: 94%;
+                top: -50px;
+                display: flex;
+                gap: c.vw1920(20);
+                .swiper-button-prevStyle,
+                .swiper-button-nextStyle {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                    background: rgba(224, 224, 224, 1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    padding: 16px;
+                    border: 2px solid rgba(224, 224, 224, 1);
+
+                    &:hover {
+                        background: white;
+                    }
+                }
+
+                .swiper-button-prevStyle {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .sliders {
+            margin-left: c.vw1920(170);
+            width: 91%;
+            overflow: hidden;
+
+            .contentBox {
+                margin-bottom: c.vw1920(50);
+                height: c.vw1920(683);
+                width: c.vw1920(588);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                p {
+                    top: c.vw1920(476);
+                    font-size: c.vw1920(28);
+                    line-height: c.vw1920(42);
+                    width: c.vw1920(470);
+                    height: c.vw1920(120);
+                }
+            }
+
+            .swiper-pagination {
+                display: none;
+            }
+        }
+
+        .slidersMobile {
+            display: none;
+        }
+
+        .slidersDesktop,
+        .arrowSliders {
+            display: block;
+        }
+    }
+}

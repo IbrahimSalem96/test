@@ -1,0 +1,64 @@
+@use "../../../css/functions" as c;
+
+.headerFormSection {
+    .mobileView {
+        .headers {
+            background-image: url("../../../assets/topBgForm.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: c.vw375(106);
+            display: flex;
+            align-items: center;
+            padding: 0 c.vw375(40);
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .desktopView {
+        .headers {
+            display: none;
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .headerFormSection {
+        .headers {
+            height: c.vw834(106) !important;
+            padding: 0 c.vw834(40) !important;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerFormSection {
+        .mobileView {
+            .headers {
+                display: none;
+            }
+        }
+
+        .desktopView {
+            .headers {
+                background-image: url("../../../assets/leftHeader.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: c.vw1920(252);
+                height: 100%;
+                display: block;
+                // align-items: center;
+                padding: c.vw1920(40);
+                position: fixed;
+                right: 0;
+            }
+        }
+    }
+}

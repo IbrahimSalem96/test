@@ -1,0 +1,201 @@
+.trustedVerifiedPricingSection {
+  padding: 13.3333333333vw 0;
+}
+.trustedVerifiedPricingSection p.subTitle {
+  font-family: Inter;
+  font-size: 5.3333333333vw;
+  font-weight: 500;
+  margin-bottom: 1.6vw;
+  text-align: center;
+  color: rgb(76, 41, 181);
+}
+.trustedVerifiedPricingSection .titleSection {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.6vw;
+}
+.trustedVerifiedPricingSection .titleSection h2 {
+  text-align: center;
+  font-family: Inter;
+  font-size: 7.4666666667vw;
+  font-weight: 700;
+  color: rgb(76, 41, 181);
+  width: 86.6666666667vw;
+}
+.trustedVerifiedPricingSection .titleSection img {
+  display: none;
+  width: auto;
+  height: 4.2666666667vw;
+}
+.trustedVerifiedPricingSection .cardItems {
+  margin-top: 10.6666666667vw;
+  display: flex;
+  flex-direction: column;
+  gap: 6.9333333333vw;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox {
+  width: 77.3333333333vw;
+  background-color: rgba(137, 69, 236, 0.1);
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10.6666666667vw;
+  padding: 10.6666666667vw 5.3333333333vw;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid white;
+  cursor: pointer;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom {
+  width: 18.1333333333vw;
+  height: 18.1333333333vw;
+  padding: 2.6666666667vw;
+  margin: 0 auto;
+  background-color: rgb(137, 69, 236);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom img {
+  width: 8.5333333333vw;
+  height: auto;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox h2 {
+  font-family: Inter;
+  font-size: 4.8vw;
+  font-weight: 800;
+  line-height: 5.8666666667vw;
+  color: rgb(115, 80, 159);
+  margin: 6.9333333333vw 0;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox p {
+  font-family: Inter;
+  font-size: 4.5333333333vw;
+  font-weight: 400;
+  line-height: 5.3333333333vw;
+  color: rgb(115, 80, 159);
+  width: 69.8666666667vw;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox:hover {
+  background: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 80px rgba(137, 69, 236, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.trustedVerifiedPricingSection .cardItems .contentBox:hover .imageSectiom {
+  background: rgb(255, 0, 121);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .trustedVerifiedPricingSection {
+    padding: 5.9952038369vw 0;
+  }
+  .trustedVerifiedPricingSection p.subTitle {
+    font-size: 2.3980815348vw;
+    margin-bottom: 0.7194244604vw;
+  }
+  .trustedVerifiedPricingSection .titleSection {
+    margin-bottom: 0.7194244604vw;
+    align-items: center;
+    gap: 0;
+  }
+  .trustedVerifiedPricingSection .titleSection h2 {
+    font-size: 4.1966426859vw;
+    width: 53.2374100719vw;
+  }
+  .trustedVerifiedPricingSection .titleSection img {
+    display: block;
+    width: 4.3165467626vw;
+    height: auto;
+  }
+  .trustedVerifiedPricingSection .cardItems {
+    margin-top: 4.7961630695vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.4388489209vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox {
+    width: 34.7721822542vw;
+    border-radius: 4.7961630695vw;
+    padding: 4.7961630695vw 2.3980815348vw;
+    margin: 0;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom {
+    width: 8.1534772182vw;
+    height: 8.1534772182vw;
+    padding: 1.1990407674vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom img {
+    width: 3.8369304556vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox h2 {
+    font-size: 2.1582733813vw;
+    line-height: 2.6378896882vw;
+    margin: 3.1175059952vw 0;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox p {
+    font-size: 2.0383693046vw;
+    line-height: 2.3980815348vw;
+    width: 31.4148681055vw;
+  }
+}
+@media (min-width: 1024px) {
+  .trustedVerifiedPricingSection {
+    padding: 2.6041666667vw 0;
+  }
+  .trustedVerifiedPricingSection p.subTitle {
+    font-size: 1.0416666667vw;
+    margin-bottom: 0.3125vw;
+  }
+  .trustedVerifiedPricingSection .titleSection {
+    margin-bottom: 0.3125vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .trustedVerifiedPricingSection .titleSection h2 {
+    font-size: 2.4479166667vw;
+    width: 28.90625vw;
+  }
+  .trustedVerifiedPricingSection .titleSection img {
+    display: block;
+    width: 2.0833333333vw;
+    height: auto;
+    margin-top: -10px;
+  }
+  .trustedVerifiedPricingSection .cardItems {
+    margin-top: 2.0833333333vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.625vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox {
+    width: calc(25% - 0.625vw);
+    border-radius: 2.0833333333vw;
+    padding: 2.0833333333vw 1.0416666667vw;
+    margin: 0;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom {
+    width: 3.5416666667vw;
+    height: 3.5416666667vw;
+    padding: 0.5208333333vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox .imageSectiom img {
+    width: 1.6666666667vw;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox h2 {
+    font-size: 1.0416666667vw;
+    line-height: 1.1458333333vw;
+    margin: 1.3541666667vw 0;
+  }
+  .trustedVerifiedPricingSection .cardItems .contentBox p {
+    font-size: 0.9895833333vw;
+    line-height: 1.0416666667vw;
+    width: 13.6458333333vw;
+    margin: 0 auto;
+  }
+}

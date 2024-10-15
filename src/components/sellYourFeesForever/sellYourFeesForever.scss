@@ -1,0 +1,222 @@
+@use "../../css/functions" as c;
+
+.sellYourFeesForeverSection {
+    .mobileView {
+        background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 63, 236, 0.5));
+        padding: c.vw375(60) 0;
+
+        h2 {
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            width: c.vw375(344);
+            text-align: center;
+            color: white;
+            line-height: c.vw375(33);
+            margin: 0 auto;
+        }
+
+        p {
+            font-family: Poppins;
+            font-size: c.vw375(16);
+            font-weight: 500;
+            width: c.vw375(344);
+            text-align: center;
+            color: white;
+            line-height: c.vw375(30);
+            margin: c.vw375(30) auto 0;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .mobileViewDownSection {
+        background-color: rgba(242, 242, 242, 1);
+        padding: c.vw375(60) 0;
+        h2 {
+            font-family: Poppins;
+            font-size: c.vw375(20);
+            font-weight: 600;
+            width: c.vw375(331);
+            text-align: center;
+            color: rgba(255, 0, 121, 1);
+            line-height: c.vw375(44);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            width: c.vw375(186);
+            height: c.vw375(55);
+            text-decoration: none;
+            background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 63, 236, 0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Inter;
+            font-size: c.vw375(18);
+            font-weight: 600;
+            color: white;
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            margin-top: c.vw375(10);
+            font-family: Poppins;
+            font-size: c.vw375(14);
+            font-weight: 500;
+            width: c.vw375(344);
+            text-align: center;
+            color: rgba(115, 80, 159, 1);
+            line-height: c.vw375(30);
+            margin-left: auto;
+            margin-right: auto;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .desktopView{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sellYourFeesForeverSection {
+        .mobileView {
+            padding: c.vw834(60) 0;
+
+            h2 {
+                font-size: c.vw834(35);
+                width: c.vw834(701);
+                line-height: c.vw834(30);
+                
+            }
+
+            p {
+                margin-top: c.vw834(30);
+                font-size: c.vw834(16);
+                width: c.vw834(641);
+                line-height: c.vw834(30);
+            }
+        }
+
+        .mobileViewDownSection {
+            padding: c.vw834(40) 0;
+            h2 {
+                font-size: c.vw834(20);
+                width: c.vw834(513);
+                line-height: c.vw834(44);
+            }
+
+            a {
+                width: c.vw834(186);
+                height: c.vw834(55);
+                font-size: c.vw834(18);
+            }
+
+            p {
+                margin-top: c.vw834(10);
+                font-size: c.vw834(14);
+                width: c.vw834(513);
+                line-height: c.vw834(30);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .sellYourFeesForeverSection {
+        .mobileView {
+            display: none;
+        }
+
+        .mobileViewDownSection {
+            display: none;
+        }
+
+        .desktopView{
+            display: flex;
+            background: linear-gradient(to bottom, rgb(125, 86, 209) 50%, rgba(242, 242, 242, 1) 50%);
+            padding: c.vw1920(40);
+
+            .contentBox{
+                width: 80%;
+                margin: 0 auto;
+                background-color: white;
+                padding: c.vw1920(30) 0;
+                border-radius: 8px;
+
+                h2{
+                    font-family: Inter;
+                    font-size: c.vw1920(47);
+                    font-weight: 700;
+                    width: c.vw1920(774);
+                    margin: 0 auto;
+                    text-align: center;
+                    color: rgba(76, 41, 181, 1);
+                    span{
+                        color: rgba(255, 145, 197, 1);
+
+                    }
+                }
+
+                p.descOne{
+                    font-family: Poppins;
+                    font-size: c.vw1920(18);
+                    font-weight: 500;
+                    width: c.vw1920(804);
+                    margin: 0 auto;
+                    text-align: center;
+                    color: rgba(76, 41, 181, 1);
+                    margin-top: c.vw1920(20);
+                }
+
+                h3{
+                    font-family: Poppins;
+                    font-size: c.vw1920(20);
+                    font-weight: 600;
+                    width: c.vw1920(804);
+                    margin: 0 auto;
+                    text-align: center;
+                    color: rgba(255, 145, 197, 1);
+                    margin-top: c.vw1920(20);
+                }
+
+                a{
+                    width: c.vw1920(186);
+                    height: c.vw1920(55);
+                    color: white;
+                    background: linear-gradient(to top left, rgb(76, 41, 181), rgba(137, 63, 236, 0.5));
+                    border-radius: 8px;
+                    font-family: Inter;
+                    font-size: c.vw1920(18);
+                    font-weight: 600;
+                    margin: 0 auto;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: c.vw1920(20);
+
+                }
+
+                p.termsAndConditions{
+                    font-family: Poppins;
+                    font-size: c.vw1920(14);
+                    font-weight: 500;
+                    width: c.vw1920(804);
+                    margin: 0 auto;
+                    text-align: center;
+                    color: rgba(76, 41, 181, 1);
+                    margin-top: c.vw1920(20);
+                }
+            }
+        }
+    }
+}
+ 

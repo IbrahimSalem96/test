@@ -1,0 +1,377 @@
+@use "../../css/functions" as c;
+
+.accessToBuyersAgentsSection {
+    padding: c.vw375(50) 0;
+
+    p.subTitle {
+        font-family: Inter;
+        font-size: c.vw375(20);
+        font-weight: 500;
+        margin-bottom: c.vw375(6);
+        text-align: center;
+        color: rgba(76, 41, 181, 1);
+    }
+
+    .titleSection {
+        text-align: center;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: c.vw375(6);
+
+        h2 {
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            color: rgba(76, 41, 181, 1);
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .descSection {
+        margin-bottom: c.vw375(30);
+        p {
+            text-align: center;
+            font-size: c.vw375(18);
+            font-family: Inter;
+            font-weight: 500;
+            color: rgba(115, 80, 159, 1);
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .twoSection {
+        .sectionLeft {
+            h2 {
+                text-align: center;
+                font-family: Inter;
+                font-size: c.vw375(28);
+                color: rgba(76, 41, 181, 1);
+                font-weight: 700;
+                width: c.vw375(240);
+                margin: 0 auto;
+
+                span {
+                    font-size: c.vw375(28);
+                    color: rgba(255, 0, 121, 1);
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .imageHoverSlash{
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &::before{
+                    position: absolute;
+                    content: " ";
+                    background-image: url("../../assets/slashImage.svg");
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: 2;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover{
+                    &::before{
+                        transform: translateX(18%);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .sectionRight {
+            h2 {
+                text-align: center;
+                font-family: Inter;
+                font-size: c.vw375(28);
+                color: rgba(255, 0, 121, 1);
+                font-weight: 700;
+                width: c.vw375(250);
+                margin: 0 auto;
+            }
+
+            p {
+                text-align: center;
+                font-weight: 400;
+                font-size: c.vw375(18);
+                color: rgba(76, 41, 181, 1);
+                margin-bottom: c.vw375(60);
+            }
+
+            .cardItems {
+                width: c.vw375(250);
+                margin: 0 auto;
+
+                .contenCard {
+                    cursor: pointer;
+                    background: linear-gradient(to top left, rgba(137, 69, 236, 0.2), rgba(137, 69, 236, 0));
+                    border-radius: c.vw375(40);
+                    padding: c.vw375(20);
+                    height: c.vw375(170);
+                    width: c.vw375(254);
+                    margin-bottom: c.vw375(70);
+                    transition: all 0.3s ease-in-out;
+                    border: 3px solid white;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h3 {
+                        font-family: Inter;
+                        font-size: c.vw375(18);
+                        font-weight: 800;
+                        color: rgba(76, 41, 181, 1);
+                    }
+
+                    p {
+                        font-family: Inter;
+                        font-size: c.vw375(16);
+                        font-weight: 400;
+                        color: rgba(76, 41, 181, 1);
+                        text-align: unset;
+                    }
+
+                    .imageHover {
+                        position: absolute;
+                        top: c.vw375(-25);
+                        left: c.vw375(24);
+                        margin-bottom: c.vw375(-30);
+                        width: c.vw375(68);
+                        height: c.vw375(68);
+                        border: 2px solid white;
+                        border-radius: c.vw375(15);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(137, 69, 236, 1);
+                        transition: all 0.3s ease-in-out;
+
+                        img {
+                            width: c.vw375(32);
+                            height: auto;
+                        }
+                    }
+
+                    &:hover {
+                        background: white;
+                        transition: all 0.3s ease-in-out;
+                        box-shadow: 0 0 80px rgba(137, 69, 236, 0.2);
+                        transition: all 0.3s ease-in-out;
+
+                        .imageHover {
+                            background: rgba(255, 0, 121, 1);
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .accessToBuyersAgentsSection {
+        padding: c.vw834(50) 0;
+
+        p.subTitle {
+            font-size: c.vw834(20);
+            margin-bottom: c.vw834(6);
+        }
+
+        .titleSection {
+            margin-bottom: c.vw834(6);
+
+            h2 {
+                font-size: c.vw834(35);
+            }
+
+            img {
+                display: block;
+                height: c.vw834(30);
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw834(30);
+            p {
+                font-size: c.vw834(22);
+            }
+        }
+
+        .twoSection {
+            .sectionLeft {
+                h2 {
+                    font-size: c.vw834(28);
+
+                    span {
+                        font-size: c.vw834(31);
+                    }
+                }
+            }
+
+            .sectionRight {
+                margin-top: c.vw834(46);
+                h2 {
+                    font-size: c.vw834(32);
+                }
+
+                p {
+                    font-size: c.vw834(24);
+                    margin-bottom: c.vw834(60);
+                }
+
+                .cardItems {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .contenCard {
+                        border-radius: c.vw834(40);
+                        padding: c.vw834(20);
+                        height: c.vw834(170);
+                        margin-bottom: c.vw834(70);
+                        width: c.vw834(400);
+
+                        h3 {
+                            font-size: c.vw834(18);
+                        }
+
+                        p {
+                            font-size: c.vw834(16);
+                        }
+
+                        .imageHover {
+                            top: c.vw834(-44);
+                            margin-bottom: c.vw834(-30);
+                            width: c.vw834(68);
+                            height: c.vw834(68);
+                            border-radius: c.vw834(15);
+                            img {
+                                width: c.vw834(32);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .accessToBuyersAgentsSection {
+        padding: c.vw1920(50) 0;
+
+        p.subTitle {
+            font-size: c.vw1920(20);
+            margin-bottom: c.vw1920(6);
+            text-align: start;
+        }
+
+        .titleSection {
+            margin-bottom: c.vw1920(6);
+            justify-content: start;
+            align-items: center;
+            h2 {
+                font-size: c.vw1920(47);
+            }
+
+            img {
+                width: c.vw1920(40);
+                height: auto;
+                margin-top: -10px;
+                display: block;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw1920(30);
+            p {
+                font-size: c.vw1920(28);
+                text-align: start;
+            }
+        }
+
+        .twoSection {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            .sectionLeft {
+                width: 50%;
+                h2 {
+                    font-size: c.vw1920(28);
+                    width: c.vw1920(500);
+                    margin-bottom: c.vw1920(30);
+                    
+                    span {
+                        font-size: c.vw1920(48);
+                    }
+                }
+
+
+            }
+
+            .sectionRight {
+                h2 {
+                    font-size: c.vw1920(32);
+                    text-align: left;
+                    width: c.vw1920(600);
+                    margin: 0 0 16px 0;
+                }
+
+                p {
+                    font-size: c.vw1920(24);
+                    margin-bottom: c.vw1920(120);
+                    text-align: left;
+                }
+
+                .cardItems {
+                    display: flex;
+                    gap: c.vw1920(20);
+                    width: c.vw1920(630);
+                    margin: 0;
+
+                    .contenCard {
+                        border-radius: c.vw1920(40);
+                        padding: c.vw1920(20) c.vw1920(40);
+                        height: c.vw1920(170);
+                        margin-bottom: c.vw1920(0);
+
+                        h3 {
+                            font-size: c.vw1920(18);
+                        }
+
+                        p {
+                            font-size: c.vw1920(16);
+                        }
+
+                        .imageHover {
+                            top: c.vw1920(-18);
+                            left: c.vw1920(20);
+                            margin-bottom: c.vw1920(-30);
+                            width: c.vw1920(68);
+                            height: c.vw1920(68);
+                            border-radius: c.vw1920(15);
+                            img {
+                                width: c.vw1920(32);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

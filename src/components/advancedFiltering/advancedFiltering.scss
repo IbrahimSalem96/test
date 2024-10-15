@@ -1,0 +1,167 @@
+@use "../../css/functions" as c;
+
+.advancedFilteringSection {
+    padding: c.vw375(50) 0;
+
+    p.subTitle {
+        font-family: Inter;
+        font-size: c.vw375(20);
+        font-weight: 500;
+        margin-bottom: c.vw375(6);
+        text-align: center;
+        color: rgba(76, 41, 181, 1);
+    }
+
+    .titleSection {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: c.vw375(6);
+
+        h2 {
+            text-align: center;
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            color: rgba(76, 41, 181, 1);
+            width: c.vw375(325);
+        }
+
+        img {
+            display: none;
+            width: auto;
+            height: c.vw375(16);
+        }
+    }
+
+    .descSection {
+        margin-bottom: c.vw375(30);
+        p {
+            text-align: center;
+            font-size: c.vw375(18);
+            font-family: Inter;
+            font-weight: 400;
+            color: rgba(115, 80, 159, 1);
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .sectionImag {
+        background-image: url("../../assets/sectionAdvancedFiltering.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: c.vw375(323);
+        height: c.vw375(238);
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .advancedFilteringSection {
+        padding: c.vw834(50) 0;
+
+        p.subTitle {
+            font-size: c.vw834(20);
+            margin-bottom: c.vw834(6);
+        }
+
+        .titleSection {
+            margin-bottom: c.vw834(6);
+            align-items: center;
+            gap: 0;
+            h2 {
+                font-size: c.vw834(35);
+                width: c.vw834(324);
+            }
+
+            img {
+                display: block;
+                width: c.vw834(30);
+                height: auto;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw834(30);
+            p {
+                font-size: c.vw834(22);
+                width: c.vw834(550);
+                margin: 0 auto;
+            }
+        }
+
+        .sectionImag {
+            background-image: url("../../assets/sectionAdvancedFilteringTablet.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: auto;
+            height: c.vw834(591);
+            margin: c.vw834(60) auto 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .advancedFilteringSection {
+        padding: c.vw1920(50) 0;
+
+        p.subTitle {
+            font-size: c.vw1920(20);
+            margin-bottom: c.vw1920(6);
+            text-align: left;
+        }
+
+        .titleSection {
+            margin-bottom: c.vw1920(6);
+            justify-content: center;
+            align-items: center;
+            justify-content: start;
+            gap: 0;
+            h2 {
+                font-size: c.vw1920(47);
+                width: c.vw1920(434);
+                text-align: left;
+            }
+
+            img {
+                display: block;
+                width: c.vw1920(32);
+                height: auto;
+                margin-top: -10px;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw1920(30);
+            p {
+                font-size: c.vw1920(28);
+                text-align: start;
+            }
+        }
+
+        .sectionImag {
+            background-image: url("../../assets/sectionAdvancedFilteringTablet.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: c.vw1920(793);
+            height: c.vw1920(591);
+            margin: c.vw1920(60) auto 0;
+            transition: all 0.7s ease-in-out;
+
+            &:hover{
+                background-image: url("../../assets/sectionAdvancedFilteringTabletHover.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: c.vw1920(793);
+                height: c.vw1920(591);
+                margin: c.vw1920(60) auto 0;
+                transition: all 0.7s ease-in-out;
+            }
+        }
+    }
+}

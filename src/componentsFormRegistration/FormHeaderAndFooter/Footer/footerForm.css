@@ -1,0 +1,95 @@
+.footerFormection {
+  padding: 13.3333333333vw 0;
+}
+.footerFormection ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.footerFormection ul li {
+  list-style-type: none;
+}
+.footerFormection ul li a {
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 600;
+  line-height: 4.5333333333vw;
+  color: rgb(158, 157, 157);
+  text-decoration: none;
+}
+.footerFormection ul li p {
+  font-family: Roboto;
+  font-size: 4.2666666667vw;
+  font-weight: 400;
+  line-height: 6.4vw;
+  color: rgb(0, 0, 0);
+  margin: 3.2vw 0;
+}
+.footerFormection ul li.imageSection {
+  background-color: rgb(237, 234, 248);
+  border-radius: 100px;
+  padding: 2.6666666667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 20vw;
+}
+.footerFormection ul li.imageSection img {
+  width: 12.2666666667vw;
+  height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footerFormection {
+    padding: 5.9952038369vw 0;
+  }
+  .footerFormection ul li a {
+    font-size: 1.9184652278vw;
+    line-height: 2.0383693046vw;
+  }
+  .footerFormection ul li p {
+    font-size: 1.9184652278vw;
+    line-height: 2.8776978417vw;
+    margin: 1.4388489209vw 0;
+  }
+  .footerFormection ul li.imageSection {
+    padding: 1.1990407674vw;
+    width: 8.9928057554vw;
+    height: 8.9928057554vw;
+  }
+  .footerFormection ul li.imageSection img {
+    width: 5.51558753vw;
+  }
+}
+@media (min-width: 1024px) {
+  .footerFormection {
+    padding: 1.0416666667vw 0;
+    width: 86.875vw;
+  }
+  .footerFormection ul {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 76.71875vw;
+    margin: 0 auto;
+  }
+  .footerFormection ul li a {
+    font-size: 0.8333333333vw;
+    line-height: 0.8854166667vw;
+  }
+  .footerFormection ul li p {
+    font-size: 0.8333333333vw;
+    line-height: 1.25vw;
+    margin: 0.625vw 0;
+  }
+  .footerFormection ul li.imageSection {
+    padding: 0.5208333333vw;
+    width: 3.90625vw;
+    height: 3.90625vw;
+  }
+  .footerFormection ul li.imageSection img {
+    width: 2.3958333333vw;
+  }
+}

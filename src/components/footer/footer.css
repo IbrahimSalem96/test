@@ -1,0 +1,300 @@
+.footer {
+  background: linear-gradient(rgba(76, 41, 181, 0.79), rgba(76, 41, 181, 0.79)), url("../../assets/footerImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 16vw 0;
+}
+.footer .logoSection {
+  width: 96vw;
+  margin: 0 auto 20vw;
+  text-align: center;
+}
+.footer .logoSection .logoFooter {
+  width: 26.6666666667vw;
+  height: auto;
+}
+.footer .logoSection p {
+  margin-top: 5.3333333333vw;
+  font-family: Inter;
+  font-size: 3.7333333333vw;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.footer .logoSection .formEmail {
+  display: flex;
+  justify-content: center;
+}
+.footer .logoSection .formEmail a {
+  color: rgb(137, 69, 236);
+  text-decoration: none;
+  width: 53.3333333333vw;
+  height: 12.8vw;
+  font-size: 4.8vw;
+  font-family: Inter;
+  border: 1px solid rgb(137, 69, 236);
+  background: white;
+  border-radius: 2.1333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(105, 81, 255, 0.05);
+}
+.footer .LinkSite {
+  width: 59.2vw;
+  margin: 0 auto;
+  margin-bottom: 16vw;
+}
+.footer .LinkSite .contentBox {
+  margin-bottom: 5.8666666667vw;
+}
+.footer .LinkSite .contentBox h5 {
+  color: white;
+  font-family: Inter;
+  font-size: 6.6666666667vw;
+  font-weight: 600;
+  margin-bottom: 5.3333333333vw;
+  text-transform: uppercase;
+}
+.footer .LinkSite .contentBox ul {
+  padding: 0;
+}
+.footer .LinkSite .contentBox ul li {
+  list-style-type: none;
+  color: white;
+  margin-bottom: 4.8vw;
+}
+.footer .LinkSite .contentBox ul li h6 {
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 600;
+  margin: 0;
+}
+.footer .LinkSite .contentBox ul li p {
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 300;
+  margin: 0;
+}
+.footer .LinkSite .contentBox ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 300;
+  margin: 0;
+}
+.footer .LinkSiteDeskTop {
+  display: none;
+}
+.footer .footerSocialMedia {
+  width: 92vw;
+  margin: 0 auto;
+}
+.footer .footerSocialMedia ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8vw;
+}
+.footer .footerSocialMedia ul li {
+  list-style-type: none;
+}
+.footer .footerSocialMedia ul img {
+  width: 6.4vw;
+  height: 6.4vw;
+}
+.footer .footerSocialMedia p.sectionCopyright {
+  text-align: center;
+  color: #b3aad8;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 4.2666666667vw;
+  margin: 0 0 1.6vw 0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 7.1942446043vw 0;
+  }
+  .footer .logoSection {
+    width: 40.8872901679vw;
+    margin: 0 auto 8.9928057554vw;
+  }
+  .footer .logoSection .logoFooter {
+    width: 11.9904076739vw;
+  }
+  .footer .logoSection p {
+    margin-top: 2.3980815348vw;
+    font-size: 1.9184652278vw;
+  }
+  .footer .logoSection .formEmail a {
+    width: 23.9808153477vw;
+    height: 5.7553956835vw;
+    font-size: 1.9184652278vw;
+    border-radius: 0.9592326139vw;
+  }
+  .footer .LinkSite {
+    width: 71.9424460432vw;
+    margin-bottom: 2.3980815348vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.3980815348vw 23.9808153477vw;
+  }
+  .footer .LinkSite .contentBox {
+    margin-bottom: 2.6378896882vw;
+    width: calc(50% - 11.9904076739vw);
+  }
+  .footer .LinkSite .contentBox h5 {
+    font-size: 2.9976019185vw;
+    margin-bottom: 2.3980815348vw;
+  }
+  .footer .LinkSite .contentBox ul li {
+    margin-bottom: 2.1582733813vw;
+  }
+  .footer .LinkSite .contentBox ul li h6 {
+    font-size: 1.9184652278vw;
+  }
+  .footer .LinkSite .contentBox ul li p {
+    font-size: 2.1582733813vw;
+  }
+  .footer .LinkSite .contentBox ul li a {
+    font-size: 1.6786570743vw;
+  }
+  .footer .footerSocialMedia {
+    width: 41.3669064748vw;
+  }
+  .footer .footerSocialMedia ul {
+    gap: 3.5971223022vw;
+  }
+  .footer .footerSocialMedia ul img {
+    width: 2.8776978417vw;
+    height: 2.8776978417vw;
+  }
+  .footer .footerSocialMedia p.sectionCopyright {
+    font-size: 1.9184652278vw;
+    margin: 0 0 0.7194244604vw 0;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 8.3333333333vw 0 2.0833333333vw;
+  }
+  .footer .FlexSection {
+    display: flex;
+    gap: 6.25vw;
+    width: 100%;
+  }
+  .footer .logoSection {
+    margin: 0;
+    width: auto;
+    text-align: left;
+  }
+  .footer .logoSection .logoFooter {
+    width: 7.8125vw;
+  }
+  .footer .logoSection p {
+    margin: 1.7708333333vw 0;
+    font-size: 0.8333333333vw;
+    width: 10.9895833333vw;
+    line-height: 1.4583333333vw;
+  }
+  .footer .logoSection .formEmail a {
+    width: 10.4166666667vw;
+    height: 2.5vw;
+    font-size: 1.0416666667vw;
+    border-radius: 0.625vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer .logoSection .formEmail a:hover {
+    background: linear-gradient(to top left, rgb(137, 69, 236), rgba(137, 69, 236, 0.4));
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer .LinkSite {
+    width: auto;
+    margin: 0;
+    margin-bottom: 0vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .footer .LinkSite .contentBox {
+    margin-bottom: 1.1458333333vw;
+    width: 33.3333333333%;
+  }
+  .footer .LinkSite .contentBox h5 {
+    font-size: 1.3020833333vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .footer .LinkSite .contentBox ul li {
+    margin-bottom: 0.9375vw;
+  }
+  .footer .LinkSite .contentBox ul li h6 {
+    font-size: 0.8333333333vw;
+  }
+  .footer .LinkSite .contentBox ul li p {
+    font-size: 1.0416666667vw;
+    width: 17.7083333333vw;
+  }
+  .footer .LinkSite .contentBox ul li a {
+    font-size: 1.0416666667vw;
+  }
+  .footer .LinkSiteMobile {
+    display: none;
+  }
+  .footer .LinkSiteDeskTop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .footer .LinkSiteDeskTop .sectionTop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer .LinkSiteDeskTop .contentBoxDeskTop {
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 2.0833333333vw 0 1.0416666667vw;
+  }
+  .footer .LinkSiteDeskTop .contentBoxDeskTop ul {
+    padding: 0;
+    display: flex;
+  }
+  .footer .LinkSiteDeskTop .contentBoxDeskTop ul li {
+    list-style-type: none;
+    color: white;
+    width: 33.3333333333%;
+  }
+  .footer .LinkSiteDeskTop .contentBoxDeskTop ul li h6 {
+    font-size: 0.9375vw;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 1.4583333333vw;
+  }
+  .footer .LinkSiteDeskTop .contentBoxDeskTop ul li p {
+    font-size: 1.0416666667vw;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 1.1458333333vw;
+    color: white;
+  }
+  .footer .footerSocialMedia {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .footerSocialMedia ul {
+    gap: 1.5625vw;
+  }
+  .footer .footerSocialMedia ul img {
+    width: 1.4583333333vw;
+    height: 1.4583333333vw;
+  }
+  .footer .footerSocialMedia p.sectionCopyright {
+    font-size: 0.9375vw;
+    margin: 0 0 0.3125vw 0;
+  }
+}

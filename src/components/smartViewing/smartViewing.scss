@@ -1,0 +1,310 @@
+@use "../../css/functions" as c;
+
+.smartViewingSection {
+    padding: c.vw375(50) 0;
+
+    p.subTitle {
+        font-family: Inter;
+        font-size: c.vw375(20);
+        font-weight: 500;
+        margin-bottom: c.vw375(6);
+        text-align: center;
+        color: rgba(76, 41, 181, 1);
+    }
+
+    .titleSection {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: c.vw375(6);
+
+        h2 {
+            text-align: center;
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            color: rgba(76, 41, 181, 1);
+            width: c.vw375(325);
+        }
+
+        img {
+            display: none;
+            width: auto;
+            height: c.vw375(16);
+        }
+    }
+
+    .descSection {
+        margin-bottom: c.vw375(30);
+        p {
+            text-align: center;
+            font-size: c.vw375(18);
+            font-family: Inter;
+            font-weight: 400;
+            color: rgba(115, 80, 159, 1);
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    p {
+        font-size: c.vw834(24);
+        margin-bottom: c.vw834(60);
+    }
+
+    .cardItems {
+        width: c.vw375(250);
+        margin: 0 auto;
+        padding-top: c.vw375(40);
+
+        .contenCard {
+            background: linear-gradient(to top left, rgba(137, 69, 236, 0.2), rgba(137, 69, 236, 0));
+            border-radius: c.vw375(40);
+            padding: c.vw375(20);
+            height: c.vw375(170);
+            margin-bottom: c.vw375(70);
+            transition: all 0.3s ease-in-out;
+            border: 3px solid white;
+            cursor: pointer;
+
+            p {
+                font-family: Inter;
+                font-size: c.vw375(16);
+                font-weight: 400;
+                color: rgba(76, 41, 181, 1);
+                text-align: center;
+                width: c.vw375(200);
+            }
+
+            .imageSectiom {
+                position: relative;
+                top: c.vw375(-44);
+                margin-bottom: c.vw375(-26);
+                width: c.vw375(68);
+                height: c.vw375(68);
+                border: 2px solid white;
+                border-radius: c.vw375(15);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(137, 69, 236, 1);
+                transition: all 0.3s ease-in-out;
+
+                &:nth-child(3) {
+                    margin-bottom: c.vw375(-20);
+                }
+
+                img {
+                    width: c.vw375(32);
+                    height: auto;
+                }
+            }
+
+            &:hover {
+                background: white;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 80px rgba(137, 69, 236, 0.2);
+                transition: all 0.3s ease-in-out;
+
+                .imageSectiom {
+                    background: rgba(255, 0, 121, 1);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .scrollPointImage {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .smartViewingSection {
+        padding: c.vw834(50) 0;
+
+        p.subTitle {
+            font-size: c.vw834(20);
+            margin-bottom: c.vw834(6);
+        }
+
+        .titleSection {
+            margin-bottom: c.vw834(6);
+            align-items: center;
+            gap: 0;
+            h2 {
+                font-size: c.vw834(35);
+                width: c.vw834(260);
+            }
+
+            img {
+                display: block;
+                width: c.vw834(36);
+                height: auto;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw834(30);
+            p {
+                font-size: c.vw834(22);
+                width: c.vw834(501);
+                margin: 0 auto;
+            }
+        }
+
+        .cardItems {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: c.vw834(40);
+            // justify-content: space-around;
+            gap: c.vw834(60) c.vw834(50);
+            margin-top: c.vw834(60);
+            .contenCard {
+                border-radius: c.vw834(40);
+                padding: c.vw834(20);
+                height: c.vw834(170);
+                margin-bottom: c.vw834(0);
+                width: calc(50% - 30px);
+
+                p {
+                    font-size: c.vw834(16);
+                    width: c.vw834(200);
+                }
+
+                .imageSectiom {
+                    top: c.vw834(-44);
+                    margin-bottom: c.vw834(-30);
+                    width: c.vw834(68);
+                    height: c.vw834(68);
+                    border-radius: c.vw834(15);
+                    img {
+                        width: c.vw834(32);
+                    }
+                }
+            }
+        }
+
+        .scrollPointImage {
+            display: block;
+
+            img.Line {
+                width: 100%;
+                height: 5px;
+            }
+
+            img.pointer {
+                margin-top: c.vw834(-12);
+
+                &.goRight {
+                    transform: translateX(c.vw834(620));
+                    transition: transform 0.7s ease-in;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .smartViewingSection {
+        padding: c.vw1920(50) 0;
+
+        p.subTitle {
+            font-size: c.vw1920(20);
+            margin-bottom: c.vw1920(6);
+            text-align: left;
+        }
+
+        .titleSection {
+            margin-bottom: c.vw1920(6);
+            justify-content: center;
+            align-items: center;
+            justify-content: start;
+            gap: 0;
+            h2 {
+                font-size: c.vw1920(47);
+                width: c.vw1920(340);
+                text-align: left;
+            }
+
+            img {
+                display: block;
+                width: c.vw1920(40);
+                height: auto;
+                margin-top: -10px;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw1920(30);
+            p {
+                font-size: c.vw1920(28);
+                text-align: start;
+            }
+        }
+
+        .cardItems {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            gap: c.vw1920(14);
+            margin-bottom: c.vw1920(60);
+            padding-top: c.vw1920(40);
+
+            .contenCard {
+                border-radius: c.vw1920(40);
+                padding: c.vw1920(20) c.vw1920(40);
+                height: c.vw1920(170);
+                margin-bottom: c.vw1920(0);
+                width: 20%;
+                height: c.vw1920(190);
+                position: relative;
+                
+                p { 
+                    font-size: c.vw1920(18);
+                    width: c.vw1920(200);
+                    margin: 0 auto 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .imageSectiom {
+                    top: c.vw1920(-48);
+                    margin-bottom: c.vw1920(-20);
+                    width: c.vw1920(82);
+                    height: c.vw1920(82);
+                    border-radius: c.vw1920(15);
+                    img {
+                        width: c.vw1920(32);
+                    }
+                }
+            }
+        }
+
+        .scrollPointImage {
+            display: block;
+
+            img.Line {
+                width: 100%;
+                height: 5px;
+            }
+
+            img.pointer {
+                margin-top: c.vw1920(-15);
+                cursor: pointer;
+
+                &.goRight {
+                    transform: translateX(c.vw1920(1500));
+                    transition: transform 0.7s ease-in;
+                }
+            }
+        }
+    }
+}

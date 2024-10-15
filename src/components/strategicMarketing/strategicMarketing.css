@@ -1,0 +1,201 @@
+.strategicMarketingSection {
+  padding: 13.3333333333vw 0;
+}
+.strategicMarketingSection p.subTitle {
+  font-family: Inter;
+  font-size: 5.3333333333vw;
+  font-weight: 500;
+  margin-bottom: 1.6vw;
+  text-align: center;
+  color: rgb(76, 41, 181);
+}
+.strategicMarketingSection .titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.6vw;
+}
+.strategicMarketingSection .titleSection h2 {
+  font-family: Inter;
+  font-size: 7.4666666667vw;
+  font-weight: 700;
+  color: rgb(76, 41, 181);
+}
+.strategicMarketingSection .titleSection img {
+  display: none;
+  width: auto;
+  height: 4.2666666667vw;
+}
+.strategicMarketingSection .descSection {
+  margin-bottom: 8vw;
+}
+.strategicMarketingSection .descSection p {
+  text-align: center;
+  font-size: 4.8vw;
+  font-family: Inter;
+  font-weight: 500;
+  color: rgb(115, 80, 159);
+}
+.strategicMarketingSection .descSection p span {
+  font-weight: 700;
+}
+.strategicMarketingSection .sliders .contentBox {
+  position: relative;
+  border-radius: 40px;
+  margin-bottom: 13.3333333333vw;
+}
+.strategicMarketingSection .sliders .contentBox p {
+  position: absolute;
+  bottom: 15.4666666667vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Inter;
+  font-size: 4.8vw;
+  font-weight: 600;
+  line-height: 7.2vw;
+  color: white;
+  width: 80vw;
+  margin: 0;
+}
+.strategicMarketingSection .sliders .swiper-pagination-bullet {
+  background-color: rgb(76, 41, 181);
+}
+.strategicMarketingSection .sliders .swiper-button-prev,
+.strategicMarketingSection .sliders .swiper-button-next {
+  display: none;
+}
+.strategicMarketingSection .slidersDesktop,
+.strategicMarketingSection .arrowSliders {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .strategicMarketingSection {
+    padding: 5.9952038369vw 0;
+  }
+  .strategicMarketingSection p.subTitle {
+    font-size: 2.3980815348vw;
+    margin-bottom: 0.7194244604vw;
+  }
+  .strategicMarketingSection .titleSection {
+    margin-bottom: 0.7194244604vw;
+  }
+  .strategicMarketingSection .titleSection h2 {
+    font-size: 4.1966426859vw;
+  }
+  .strategicMarketingSection .titleSection img {
+    display: block;
+    height: 3.5971223022vw;
+  }
+  .strategicMarketingSection .descSection {
+    margin-bottom: 3.5971223022vw;
+  }
+  .strategicMarketingSection .descSection p {
+    font-size: 2.6378896882vw;
+  }
+  .strategicMarketingSection .sliders .contentBox {
+    margin-bottom: 5.9952038369vw;
+  }
+  .strategicMarketingSection .sliders .contentBox img {
+    width: 100%;
+  }
+  .strategicMarketingSection .sliders .contentBox p {
+    bottom: 16.067146283vw;
+    font-size: 3.3573141487vw;
+    line-height: 5.035971223vw;
+    width: 56.3549160671vw;
+  }
+}
+@media (min-width: 1024px) {
+  .strategicMarketingSection {
+    padding: 2.6041666667vw 0;
+  }
+  .strategicMarketingSection p.subTitle {
+    font-size: 1.0416666667vw;
+    margin-bottom: 0.3125vw;
+    text-align: start;
+  }
+  .strategicMarketingSection .titleSection {
+    margin-bottom: 0.3125vw;
+    justify-content: start;
+    align-items: center;
+  }
+  .strategicMarketingSection .titleSection h2 {
+    font-size: 2.4479166667vw;
+  }
+  .strategicMarketingSection .titleSection img {
+    display: block;
+    width: 2.0833333333vw;
+    height: auto;
+    margin-top: -10px;
+  }
+  .strategicMarketingSection .descSection {
+    margin-bottom: 5.2083333333vw;
+  }
+  .strategicMarketingSection .descSection p {
+    font-size: 1.4583333333vw;
+    text-align: start;
+  }
+  .strategicMarketingSection .arrowSliders {
+    position: relative;
+  }
+  .strategicMarketingSection .arrowSliders .containerBox {
+    position: absolute;
+    left: 94%;
+    top: -50px;
+    display: flex;
+    gap: 1.0416666667vw;
+  }
+  .strategicMarketingSection .arrowSliders .containerBox .swiper-button-prevStyle,
+  .strategicMarketingSection .arrowSliders .containerBox .swiper-button-nextStyle {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: rgb(224, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 16px;
+    border: 2px solid rgb(224, 224, 224);
+  }
+  .strategicMarketingSection .arrowSliders .containerBox .swiper-button-prevStyle:hover,
+  .strategicMarketingSection .arrowSliders .containerBox .swiper-button-nextStyle:hover {
+    background: white;
+  }
+  .strategicMarketingSection .arrowSliders .containerBox .swiper-button-prevStyle {
+    transform: rotate(180deg);
+  }
+  .strategicMarketingSection .sliders {
+    margin-left: 8.8541666667vw;
+    width: 91%;
+    overflow: hidden;
+  }
+  .strategicMarketingSection .sliders .contentBox {
+    margin-bottom: 2.6041666667vw;
+    height: 35.5729166667vw;
+    width: 30.625vw;
+  }
+  .strategicMarketingSection .sliders .contentBox img {
+    width: 100%;
+    height: 100%;
+  }
+  .strategicMarketingSection .sliders .contentBox p {
+    top: 24.7916666667vw;
+    font-size: 1.4583333333vw;
+    line-height: 2.1875vw;
+    width: 24.4791666667vw;
+    height: 6.25vw;
+  }
+  .strategicMarketingSection .sliders .swiper-pagination {
+    display: none;
+  }
+  .strategicMarketingSection .slidersMobile {
+    display: none;
+  }
+  .strategicMarketingSection .slidersDesktop,
+  .strategicMarketingSection .arrowSliders {
+    display: block;
+  }
+}

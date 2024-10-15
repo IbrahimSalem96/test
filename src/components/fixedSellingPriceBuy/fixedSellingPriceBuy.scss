@@ -1,0 +1,320 @@
+@use "../../css/functions" as c;
+
+.fixedSellingPriceBuySection {
+    padding: c.vw375(50) 0;
+
+    p.subTitle {
+        font-family: Inter;
+        font-size: c.vw375(20);
+        font-weight: 500;
+        margin-bottom: c.vw375(6);
+        text-align: center;
+        color: rgba(76, 41, 181, 1);
+    }
+
+    .titleSection {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: c.vw375(6);
+
+        h2 {
+            text-align: center;
+            font-family: Inter;
+            font-size: c.vw375(28);
+            font-weight: 700;
+            color: rgba(76, 41, 181, 1);
+            width: c.vw375(325);
+        }
+
+        img {
+            display: none;
+            width: auto;
+            height: c.vw375(16);
+        }
+    }
+
+    .descSection {
+        margin-bottom: c.vw375(30);
+        p {
+            text-align: center;
+            font-size: c.vw375(18);
+            font-family: Inter;
+            font-weight: 400;
+            color: rgba(115, 80, 159, 1);
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .cardItems {
+        margin-top: c.vw375(40);
+        display: flex;
+        flex-direction: column;
+        gap: c.vw375(26);
+
+        .contentBox {
+            width: c.vw375(325);
+            background-color: rgba(137, 69, 236, 0.1);
+            border-radius: c.vw375(16);
+            padding: c.vw375(20) c.vw375(14);
+            transition: all 0.3s ease-in-out;
+            text-align: left;
+            border: 3px solid white;
+            cursor: pointer;
+
+            .imageSectiom {
+                display: none;
+            }
+
+            h2 {
+                font-family: Inter;
+                font-size: c.vw375(14);
+                font-weight: 800;
+                line-height: c.vw375(17);
+                color: rgba(76, 41, 181, 1);
+                margin: c.vw375(6) 0;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: c.vw375(14);
+                font-weight: 400;
+                line-height: c.vw375(17);
+                color: rgba(76, 41, 181, 1);
+                width: c.vw375(293);
+                margin: 0;
+            }
+
+            &:hover {
+                background: white;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 80px rgba(137, 69, 236, 0.2);
+                transition: all 0.3s ease-in-out;
+
+                .imageSectiom {
+                    background: rgba(255, 0, 121, 1);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .contentBoxAll {
+        .fullImage {
+            width: c.vw375(300);
+            height: auto;
+            margin: c.vw375(50) auto 0;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .fixedSellingPriceBuySection {
+        padding: c.vw834(50) 0;
+
+        p.subTitle {
+            font-size: c.vw834(20);
+            margin-bottom: c.vw834(6);
+        }
+
+        .titleSection {
+            margin-bottom: c.vw834(6);
+            align-items: center;
+            gap: 0;
+            h2 {
+                font-size: c.vw834(35);
+                width: c.vw834(327);
+            }
+
+            img {
+                display: block;
+                width: c.vw834(36);
+                height: auto;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw834(30);
+            p {
+                font-size: c.vw834(22);
+                width: c.vw834(501);
+                margin: 0 auto;
+            }
+        }
+
+        .contentBoxAll {
+            .cardItems {
+                margin-top: c.vw834(40);
+                gap: c.vw834(12);
+
+                .contentBox {
+                    width: c.vw834(584);
+                    border-radius: c.vw834(15);
+                    padding: c.vw834(20) c.vw834(20);
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: c.vw834(20);
+                    margin: 0 auto;
+                    .imageSectiom {
+                        display: block;
+                        width: c.vw834(68);
+                        height: c.vw834(68);
+                        padding: c.vw834(10);
+                        background: rgb(137, 69, 236);
+                        border-radius: 15px;
+                        transition: all 0.3s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: c.vw834(32);
+                        }
+                    }
+
+                    &:hover {
+                        .imageSectiom {
+                            background: rgba(255, 0, 121, 1);
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+
+                    h2 {
+                        font-size: c.vw834(18);
+                        line-height: c.vw834(22);
+                        margin: c.vw834(12) 0;
+                    }
+
+                    p {
+                        font-size: c.vw834(17);
+                        line-height: c.vw834(20);
+                        width: c.vw834(463);
+                    }
+                }
+            }
+        }
+
+        .contentBoxAll {
+            .fullImage {
+                width: c.vw834(500);
+                margin: c.vw834(50) auto 0;
+
+                img {
+                    width: c.vw834(500);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .fixedSellingPriceBuySection {
+        padding: c.vw1920(50) 0;
+
+        p.subTitle {
+            font-size: c.vw1920(20);
+            margin-bottom: c.vw1920(6);
+            text-align: left;
+        }
+
+        .titleSection {
+            margin-bottom: c.vw1920(6);
+            justify-content: center;
+            align-items: center;
+            justify-content: start;
+            h2 {
+                font-size: c.vw1920(47);
+                width: c.vw1920(400);
+            }
+
+            img {
+                display: block;
+                width: c.vw1920(40);
+                height: auto;
+                margin-top: -10px;
+            }
+        }
+
+        .descSection {
+            margin-bottom: c.vw1920(30);
+            p {
+                font-size: c.vw1920(28);
+                text-align: start;
+            }
+        }
+
+        .contentBoxAll {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: c.vw1920(40);
+
+            .cardItems {
+                width: 50%;
+                gap: c.vw1920(12);
+                margin-top: c.vw1920(0);
+
+                .contentBox {
+                    width: c.vw1920(720);
+                    border-radius: c.vw1920(15);
+                    padding: c.vw1920(20) c.vw1920(20);
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: c.vw1920(20);
+                    margin: 0;
+                    .imageSectiom {
+                        display: block;
+                        width: c.vw1920(68);
+                        height: c.vw1920(68);
+                        padding: c.vw1920(10);
+                        background: rgb(137, 69, 236);
+                        border-radius: 15px;
+                        transition: all 0.3s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: c.vw1920(32);
+                        }
+                    }
+
+                    &:hover {
+                        .imageSectiom {
+                            background: rgba(255, 0, 121, 1);
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+
+                    h2 {
+                        font-size: c.vw1920(20);
+                        line-height: c.vw1920(22);
+                        margin: c.vw1920(12) 0;
+                    }
+
+                    p {
+                        font-size: c.vw1920(18);
+                        line-height: c.vw1920(20);
+                        width: c.vw1920(580);
+                    }
+                }
+            }
+        }
+
+        .contentBoxAll {
+            .fullImage {
+                width: 50%;
+                margin: 0;
+                text-align: center;
+
+                img {
+                    width: 65%;
+                }
+            }
+        }
+    }
+}

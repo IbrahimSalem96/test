@@ -1,0 +1,55 @@
+@use "../../css/functions" as c;
+
+.joinUsBtn {
+    position: relative;
+    a {
+        position: fixed;
+        top: 90%;
+        left: 71%;
+        z-index: 10;
+        color: white;
+        text-decoration: none;
+        width: c.vw375(100);
+        height: c.vw375(48);
+        font-size: c.vw375(18);
+        font-family: Inter;
+        border: 1px solid rgba(137, 69, 236, 0.4);
+        background: linear-gradient(to top left, rgb(137, 69, 236), rgba(137, 69, 236, 0.8));
+        border-radius: c.vw375(14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        box-shadow: 0 1px 2px rgba(105, 81, 255, 0.05);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .joinUsBtn {
+        a {
+            left: 86%;
+            width: c.vw834(100);
+            height: c.vw834(48);
+            font-size: c.vw834(16);
+            border-radius: c.vw834(8);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .joinUsBtn {
+        a {
+            left: 91%;
+            width: c.vw1920(150);
+            height: c.vw1920(60);
+            font-size: c.vw1920(22);
+            border-radius: c.vw1920(12);
+
+            // &:hover {
+            //     background: white;
+            //     color: black;
+            //     transition: all 0.3s ease-in-out;
+            // }
+        }
+    }
+}

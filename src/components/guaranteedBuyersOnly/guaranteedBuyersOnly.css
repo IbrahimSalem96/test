@@ -1,0 +1,175 @@
+.guaranteedBuyersOnlySection {
+  padding: 13.3333333333vw 0;
+}
+.guaranteedBuyersOnlySection p.subTitle {
+  font-family: Inter;
+  font-size: 5.3333333333vw;
+  font-weight: 500;
+  margin-bottom: 1.6vw;
+  text-align: center;
+  color: rgb(76, 41, 181);
+}
+.guaranteedBuyersOnlySection .titleSection {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.6vw;
+  width: 72vw;
+  margin: 0 auto 1.6vw;
+}
+.guaranteedBuyersOnlySection .titleSection h2 {
+  text-align: center;
+  font-family: Inter;
+  font-size: 7.4666666667vw;
+  font-weight: 700;
+  color: rgb(76, 41, 181);
+}
+.guaranteedBuyersOnlySection .titleSection img {
+  display: none;
+  width: auto;
+  height: 4.2666666667vw;
+}
+.guaranteedBuyersOnlySection .descSection {
+  margin-bottom: 8vw;
+}
+.guaranteedBuyersOnlySection .descSection p {
+  text-align: center;
+  font-size: 4.8vw;
+  font-family: Inter;
+  font-weight: 500;
+  color: rgb(115, 80, 159);
+}
+.guaranteedBuyersOnlySection .descSection p span {
+  font-weight: 700;
+}
+.guaranteedBuyersOnlySection .imageTable {
+  width: 100%;
+  margin-bottom: 5.3333333333vw;
+}
+.guaranteedBuyersOnlySection .listPlatform h2 {
+  font-family: Inter;
+  font-size: 7.4666666667vw;
+  font-weight: 700;
+  color: rgb(255, 0, 121);
+  width: 86.9333333333vw;
+  text-align: center;
+}
+.guaranteedBuyersOnlySection .listPlatform ul {
+  margin: 0;
+  width: 88vw;
+}
+.guaranteedBuyersOnlySection .listPlatform ul li {
+  color: rgb(115, 80, 159);
+  font-size: 4.2666666667vw;
+  font-family: Inter;
+  font-weight: 400;
+  margin-bottom: 3.2vw;
+}
+.guaranteedBuyersOnlySection .listPlatform ul li span {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .guaranteedBuyersOnlySection {
+    padding: 5.9952038369vw 0;
+  }
+  .guaranteedBuyersOnlySection p.subTitle {
+    font-size: 2.3980815348vw;
+    margin-bottom: 0.7194244604vw;
+  }
+  .guaranteedBuyersOnlySection .titleSection {
+    margin-bottom: 0.7194244604vw;
+    width: 73.860911271vw;
+  }
+  .guaranteedBuyersOnlySection .titleSection h2 {
+    font-size: 4.1966426859vw;
+  }
+  .guaranteedBuyersOnlySection .titleSection img {
+    display: block;
+    height: 3.5971223022vw;
+  }
+  .guaranteedBuyersOnlySection .descSection {
+    margin-bottom: 3.5971223022vw;
+  }
+  .guaranteedBuyersOnlySection .descSection p {
+    font-size: 2.6378896882vw;
+  }
+  .guaranteedBuyersOnlySection .imageTable {
+    width: 100%;
+    margin-bottom: 2.3980815348vw;
+  }
+  .guaranteedBuyersOnlySection .listPlatform h2 {
+    width: 73.9808153477vw;
+    font-size: 3.8369304556vw;
+    text-align: left;
+  }
+  .guaranteedBuyersOnlySection .listPlatform ul {
+    padding: 0 2.3980815348vw;
+    width: 73.9808153477vw;
+  }
+  .guaranteedBuyersOnlySection .listPlatform ul li {
+    font-size: 2.3980815348vw;
+    margin-bottom: 0.7194244604vw;
+  }
+}
+@media (min-width: 1024px) {
+  .guaranteedBuyersOnlySection {
+    padding: 2.6041666667vw 0;
+  }
+  .guaranteedBuyersOnlySection p.subTitle {
+    font-size: 1.0416666667vw;
+    margin-bottom: 0.3125vw;
+    text-align: start;
+  }
+  .guaranteedBuyersOnlySection .titleSection {
+    justify-content: start;
+    align-items: center;
+    margin: 0 0 0.3125vw 0;
+  }
+  .guaranteedBuyersOnlySection .titleSection h2 {
+    font-size: 2.4479166667vw;
+  }
+  .guaranteedBuyersOnlySection .titleSection img {
+    display: block;
+    width: 2.0833333333vw;
+    height: auto;
+    margin-top: -10px;
+  }
+  .guaranteedBuyersOnlySection .descSection {
+    margin-bottom: 0vw;
+  }
+  .guaranteedBuyersOnlySection .descSection p {
+    font-size: 1.4583333333vw;
+    text-align: start;
+  }
+  .guaranteedBuyersOnlySection .imageTable {
+    width: 28.6458333333vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .guaranteedBuyersOnlySection .listPlatform h2 {
+    width: 32.1354166667vw;
+    font-size: 1.6666666667vw;
+    text-align: left;
+    margin-bottom: 1.0416666667vw;
+  }
+  .guaranteedBuyersOnlySection .listPlatform ul {
+    padding: 0 1.0416666667vw;
+    width: 32.1354166667vw;
+  }
+  .guaranteedBuyersOnlySection .listPlatform ul li {
+    font-size: 1.0416666667vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .guaranteedBuyersOnlySection .contentBoxFlex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    margin-top: -2.0833333333vw;
+  }
+  .guaranteedBuyersOnlySection .contentBoxFlex img,
+  .guaranteedBuyersOnlySection .contentBoxFlex .listPlatform {
+    width: 50%;
+  }
+}

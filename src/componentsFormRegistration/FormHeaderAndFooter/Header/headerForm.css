@@ -1,0 +1,42 @@
+.headerFormSection .mobileView .headers {
+  background-image: url("../../../assets/topBgForm.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 28.2666666667vw;
+  display: flex;
+  align-items: center;
+  padding: 0 10.6666666667vw;
+}
+.headerFormSection .mobileView .headers img {
+  cursor: pointer;
+}
+.headerFormSection .desktopView .headers {
+  display: none;
+}
+.headerFormSection .desktopView .headers img {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .headerFormSection .headers {
+    height: 12.7098321343vw !important;
+    padding: 0 4.7961630695vw !important;
+  }
+}
+@media (min-width: 1024px) {
+  .headerFormSection .mobileView .headers {
+    display: none;
+  }
+  .headerFormSection .desktopView .headers {
+    background-image: url("../../../assets/leftHeader.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 13.125vw;
+    height: 100%;
+    display: block;
+    padding: 2.0833333333vw;
+    position: fixed;
+    right: 0;
+  }
+}

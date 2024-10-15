@@ -1,0 +1,22 @@
+@function vw1920($px) {
+  $m: calc($px / 1920);
+  @return #{($m * 100)}vw;
+}
+
+@function vw1440($px) {
+  $m: calc($px / 1440);
+  @return #{($m * 100)}vw;
+}
+
+@function vw834($px) {
+  $m: calc($px / 834);
+  @return #{($m * 100)}vw;
+}
+
+@function vw375($px) {
+  $m: calc($px / 375);
+  @return #{($m * 100)}vw;
+}
+
+
+//@use "/functions" as c;

@@ -1,0 +1,118 @@
+@use "../../../css/functions" as c;
+
+.footerFormection {
+    padding: c.vw375(50) 0;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+
+            a {
+                font-family: Inter;
+                font-size: c.vw375(16);
+                font-weight: 600;
+                line-height: c.vw375(17);
+                color: rgba(158, 157, 157, 1);
+                text-decoration: none;
+            }
+
+            p {
+                font-family: Roboto;
+                font-size: c.vw375(16);
+                font-weight: 400;
+                line-height: c.vw375(24);
+                color: rgba(0, 0, 0, 1);
+                margin: c.vw375(12) 0;
+            }
+
+            &.imageSection {
+                background-color: rgb(237, 234, 248);
+                border-radius: 100px;
+                padding: c.vw375(10);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: c.vw375(75);
+                height: c.vw375(75);
+
+                img {
+                    width: c.vw375(46);
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footerFormection {
+        padding: c.vw834(50) 0;
+        ul {
+            li {
+                a {
+                    font-size: c.vw834(16);
+                    line-height: c.vw834(17);
+                }
+
+                p {
+                    font-size: c.vw834(16);
+                    line-height: c.vw834(24);
+                    margin: c.vw834(12) 0;
+                }
+
+                &.imageSection {
+                    padding: c.vw834(10);
+                    width: c.vw834(75);
+                    height: c.vw834(75);
+
+                    img {
+                        width: c.vw834(46);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footerFormection {
+        padding: c.vw1920(20) 0;
+        width: c.vw1920(1668);
+
+        ul {
+            flex-direction: row;
+            justify-content: space-between;
+            width: c.vw1920(1473);
+            margin:  0 auto;
+
+            li {
+                a {
+                    font-size: c.vw1920(16);
+                    line-height: c.vw1920(17);
+                }
+
+                p {
+                    font-size: c.vw1920(16);
+                    line-height: c.vw1920(24);
+                    margin: c.vw1920(12) 0;
+                }
+
+                &.imageSection {
+                    padding: c.vw1920(10);
+                    width: c.vw1920(75);
+                    height: c.vw1920(75);
+
+                    img {
+                        width: c.vw1920(46);
+                    }
+                }
+            }
+        }
+    }
+}

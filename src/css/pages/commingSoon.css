@@ -1,0 +1,328 @@
+.commingSoonPageBox {
+  position: relative;
+  padding-top: 5.3333333333vw;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../../assets/commingSoonMobile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5.3333333333vw;
+  overflow: hidden;
+}
+.commingSoonPageBox::before {
+  position: absolute;
+  content: " ";
+  background-image: url("../../assets/carCommingSoon.png");
+  background-repeat: no-repeat;
+  width: 26.6666666667vw;
+  height: 8vw;
+  background-size: 22.9333333333vw 5.3333333333vw;
+  bottom: -8px;
+  left: -26.6666666667vw;
+  animation: moveLeft 7s linear infinite;
+}
+@keyframes moveLeft {
+  0% {
+    left: -26.6666666667vw;
+  }
+  50% {
+    left: 106.6666666667vw;
+  }
+  100% {
+    left: 106.6666666667vw;
+  }
+}
+.commingSoonPageBox .burgerMenu {
+  text-align: end;
+  position: relative;
+}
+.commingSoonPageBox .burgerMenu .socialMediaIcon {
+  width: 40px;
+  gap: 3.2vw;
+  position: absolute;
+  left: 78%;
+  top: 1.0666666667vw;
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.commingSoonPageBox .burgerMenu .socialMediaIcon img {
+  width: 5.3333333333vw;
+  height: 5.8666666667vw;
+}
+.commingSoonPageBox .burgerMenu .socialMediaIcon.active {
+  display: flex;
+  height: 26.6666666667vw;
+  transition: all 0.2s ease-in-out;
+}
+.commingSoonPageBox .contentTex {
+  margin-top: 0vw;
+  text-align: center;
+}
+.commingSoonPageBox .contentTex .LogoSite {
+  width: 21.3333333333vw;
+  height: auto;
+}
+.commingSoonPageBox .contentTex h1 {
+  font-size: 5.8666666667vw;
+  font-family: Inter;
+  color: white;
+  font-weight: 700;
+  line-height: 6.9333333333vw;
+}
+.commingSoonPageBox .contentTex .btnLinkBuyAndSell {
+  display: flex;
+  align-items: center;
+  gap: 4.8vw;
+}
+.commingSoonPageBox .contentTex .btnLinkBuyAndSell a {
+  color: white;
+  text-decoration: none;
+  width: 28vw;
+  height: 9.0666666667vw;
+  font-size: 3.7333333333vw;
+  font-family: Inter;
+  border: 1px solid rgb(137, 69, 236);
+  background: linear-gradient(to top left, rgb(137, 69, 236), rgba(137, 69, 236, 0.4));
+  border-radius: 2.1333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(105, 81, 255, 0.05);
+}
+.commingSoonPageBox .contentTex .btnLinkBuyAndSell a.joinNowStyle {
+  width: 32vw;
+}
+.commingSoonPageBox .contentTex h3 {
+  font-family: Inter;
+  color: white;
+  font-size: 4.2666666667vw;
+  line-height: 5.0666666667vw;
+}
+.commingSoonPageBox .contentTex .comingSoonCount h2 {
+  font-family: Inter;
+  color: white;
+  font-size: 5.3333333333vw;
+  line-height: 6.4vw;
+  margin-bottom: 5.3333333333vw;
+  font-weight: 700;
+}
+.commingSoonPageBox .contentTex .comingSoonCount .count {
+  display: flex;
+}
+.commingSoonPageBox .contentTex .comingSoonCount .count span {
+  padding: 0 1.0666666667vw;
+  font-size: 10.1333333333vw;
+  color: white;
+}
+.commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone {
+  display: flex;
+  gap: 2.1333333333vw;
+}
+.commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.2vw;
+  height: 16.5333333333vw;
+  border: 2px solid rgb(137, 69, 236);
+  border-radius: 10px;
+  background-color: white;
+  font-family: Inter;
+  font-size: 10.1333333333vw;
+  color: rgb(154, 97, 238);
+}
+.commingSoonPageBox .imageDownSite {
+  width: 100%;
+}
+.commingSoonPageBox .socialMediaIconDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .commingSoonPageBox {
+    padding-top: 2.3980815348vw;
+    width: 100%;
+    background-image: url("../../assets/commingsoonTablet.png");
+  }
+  .commingSoonPageBox::before {
+    bottom: -16px;
+  }
+  @keyframes moveLeft {
+    0% {
+      left: -23.9808153477vw;
+    }
+    50% {
+      left: 143.8848920863vw;
+    }
+    100% {
+      left: 143.8848920863vw;
+    }
+  }
+  .commingSoonPageBox .burgerMenu .socialMediaIcon {
+    width: 40px;
+    gap: 1.4388489209vw;
+    left: 89%;
+    top: 0.479616307vw;
+  }
+  .commingSoonPageBox .burgerMenu .socialMediaIcon img {
+    width: 2.3980815348vw;
+    height: 2.6378896882vw;
+  }
+  .commingSoonPageBox .burgerMenu .socialMediaIcon.active {
+    height: 11.9904076739vw;
+  }
+  .commingSoonPageBox .contentTex {
+    margin-top: 11.9904076739vw;
+    padding-bottom: 2.8776978417vw;
+  }
+  .commingSoonPageBox .contentTex .LogoSite {
+    width: 9.5923261391vw;
+  }
+  .commingSoonPageBox .contentTex h1 {
+    font-size: 2.6378896882vw;
+    line-height: 3.1175059952vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell {
+    gap: 4.8vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell a {
+    width: 12.5899280576vw;
+    height: 4.0767386091vw;
+    font-size: 1.9184652278vw;
+    border-radius: 0.9592326139vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell a.joinNowStyle {
+    width: 14.3884892086vw;
+  }
+  .commingSoonPageBox .contentTex h3 {
+    font-size: 1.9184652278vw;
+    line-height: 2.278177458vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount h2 {
+    font-size: 2.3980815348vw;
+    line-height: 2.8776978417vw;
+    margin-bottom: 2.3980815348vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count span {
+    padding: 0 0.479616307vw;
+    font-size: 4.5563549161vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone {
+    gap: 0.9592326139vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone span {
+    width: 5.035971223vw;
+    height: 7.4340527578vw;
+    font-size: 4.5563549161vw;
+  }
+}
+@media (min-width: 1024px) {
+  .commingSoonPageBox {
+    padding-top: 0vw;
+    gap: 1.0416666667vw;
+    background-image: url("../../assets/commingSoonDeskTop.png");
+  }
+  .commingSoonPageBox::before {
+    width: 20.8333333333vw;
+    height: 5.2604166667vw;
+    background-size: 16.9791666667vw 3.125vw;
+    bottom: -1.3541666667vw;
+    left: -20.8333333333vw;
+  }
+  @keyframes moveLeft {
+    0% {
+      left: -20.8333333333vw;
+    }
+    50% {
+      left: 62.5vw;
+    }
+    100% {
+      left: 143.8848920863vw;
+    }
+  }
+  .commingSoonPageBox .burgerMenu {
+    display: none;
+  }
+  .commingSoonPageBox .contentTex {
+    margin-top: 3.125vw;
+  }
+  .commingSoonPageBox .contentTex .LogoSite {
+    width: 4.1666666667vw;
+  }
+  .commingSoonPageBox .contentTex h1 {
+    font-size: 2.4479166667vw;
+    line-height: 2.96875vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell {
+    gap: 4.8vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell a {
+    width: 10.4166666667vw;
+    height: 3.125vw;
+    font-size: 1.1458333333vw;
+    border-radius: 0.625vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell a.joinNowStyle {
+    width: 11.4583333333vw;
+  }
+  .commingSoonPageBox .contentTex .btnLinkBuyAndSell a:hover {
+    background: white;
+    color: black;
+    transition: all 0.3s ease-in-out;
+  }
+  .commingSoonPageBox .contentTex h3 {
+    font-size: 1.25vw;
+    line-height: 1.5104166667vw;
+    margin: 0.7291666667vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount h2 {
+    font-size: 2.03125vw;
+    line-height: 2.4479166667vw;
+    margin-bottom: 1.5625vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count span {
+    padding: 0 0.625vw;
+    font-size: 3.0208333333vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone {
+    gap: 0.4166666667vw;
+  }
+  .commingSoonPageBox .contentTex .comingSoonCount .count .fixedForEveryone span {
+    width: 3.4895833333vw;
+    height: 5.15625vw;
+    font-size: 3.3854166667vw;
+    border-width: 4px;
+  }
+  .commingSoonPageBox .imageDownSite {
+    width: 100%;
+    margin-top: -4.1666666667vw;
+  }
+  .commingSoonPageBox .socialMediaIconDesktop {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8333333333vw;
+    position: absolute;
+    top: 36%;
+    transform: rotate(90deg);
+  }
+  .commingSoonPageBox .socialMediaIconDesktop p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.7291666667vw;
+    line-height: 1.09375vw;
+    color: white;
+  }
+  .commingSoonPageBox .socialMediaIconDesktop a img {
+    width: 1.0416666667vw;
+    height: 1.0416666667vw;
+    transform: rotate(-90deg);
+  }
+}

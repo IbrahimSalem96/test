@@ -1,0 +1,91 @@
+@use "../../css/functions" as c;
+
+.buyingWithTheGunuineSection {
+    padding: c.vw375(50) 0;
+    .flexContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .leftSection {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .rightSection {
+            text-align: center;
+            h2 {
+                font-family: Inter;
+                font-size: c.vw375(26);
+                font-weight: 700;
+                line-height: c.vw375(48);
+                color: rgba(76, 41, 181, 1);
+                margin: c.vw375(24) 0;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: c.vw375(18);
+                font-weight: 400;
+                line-height: c.vw375(22);
+                color: rgba(115, 80, 159, 1);
+                width: c.vw375(325);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .buyingWithTheGunuineSection {
+        padding: c.vw834(50) 0;
+        .flexContent {
+            .rightSection {
+                h2 {
+                    font-size: c.vw834(35);
+                    line-height: c.vw834(42);
+                    margin: c.vw834(32) 0 c.vw834(24) 0;
+                }
+
+                p {
+                    font-size: c.vw834(22);
+                    line-height: c.vw834(26);
+                    width: c.vw834(500);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .buyingWithTheGunuineSection {
+        padding: c.vw1920(50) 0;
+        .flexContent {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .leftSection{
+                width: 45%;
+            }
+
+            .rightSection {
+                text-align: left;
+                width: 50%;
+                h2 {
+                    font-size: c.vw1920(47);
+                    line-height: c.vw1920(56);
+                    margin: 0;
+                }
+
+                p {
+                    margin-top: c.vw1920(40);
+                    font-size: c.vw1920(22);
+                    line-height: c.vw1920(26);
+                    width: c.vw1920(592);
+                }
+            }
+        }
+    }
+}

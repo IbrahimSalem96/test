@@ -1,0 +1,260 @@
+import "./buyer.css";
+import Bar from "./Bar.js";
+import {
+  ContactInformation,
+  Communication,
+  PropertyInvestment,
+  AccessAndUpdates,
+  AlmostThere,
+  NextPropertyInvestment,
+  NextContactInformation,
+} from "./Step/index.js";
+
+import { HeaderForm, FooterForm } from "../index.js";
+import { useState } from "react";
+
+import request from "../../utils/request.js";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
+const Buyer = () => {
+  const [stepSelect, setStepSelect] = useState(1);
+  const navigate = useNavigate();
+
+  //Step 1
+  const [salutation, setSalutation] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [whatsappNumber, setWhatsappNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [checkbox1, setCheckbox1] = useState(false);
+  const [checkbox2, setCheckbox2] = useState(false);
+
+  //step 2
+  const [countryOfResidence, setCountryOfResidence] = useState("");
+  const [preferredLanguage, setPreferredLanguage] = useState("");
+
+  //Step 3
+  const [preferredMethodSave, setPreferredMethodSave] = useState("");
+  const [preferredDaysSave, setPreferredDaysSave] = useState("");
+  const [preferredTimesSave, setPreferredTimesSave] = useState("");
+
+  //Step 4
+  const [propertyTypeSave, setPropertyTypeSave] = useState("");
+  const [interestedEmirateSave, setInterestedEmirateSave] = useState([]);
+  const [propertyStatusSave, setPropertyStatusSave] = useState([]);
+  const [estimatedBudgetFromSave, setEstimatedBudgetFromSave] = useState("");
+  const [estimatedBudgetToSave, setEstimatedBudgetToSave] = useState("");
+
+  //Step 5
+  const [primaryReason, setPrimaryReason] = useState("");
+  const [financingMethod, setFinancingMethod] = useState("");
+  const [mortgagePreApproval, setMortgagePreApproval] = useState("");
+
+  //Step 6
+  const [contactPermission, setContactPermission] = useState("");
+  const [earlyAccessSave, setEarlyAccessSave] = useState("");
+  const [referralSource, setReferralSource] = useState("");
+  const [subscribeNewsletter, setSubscribeNewsletter] = useState("");
+
+  //Step 7
+  const [comments, setComments] = useState("");
+
+  //Send Data
+  const sendDataAll = async () => {
+    try {
+      const requestData = {
+        salutation: salutation,
+        firstname: firstName,
+        lastname: lastName,
+        mobilenumber: mobileNumber,
+        whatsappnumber: whatsappNumber,
+        email: email,
+        checkbox1: checkbox1,
+        checkbox2: checkbox2,
+        countryofresidence: countryOfResidence.label,
+        preferredlanguage: preferredLanguage.label,
+        preferredmethod: preferredMethodSave.value,
+        preferreddays: preferredDaysSave.map((day) => day.value),
+        preferredtimes: preferredTimesSave.map((time) => time.value),
+        propertytype: propertyTypeSave.label,
+        interestedemirates: interestedEmirateSave.map(
+          (emirate) => emirate.value
+        ),
+        propertystatus: propertyStatusSave.map((status) => status.value),
+        estimatedbudgetfrom: estimatedBudgetFromSave,
+        estimatedbudgetto: estimatedBudgetToSave,
+        primaryreason: primaryReason.value,
+        financingmethod: financingMethod.value,
+        contactpermission: contactPermission.value,
+        comments: comments,
+        subscribenewsletter: subscribeNewsletter.value,
+        referralsource: referralSource.label,
+        earlyaccess: earlyAccessSave.value,
+        mortgagepreapproval: mortgagePreApproval.value,
+      };
+
+      await axios.post(
+        `${request.defaults.baseURL}buyers`,
+        requestData
+      );
+
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Your request has been submitted successfully!",
+        showConfirmButton: false,
+        showCloseButton: true,
+        allowOutsideClick: false,
+        didOpen: () => {
+          const footerElement = Swal.getFooter();
+          footerElement.innerHTML =
+            '<a href="/" style="color: #3085d6; text-decoration: none;">Go to Home Page</a>';
+
+          footerElement
+            .querySelector("a")
+            .addEventListener("click", (event) => {
+              event.preventDefault();
+              Swal.close();
+              navigate("/");
+            });
+
+          const closeButton = Swal.getCloseButton();
+          closeButton.addEventListener("click", () => {
+            navigate("/");
+          });
+        },
+      });
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "A problem occurred, please try again.",
+        showConfirmButton: false,
+        showCloseButton: true,
+        allowOutsideClick: false,
+        didOpen: () => {
+          const footerElement = Swal.getFooter();
+          footerElement.innerHTML =
+            '<a href="/the-genuine/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
+
+          footerElement
+            .querySelector("a")
+            .addEventListener("click", (event) => {
+              event.preventDefault();
+              setStepSelect(1);
+              Swal.close();
+            });
+
+          const closeButton = Swal.getCloseButton();
+          closeButton.addEventListener("click", () => {
+            navigate("/");
+          });
+        },
+      });
+    }
+  };
+
+  return (
+    <>
+      <HeaderForm />
+      <div className="buyingAndSellingSection buyingPage">
+        <Bar stepSelect={stepSelect} />
+
+        <div className="setionFormBox">
+          {stepSelect === 1 ? (
+            <ContactInformation
+              setSalutation={setSalutation}
+              setFirstName={setFirstName}
+              setLastName={setLastName}
+              setMobileNumber={setMobileNumber}
+              setWhatsappNumber={setWhatsappNumber}
+              setEmail={setEmail}
+              setCheckbox1={setCheckbox1}
+              setCheckbox2={setCheckbox2}
+              setStepSelect={setStepSelect}
+            />
+          ) : (
+            " "
+          )}
+          {stepSelect === 2 ? (
+            <NextContactInformation
+              setStepSelect={setStepSelect}
+              setCountryOfResidence={setCountryOfResidence}
+              setPreferredLanguage={setPreferredLanguage}
+            />
+          ) : (
+            " "
+          )}
+          {stepSelect === 3 ? (
+            <Communication
+              setStepSelect={setStepSelect}
+              setPreferredMethodSave={setPreferredMethodSave}
+              setPreferredDaysSave={setPreferredDaysSave}
+              setPreferredTimesSave={setPreferredTimesSave}
+            />
+          ) : (
+            " "
+          )}
+          {stepSelect === 4 ? (
+            <PropertyInvestment
+              setStepSelect={setStepSelect}
+              setPropertyTypeSave={setPropertyTypeSave}
+              setInterestedEmirateSave={setInterestedEmirateSave}
+              setPropertyStatusSave={setPropertyStatusSave}
+              setEstimatedBudgetFromSave={setEstimatedBudgetFromSave}
+              setEstimatedBudgetToSave={setEstimatedBudgetToSave}
+            />
+          ) : (
+            " "
+          )}
+
+          {stepSelect === 5 ? (
+            <NextPropertyInvestment
+              setStepSelect={setStepSelect}
+              setPrimaryReason={setPrimaryReason}
+              setFinancingMethod={setFinancingMethod}
+              setMortgagePreApproval={setMortgagePreApproval}
+            />
+          ) : (
+            " "
+          )}
+
+          {stepSelect === 6 ? (
+            <AccessAndUpdates
+              setStepSelect={setStepSelect}
+              setContactPermission={setContactPermission}
+              setEarlyAccessSave={setEarlyAccessSave}
+              setReferralSource={setReferralSource}
+              setSubscribeNewsletter={setSubscribeNewsletter}
+            />
+          ) : (
+            " "
+          )}
+
+          {stepSelect === 7 ? (
+            <AlmostThere
+              setStepSelect={setStepSelect}
+              comments={comments}
+              setComments={setComments}
+              sendDataAll={sendDataAll}
+            />
+          ) : (
+            " "
+          )}
+
+          {/* {stepSelect === 5 ? (
+            <AlmostThere setStepSelect={setStepSelect} />
+          ) : (
+            " "
+          )} */}
+        </div>
+      </div>
+      <FooterForm />
+    </>
+  );
+};
+
+export default Buyer;

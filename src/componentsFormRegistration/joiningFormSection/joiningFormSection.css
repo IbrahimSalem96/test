@@ -1,0 +1,366 @@
+.joiningFormSection .titleSection {
+  padding: 8vw 0;
+  text-align: center;
+}
+.joiningFormSection .titleSection h2 {
+  font-family: Inter;
+  font-size: 9.3333333333vw;
+  font-weight: 600;
+  line-height: 12.8vw;
+  color: rgb(76, 41, 181);
+  margin: 0;
+}
+.joiningFormSection .titleSection p {
+  font-family: Inter;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 12.8vw;
+  color: rgb(158, 157, 157);
+  margin: 0;
+}
+.joiningFormSection .cardItems .contentBox {
+  width: 93.0666666667vw;
+  height: 106.9333333333vw;
+  border: 3px solid rgb(211, 211, 211);
+  border-radius: 10px;
+  position: relative;
+  padding: 16vw 0;
+  margin-bottom: 8vw;
+  transition: all 0.3s ease-in-out;
+}
+.joiningFormSection .cardItems .contentBox::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(211, 211, 211, 0);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.joiningFormSection .cardItems .contentBox .notHover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.joiningFormSection .cardItems .contentBox p.title {
+  font-family: Inter;
+  font-size: 6.9333333333vw;
+  font-weight: 700;
+  line-height: 4.2666666667vw;
+  color: rgb(224, 224, 224);
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.joiningFormSection .cardItems .contentBox img.mainImageSection {
+  width: 29.0666666667vw;
+  height: auto;
+  filter: opacity(0.2);
+  transition: all 0.3s ease-in-out;
+}
+.joiningFormSection .cardItems .contentBox p.btnFormSection {
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 400;
+  line-height: 5.3333333333vw;
+  margin: 0;
+  width: 68.2666666667vw;
+  height: 12.8vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(224, 224, 224);
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection {
+  padding: 10.6666666667vw 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top left, rgb(76, 41, 181), rgba(76, 41, 181, 0.5));
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection p {
+  width: 74.6666666667vw;
+  font-family: Inter;
+  font-size: 3.7333333333vw;
+  font-weight: 300;
+  line-height: 4.48vw;
+  color: white;
+  margin: 0;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection p span {
+  font-weight: 700;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection p.sectionCenter {
+  padding: 5.3333333333vw 0;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection p.termsAndConditions {
+  padding: 5.3333333333vw 0;
+}
+.joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext {
+  width: 74.6666666667vw;
+  height: 12.8vw;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+.joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext a {
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 4.2666666667vw;
+  font-weight: 600;
+  line-height: 5.3333333333vw;
+  margin: 0;
+  color: rgb(76, 41, 181);
+}
+.joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext img {
+  width: 4.2666666667vw;
+  height: auto;
+  margin: 0 3.2vw;
+}
+.joiningFormSection .cardItems .contentBox:hover.contentBox {
+  border: transparent;
+}
+.joiningFormSection .cardItems .contentBox:hover .notHover {
+  display: none;
+}
+.joiningFormSection .cardItems .contentBox:hover .hoverSection {
+  display: flex;
+  border-radius: 10px;
+}
+.joiningFormSection .cardItems .contentBox:hover img.mainImageSection {
+  filter: opacity(1);
+}
+.joiningFormSection .desktopView {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .joiningFormSection .titleSection {
+    padding: 3.5971223022vw 0;
+    text-align: center;
+  }
+  .joiningFormSection .titleSection h2 {
+    font-size: 4.1966426859vw;
+    line-height: 5.7553956835vw;
+  }
+  .joiningFormSection .titleSection p {
+    font-size: 1.7985611511vw;
+    line-height: 5.7553956835vw;
+  }
+  .joiningFormSection .cardItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .joiningFormSection .cardItems .contentBox {
+    width: 41.8465227818vw;
+    height: 48.0815347722vw;
+    padding: 7.1942446043vw 0;
+    margin-bottom: 3.5971223022vw;
+  }
+  .joiningFormSection .cardItems .contentBox p.title {
+    font-size: 3.1175059952vw;
+    line-height: 1.9184652278vw;
+  }
+  .joiningFormSection .cardItems .contentBox img.mainImageSection {
+    width: 13.0695443645vw;
+  }
+  .joiningFormSection .cardItems .contentBox p.btnFormSection {
+    font-size: 1.9184652278vw;
+    line-height: 2.3980815348vw;
+    width: 30.6954436451vw;
+    height: 5.7553956835vw;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection {
+    padding: 4.7961630695vw 0;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection p {
+    width: 33.5731414868vw;
+    font-size: 1.6786570743vw;
+    line-height: 2.0143884892vw;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection p.sectionCenter {
+    padding: 2.3980815348vw 0;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection p.termsAndConditions {
+    padding: 2.3980815348vw 0;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext {
+    width: 33.5731414868vw;
+    height: 5.7553956835vw;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext a {
+    font-size: 1.9184652278vw;
+    line-height: 2.3980815348vw;
+  }
+  .joiningFormSection .cardItems .contentBox .hoverSection .btnSectionNext img {
+    width: 1.9184652278vw;
+    margin: 0 1.4388489209vw;
+  }
+}
+@media (min-width: 1024px) {
+  .joiningFormSection .titleSection {
+    padding: 3.125vw 0;
+    text-align: center;
+  }
+  .joiningFormSection .titleSection h2 {
+    font-size: 3.28125vw;
+    line-height: 2.5vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .joiningFormSection .titleSection p {
+    font-size: 1.4583333333vw;
+    line-height: 2.5vw;
+  }
+  .joiningFormSection .mobileView {
+    display: none;
+  }
+  .joiningFormSection .desktopView {
+    display: block;
+    width: 86.875vw;
+  }
+  .joiningFormSection .desktopView .cardItems {
+    width: 76.71875vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.0416666667vw;
+    margin: 0 auto 20.8854166667vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox {
+    width: 18.1770833333vw;
+    height: 20.8854166667vw;
+    padding: 3.125vw 0;
+    margin-bottom: 1.5625vw;
+    cursor: pointer;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox p.title {
+    font-size: 1.3541666667vw;
+    line-height: 0.8333333333vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox img.mainImageSection {
+    width: 5.6770833333vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox a.btnFormSection {
+    font-family: Inter;
+    font-size: 0.8333333333vw;
+    line-height: 1.0416666667vw;
+    width: 13.3333333333vw;
+    height: 2.5vw;
+    font-weight: 400;
+    margin: 0;
+    width: 13.3333333333vw;
+    height: 2.5vw;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 224, 224);
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection {
+    padding: 2.0833333333vw 0;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection p {
+    width: 14.5833333333vw;
+    font-size: 0.7291666667vw;
+    line-height: 0.875vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection p.sectionCenter {
+    padding: 1.0416666667vw 0;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection p.termsAndConditions {
+    padding: 1.0416666667vw 0;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection .btnSectionNext {
+    width: 14.5833333333vw;
+    height: 2.5vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection .btnSectionNext a {
+    font-size: 0.8333333333vw;
+    line-height: 1.0416666667vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox .hoverSection .btnSectionNext img {
+    width: 0.8333333333vw;
+    margin: 0 0.625vw;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover {
+    border: 3px solid rgb(76, 41, 181) !important;
+    transition: all 0.3s ease-in-out;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover::before {
+    position: relative;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover p.title {
+    color: rgb(76, 41, 181);
+    transition: all 0.3s ease-in-out;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover img.mainImageSection {
+    filter: opacity(1);
+    transition: all 0.3s ease-in-out;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover a.btnFormSection {
+    background-color: rgb(76, 41, 181);
+    transition: all 0.3s ease-in-out;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover .hoverSection {
+    display: flex;
+    position: absolute;
+    top: 110%;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover .hoverSection.leftSectionHover {
+    left: -60%;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover .hoverSection.rightSectionHover {
+    left: 60%;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover.twoColumnsHover {
+    position: relative;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover.twoColumnsHover::before {
+    position: absolute;
+    content: " ";
+    background-image: url("../../assets/lineTwoDive.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 104%;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover.twoColumnsHover::after {
+    position: absolute;
+    content: " ";
+    top: 100%;
+    width: 3px;
+    height: 0.9375vw;
+    background-color: rgb(76, 41, 181);
+    left: 50%;
+    z-index: -1;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover::after {
+    position: absolute;
+    content: " ";
+    top: 100%;
+    width: 3px;
+    height: 2.0833333333vw;
+    background-color: rgb(76, 41, 181);
+    left: 50%;
+    z-index: -1;
+  }
+  .joiningFormSection .desktopView .cardItems .contentBox:hover .notHover {
+    display: flex;
+  }
+}

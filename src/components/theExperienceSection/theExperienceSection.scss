@@ -1,0 +1,289 @@
+@use "../../css/functions" as c;
+
+.theExperienceSection {
+    padding: c.vw375(100) 0;
+
+    .sliders {
+        .contentBox {
+            position: relative;
+            margin-bottom: c.vw375(50);
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2px;
+            border-radius: 0;
+            background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5));
+            overflow: hidden;
+
+            // &:nth-child(1){
+            //     background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5)),
+            //     url("../../assets/TheExperienceSection/slider2.svg");
+            // }
+
+            // &:nth-child(3){
+            //     background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5)),
+            //     url("../../assets/TheExperienceSection/slider2.svg");
+            // }
+
+            .imageLeftSlider {
+                //display: none;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .boxShadow {
+                border-radius: 10px;
+                box-shadow: 0px 4px 60px 6px rgba(137, 69, 236, 0.14);
+                border: 3px solid rgb(233, 233, 233);
+                height: c.vw375(733);
+                padding: c.vw375(30) c.vw375(16);
+                color: white;
+
+                .sectionTop,
+                .sectionCenter,
+                .sectionDown {
+                    margin-bottom: c.vw375(60);
+                    span {
+                        font-family: Inter;
+                        font-size: c.vw375(20);
+                        font-weight: 500;
+                        line-height: c.vw375(24);
+                    }
+
+                    h2 {
+                        font-family: Inter;
+                        font-size: c.vw375(28);
+                        font-weight: 700;
+                        line-height: c.vw375(34);
+                        margin: c.vw375(10) 0;
+                        img {
+                            display: none;
+                        }
+                    }
+
+                    p {
+                        font-family: Inter;
+                        font-size: c.vw375(18);
+                        font-weight: 400;
+                        line-height: c.vw375(22);
+                        margin: 0;
+
+                        &.upSpan {
+                            margin: c.vw375(10) 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            display: none;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+    }
+
+    .arrowSliders {
+        position: relative;
+
+        .containerBox {
+            position: absolute;
+            left: 18%;
+            transform: translateX(-50%);
+            top: c.vw375(-128);
+            display: flex;
+            gap: c.vw375(20);
+            z-index: 1;
+            .swiper-button-prevStyle,
+            .swiper-button-nextStyle {
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                background: rgba(224, 224, 224, 1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                padding: 16px;
+                border: 2px solid rgba(224, 224, 224, 1);
+
+                &:hover {
+                    background: white;
+                }
+            }
+
+            .swiper-button-prevStyle {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .theExperienceSection {
+        padding: c.vw834(100) 0;
+
+        .sliders {
+            .contentBox {
+                margin-bottom: c.vw834(50);
+                background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5)),
+                    url("../../assets/TheExperienceSection/slider1Tab.svg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .boxShadow {
+                    height: c.vw834(600);
+                    padding: c.vw834(50) c.vw834(50);
+                    .sectionTop,
+                    .sectionCenter,
+                    .sectionDown {
+                        margin-bottom: c.vw834(60);
+                        span {
+                            font-size: c.vw834(20);
+                            line-height: c.vw834(24);
+                        }
+
+                        h2 {
+                            font-size: c.vw834(28);
+                            line-height: c.vw834(34);
+                            margin: c.vw834(10) 0;
+
+                            display: flex;
+                            gap: c.vw834(20);
+                            img{
+                                display: block;
+                                width: c.vw834(30);
+                                height: auto;
+                            }
+                        }
+
+                        p {
+                            font-size: c.vw834(18);
+                            line-height: c.vw834(22);
+
+                            &.upSpan {
+                                margin: c.vw834(10) 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .arrowSliders {
+            .containerBox {
+                left: 12%;
+                top: c.vw834(-150);
+                gap: c.vw834(20);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .theExperienceSection {
+        padding: c.vw1920(50) 0;
+        position: relative;
+
+        .sliders {
+            width: 82%;
+            margin: 0 auto;
+
+            .contentBox {
+                margin-bottom: c.vw1920(50);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                gap: c.vw1920(12);
+                background: unset;
+
+                .imageLeftSlider {
+                    position: relative;
+
+                    img {
+                        width: auto;
+                        height: c.vw1920(857);
+                        background: linear-gradient(
+                            to top left,
+                            rgba(137, 69, 236, 0.4),
+                            rgba(137, 69, 236, 0.07),
+                            rgba(104, 0, 255, 0.01)
+                        );
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(
+                            to top left,
+                            rgba(137, 69, 236, 0.4),
+                            rgba(137, 69, 236, 0.07),
+                            rgba(104, 0, 255, 0.01)
+                        );
+                        z-index: 1;
+                        pointer-events: none;
+                    }
+                }
+
+                .boxShadow {
+                    height: c.vw1920(857);
+                    padding: c.vw1920(50) c.vw1920(50);
+                    background: linear-gradient(to top left, rgba(76, 41, 181, 1), rgba(137, 69, 236, 0.5));
+                    border-width: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .sectionTop,
+                    .sectionCenter,
+                    .sectionDown {
+                        margin-bottom: c.vw1920(60);
+                        span {
+                            font-size: c.vw1920(20);
+                            line-height: c.vw1920(24);
+                        }
+
+                        h2 {
+                            font-size: c.vw1920(47);
+                            line-height: c.vw1920(56);
+                            margin: c.vw1920(16) 0;
+
+                            display: flex;
+                            gap: c.vw1920(16);
+                            img{
+                                display: block;
+                                width: c.vw1920(36);
+                                height: auto;
+                            }
+                        }
+
+                        p {
+                            font-size: c.vw1920(22);
+                            line-height: c.vw1920(26);
+
+                            &.upSpan {
+                                margin: c.vw1920(10) 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .arrowSliders {
+            .containerBox {
+                left: 21%;
+                top: c.vw1920(-150);
+                gap: c.vw1920(20);
+            }
+        }
+    }
+}

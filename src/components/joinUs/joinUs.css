@@ -1,0 +1,42 @@
+.joinUsBtn {
+  position: relative;
+}
+.joinUsBtn a {
+  position: fixed;
+  top: 90%;
+  left: 71%;
+  z-index: 10;
+  color: white;
+  text-decoration: none;
+  width: 26.6666666667vw;
+  height: 12.8vw;
+  font-size: 4.8vw;
+  font-family: Inter;
+  border: 1px solid rgba(137, 69, 236, 0.4);
+  background: linear-gradient(to top left, rgb(137, 69, 236), rgba(137, 69, 236, 0.8));
+  border-radius: 3.7333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(105, 81, 255, 0.05);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .joinUsBtn a {
+    left: 86%;
+    width: 11.9904076739vw;
+    height: 5.7553956835vw;
+    font-size: 1.9184652278vw;
+    border-radius: 0.9592326139vw;
+  }
+}
+@media (min-width: 1024px) {
+  .joinUsBtn a {
+    left: 91%;
+    width: 7.8125vw;
+    height: 3.125vw;
+    font-size: 1.1458333333vw;
+    border-radius: 0.625vw;
+  }
+}
