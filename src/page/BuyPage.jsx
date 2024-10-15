@@ -2,7 +2,6 @@
 
 import {
   Header,
-  BannerGenuineSection,
   BuyingWithTheGunuine,
   TrustedVerifiedPricing,
   FixedSellingPriceBuy,

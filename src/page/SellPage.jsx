@@ -11,7 +11,6 @@ import {
   TransparentCommunication,
   YourTrustedPartner,
   SellYourFeesForever,
-  BannerGenuineSection,
   GenuineSection,
   TheExperienceSection,
   ScrollSown,

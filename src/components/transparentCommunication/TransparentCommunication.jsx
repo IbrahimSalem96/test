@@ -18,7 +18,6 @@ const TransparentCommunication = () => {
           if (entry.isIntersecting) {
             setIsVisible(true); 
             observer.unobserve(entry.target);
-            // console.log("Section is visible and class showAnimation is added.");
           } 
         });
       },
@@ -27,14 +26,16 @@ const TransparentCommunication = () => {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-      // console.log("Observer is set on sectionRef.");
+    // Store the current ref in a variable
+    const currentSection = sectionRef.current;
+
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
