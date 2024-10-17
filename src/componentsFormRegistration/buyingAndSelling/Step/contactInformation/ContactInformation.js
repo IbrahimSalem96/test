@@ -114,6 +114,21 @@ function ContactInformation({
     }
   };
 
+
+  const [countryCodeValidation, setCountryCodeValidation] = useState('+971'); 
+  const [whatsappNumberValidation, setWhatsappNumberValidation] = useState('+971'); 
+  const handleCountryChange = (country) => {
+    const newCountryCode = country ? `+${country.dialCode}` : countryCodeValidation;
+    setCountryCodeValidation(newCountryCode);
+  };
+
+  const handleWhatsappNumberChange = (country) => {
+    const newWhatsappNumber= country ? `+${country.dialCode}` : whatsappNumberValidation;
+    setWhatsappNumberValidation(newWhatsappNumber);
+  };
+
+
+
   return (
     <div className="stepField buyingAndSellingQcontactInformation">
       <div className="salutationSection">
@@ -172,6 +187,8 @@ function ContactInformation({
               value={formData.mobileNumber}
               autoComplete="tel"
               onChange={(value) => handlePhoneChange(value, "mobileNumber")}
+              onCountryChange={handleCountryChange} 
+              countryCodeEditable={false}
             />
             <Image
               src={arrowDown}
@@ -193,6 +210,8 @@ function ContactInformation({
               value={formData.whatsappNumber}
               onChange={(value) => handlePhoneChange(value, "whatsappNumber")}
               autoComplete="tel"
+              onCountryChange={handleWhatsappNumberChange} 
+              countryCodeEditable={false}
             />
             <Image
               src={arrowDown}

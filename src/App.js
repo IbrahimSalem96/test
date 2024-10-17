@@ -8,12 +8,15 @@ import {
   Agent,
 } from "./componentsFormRegistration/index";
 
+import ScrollToTop from './utils/ScrollToTop'
  
 import "./css/main.css";
  
 function App() {
   return (
     <>
+    <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<ComingSoon />} />
         <Route path="/the-genuine/sell" element={<SellPage />} />

@@ -104,6 +104,13 @@
         width: c.vw375(345);
         margin: 0 auto;
     }
+
+    
+    .error {
+        font-size: c.vw375(12);
+        font-family: "Inter";
+        color: #ef5350;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -175,6 +182,11 @@
         .setionFormBox {
             width: c.vw834(700);
             margin: 0 auto;
+        }
+
+        
+        .error {
+            font-size: c.vw834(12);
         }
     }
 }
@@ -317,6 +329,10 @@
             .btnSection{
                 margin-bottom: c.vw1920(60);
             }
+        }
+
+        .error {
+            font-size: c.vw1920(14);
         }
     }
 }

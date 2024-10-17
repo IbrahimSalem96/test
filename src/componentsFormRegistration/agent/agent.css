@@ -88,6 +88,11 @@
   width: 92vw;
   margin: 0 auto;
 }
+.buyingAndSellingSection.agentPage .error {
+  font-size: 3.2vw;
+  font-family: "Inter";
+  color: #ef5350;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .buyingAndSellingSection.agentPage .titleSection {
@@ -144,6 +149,11 @@
   .buyingAndSellingSection.agentPage .setionFormBox {
     width: 83.932853717vw;
     margin: 0 auto;
+  }
+  .buyingAndSellingSection.agentPage .error {
+    font-size: 3.2vw;
+    font-family: "Inter";
+    color: #ef5350;
   }
 }
 @media (min-width: 1024px) {
@@ -239,5 +249,8 @@
   }
   .buyingAndSellingSection.agentPage .setionFormBox .btnSection {
     margin-bottom: 3.125vw;
+  }
+  .buyingAndSellingSection.agentPage .error {
+    font-size: 0.7291666667vw;
   }
 }

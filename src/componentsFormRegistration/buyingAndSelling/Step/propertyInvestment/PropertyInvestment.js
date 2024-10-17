@@ -12,22 +12,29 @@ const propertyTypeOptions = [
   { value: "Apartment", label: "Apartment" },
   { value: "Villa", label: "Villa" },
   { value: "Townhouse", label: "Townhouse" },
+  { value: "Commercial", label: "Commercial" },
+  { value: "Land", label: "Land" },
+  { value: "Other", label: "Other" },
 ];
 
 const emirateOptions = [
   { value: "Dubai", label: "Dubai" },
-  { value: "Abu Dhabi", label: "Abu Dhabi" },
-  { value: "Sharjah", label: "Sharjah" },
+  { value: "Ras Al Khaimah", label: "Ras Al Khaimah" },
+  { value: "Other", label: "Other" },
 ];
+
 
 const customComponents = {
   ClearIndicator: () => null, // Hide the "Close" indicator that appears on open
 };
 
 const propertyStatusOptions = [
-  { value: "Ready", label: "Ready" },
-  { value: "Off-plan", label: "Off-plan" },
+  { value: "Rented and Ready", label: "Rented and Ready" },
+  { value: "Off-plan (Almost Ready)", label: "Off-plan (Almost Ready)" },
+  { value: "Off-plan (Under Development)", label: "Off-plan (Under Development)" },
+  { value: "Other", label: "Other" },
 ];
+ 
 
 function PropertyInvestment({
   setStepSelect,

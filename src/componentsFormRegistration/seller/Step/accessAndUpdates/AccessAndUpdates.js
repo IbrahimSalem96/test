@@ -10,26 +10,35 @@ import iconNextStep from "../../../../assets/arrowIconNextStep.svg";
 // Options for contact and early access
 const contactOptions = [
   { value: "Yes", label: "Yes" },
+  { value: "Maybe", label: "Maybe" },
   { value: "No", label: "No" },
 ];
 
 const earlyAccessOptions = [
-  { value: true, label: "Yes, I would like early access" },
-  { value: false, label: "No, thank you" },
+  { value: "Yes", label: "Yes" },
+  { value: "Maybe", label: "Maybe" },
+  { value: "No", label: "No" },
 ];
 
 // Options for how did you hear about us
 const sourceOptions = [
   { value: "Social Media", label: "Social Media" },
-  { value: "Friend", label: "Friend" },
+  { value: "Friend/Referral", label: "Friend/Referral" },
+  { value: "Search Engine", label: "Search Engine" },
   { value: "Advertisement", label: "Advertisement" },
   { value: "Other", label: "Other" },
 ];
 
 // Options for newsletter subscription
 const newsletterOptions = [
-  { value: "Yes", label: "Yes, I would like to subscribe" },
-  { value: "No", label: "No, thank you" },
+  { value: "Yes", label: "Yes" },
+  { value: "Maybe", label: "Maybe" },
+  { value: "No", label: "No" },
+];
+
+const whatsAppCommunityOptions = [
+  { value: "Yes", label: "Yes" },
+  { value: "No", label: "No" },
 ];
 
 function AccessAndUpdates({
@@ -45,16 +54,17 @@ function AccessAndUpdates({
   const [earlyAccess, setEarlyAccess] = useState(null);
   const [source, setSource] = useState(null);
   const [newsletter, setNewsletter] = useState(null);
+  const [whatsAppCommunity, setWhatsAppCommunity] = useState(null);
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   // Check if all required fields are filled to activate the Next button
   useEffect(() => {
-    if (contact && earlyAccess && source && newsletter) {
+    if (contact && earlyAccess && source && newsletter && whatsAppCommunity) {
       setActiveNextStep(true);
     } else {
       setActiveNextStep(false);
     }
-  }, [contact, earlyAccess, source, newsletter]);
+  }, [contact, earlyAccess, source, newsletter, whatsAppCommunity]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
@@ -65,6 +75,9 @@ function AccessAndUpdates({
     if (!source) tempErrors.source = "Source of information is required.";
     if (!newsletter)
       tempErrors.newsletter = "Newsletter subscription preference is required.";
+    if (!whatsAppCommunity)
+      tempErrors.whatsAppCommunity =
+        "WhatsApp Community subscription preference is required.";
 
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -78,7 +91,7 @@ function AccessAndUpdates({
       setEarlyAccessSave(earlyAccess);
       setReferralSource(source);
       setSubscribeNewsletter(newsletter);
- 
+
       setStepSelect(5);
     } else {
       console.log("Validation Failed");
@@ -148,6 +161,24 @@ function AccessAndUpdates({
         />
         {showErrors && errors.newsletter && (
           <span className="error">{errors.newsletter}</span>
+        )}
+      </div>
+
+      {/* WhatsApp community */}
+      <div className="salutationSection">
+        <label>
+          We are creating a dedicated WhatsApp community to keep you informed
+          about available property listings and company updates. Would you like
+          to be enrolled in this group?
+        </label>
+        <Select
+          options={whatsAppCommunityOptions}
+          value={whatsAppCommunity}
+          onChange={setWhatsAppCommunity}
+          placeholder="Select"
+        />
+        {showErrors && errors.whatsAppCommunity && (
+          <span className="error">{errors.whatsAppCommunity}</span>
         )}
       </div>
 

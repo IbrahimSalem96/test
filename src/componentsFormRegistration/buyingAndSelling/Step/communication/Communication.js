@@ -12,22 +12,37 @@ const methodOptions = [
   { value: "Email", label: "Email" },
   { value: "Phone", label: "Phone" },
   { value: "Message on WhatsApp", label: "Message on WhatsApp" },
+  { value: "Call", label: "Call" },
+  { value: "SMS", label: "SMS" },
 ];
-
+ 
 const daysOptions = [
   { value: "monday", label: "Monday" },
   { value: "tuesday", label: "Tuesday" },
   { value: "wednesday", label: "Wednesday" },
   { value: "thursday", label: "Thursday" },
   { value: "friday", label: "Friday" },
+  { value: "saturday", label: "Saturday" },
+  { value: "sunday", label: "Sunday" },
 ];
+
 
 const timesOptions = [
-  { value: "morning", label: "Morning" },
-  { value: "afternoon", label: "Afternoon" },
-  { value: "evening", label: "Evening" },
+  { value: "8-9", label: "8-9" },
+  { value: "9-10", label: "9-10" },
+  { value: "10-11", label: "10-11" },
+  { value: "11-12", label: "11-12" },
+  { value: "12-13", label: "12-13" },
+  { value: "13-14", label: "13-14" },
+  { value: "14-15", label: "14-15" },
+  { value: "15-16", label: "15-16" },
+  { value: "16-17", label: "16-17" },
+  { value: "17-18", label: "17-18" },
+  { value: "18-19", label: "18-19" },
+  { value: "19-20", label: "19-20" },
+  { value: "After 20", label: "After 20" },
 ];
-
+ 
 const customComponents = {
   ClearIndicator: () => null,
 };

@@ -9,21 +9,39 @@ import iconNextStep from "../../../../assets/arrowIconNextStep.svg";
 
 // Options for primary reason and financing method
 const reasonOptions = [
-  { value: "Investment", label: "Investment" },
-  { value: "Personal Use", label: "Personal Use" },
-  { value: "Holiday Home", label: "Holiday Home" },
+  { value: "Personal use (To live in)", label: "Personal use (To live in)" },
+  {
+    value: "Investment (For resale/flip)",
+    label: "Investment (For resale/flip)",
+  },
+  {
+    value: "Investment (For rental income)",
+    label: "Investment (For rental income)",
+  },
+  { value: "Other", label: "Other" },
 ];
+
 
 const financingOptions = [
   { value: "Cash", label: "Cash" },
   { value: "Mortgage", label: "Mortgage" },
+  { value: "Other", label: "Other" },
 ];
 
-
 const mortgageOptions = [
-  { value: "Yes, I already have it", label: "Yes, I already have it" },
-  { value: "No, I need your free assistance", label: "No, I need your free assistance" },
-  { value: "I want to apply for it", label: "I want to apply for it" },
+  {
+    value: "Yes, I already have pre-approval",
+    label: "Yes, I already have pre-approval",
+  },
+  {
+    value: "No, I don’t have pre-approval and would like your free assistance",
+    label: "No, I don’t have pre-approval and would like your free assistance",
+  },
+  {
+    value: "No, I don’t have pre-approval and don’t need assistance",
+    label: "No, I don’t have pre-approval and don’t need assistance",
+  },
+  { value: "Other", label: "Other" },
 ];
 
 function NextPropertyInvestment({
