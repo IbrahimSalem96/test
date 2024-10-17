@@ -12,10 +12,9 @@ import JoiningFormAgent from "../../assets/JoiningFormAgent.svg";
 import { useState , useEffect} from "react";
 
 const JoiningFormSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null); // للاحتفاظ بمؤشر العنصر النشط
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const showActive = (index) => {
-    // تعيين العنصر النشط أو إزالته إذا كان هو نفسه
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {

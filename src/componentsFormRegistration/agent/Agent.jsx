@@ -1,5 +1,7 @@
 import "./agent.css";
 import Bar from "./Bar.js";
+import { BackPage } from "../index";
+
 import {
   ContactInformation,
   AccessAndUpdates,
@@ -7,7 +9,7 @@ import {
    NextContactInformation,
 } from "./Step/index.js";
 
-import { HeaderForm, FooterForm } from "../index.js";
+import { FooterForm } from "../index.js";
 import { useState } from "react";
 
 import request from "../../utils/request.js";
@@ -132,7 +134,7 @@ const Agent = () => {
 
   return (
     <>
-      <HeaderForm />
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
       <div className="buyingAndSellingSection agentPage">
         <Bar stepSelect={stepSelect} />
 

@@ -1,5 +1,7 @@
 import "./seller.css";
 import Bar from "./Bar.js";
+import { BackPage } from '../index.js'
+
 import {
   ContactInformation,
   Communication,
@@ -8,7 +10,7 @@ import {
   NextContactInformation,
 } from "./Step/index.js";
 
-import { HeaderForm, FooterForm } from "../index.js";
+import { FooterForm } from "../index.js";
 import { useState } from "react";
 
 import request from "../../utils/request.js";
@@ -134,7 +136,7 @@ const Seller = () => {
   };
   return (
     <>
-      <HeaderForm />
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
       <div className="buyingAndSellingSection selleringPage">
         <Bar stepSelect={stepSelect} />
 

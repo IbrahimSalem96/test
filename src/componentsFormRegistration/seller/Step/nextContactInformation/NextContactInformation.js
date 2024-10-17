@@ -81,6 +81,8 @@ function NextContactInformation({
       setPreferredLanguage(selectedLanguage);
 
       setStepSelect(3);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }

@@ -1,5 +1,6 @@
 import "./buyer.css";
 import Bar from "./Bar.js";
+import { BackPage } from '../index.js'
 import {
   ContactInformation,
   Communication,
@@ -9,8 +10,9 @@ import {
   NextPropertyInvestment,
   NextContactInformation,
 } from "./Step/index.js";
+import ScrollToTop from "../../utils/ScrollToTop.js"
 
-import { HeaderForm, FooterForm } from "../index.js";
+import { FooterForm } from "../index.js";
 import { useState } from "react";
 
 import request from "../../utils/request.js";
@@ -159,7 +161,9 @@ const Buyer = () => {
 
   return (
     <>
-      <HeaderForm />
+    <ScrollToTop />
+    
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
       <div className="buyingAndSellingSection buyingPage">
         <Bar stepSelect={stepSelect} />
 

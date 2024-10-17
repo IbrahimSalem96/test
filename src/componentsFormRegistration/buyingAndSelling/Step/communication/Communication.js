@@ -96,6 +96,8 @@ function Communication({
       setPreferredTimesSave(preferredTimes);
 
       setStepSelect(4);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }

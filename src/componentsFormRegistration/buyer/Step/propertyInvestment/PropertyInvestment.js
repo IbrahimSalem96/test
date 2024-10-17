@@ -95,6 +95,8 @@ function PropertyInvestment({
       setEstimatedBudgetToSave(budgetTo);
 
       setStepSelect(5);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }
@@ -105,12 +107,7 @@ function PropertyInvestment({
     setStepSelect(3);
   };
 
-  
-  
-  const customComponents = {
-    ClearIndicator: () => null,
-  };
-  
+
   return (
     <div className="stepField buyingPageQpropertyInvestment">
       {/* Property Type */}
@@ -143,9 +140,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>

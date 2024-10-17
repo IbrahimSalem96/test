@@ -1,5 +1,8 @@
 import "./buyingAndSelling.css";
 import Bar from "./Bar.js";
+import { BackPage } from "../index.js";
+
+
 import {
   ContactInformation,
   Communication,
@@ -10,7 +13,7 @@ import {
   NextContactInformation,
 } from "./Step/index.js";
 
-import { HeaderForm, FooterForm } from "../index.js";
+import { FooterForm } from "../index.js";
 import { useState } from "react";
 
 import request from "../../utils/request.js";
@@ -159,7 +162,8 @@ const BuyingAndSelling = () => {
 
   return (
     <>
-      <HeaderForm />
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
+
       <div className="buyingAndSellingSection buyingAndSelling">
         <Bar stepSelect={stepSelect} />
 

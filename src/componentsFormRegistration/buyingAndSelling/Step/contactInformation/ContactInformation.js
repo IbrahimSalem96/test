@@ -109,6 +109,8 @@ function ContactInformation({
       setCheckbox2(true);
 
       setStepSelect(2);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }

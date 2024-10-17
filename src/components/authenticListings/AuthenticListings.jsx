@@ -12,26 +12,26 @@ import closeIcon from "../../assets/close.svg";
 
 const AuthenticListings = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null); // مرجع للعنصر
+  const sectionRef = useRef(null);  
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setIsVisible(true); // قم بتعيين الحالة عند رؤية العنصر
-          observer.unobserve(entry.target); // توقف عن مراقبة العنصر
+          setIsVisible(true);  
+          observer.unobserve(entry.target); 
         }
       });
     });
 
     const currentSection = sectionRef.current;
     if (currentSection) {
-      observer.observe(currentSection); // ابدأ مراقبة العنصر
+      observer.observe(currentSection);  
     }
 
     return () => {
       if (currentSection) {
-        observer.unobserve(currentSection); // توقف عن المراقبة عند إلغاء التركيب
+        observer.unobserve(currentSection); 
       }
     };
   }, []);

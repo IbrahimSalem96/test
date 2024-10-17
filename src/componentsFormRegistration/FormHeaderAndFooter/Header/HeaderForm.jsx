@@ -9,7 +9,7 @@ const HeaderForm = () => {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
-    navigate(-1);
+    navigate("/");
   };
 
   return (

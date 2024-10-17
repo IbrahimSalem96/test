@@ -92,6 +92,8 @@ function AccessAndUpdates({
       setSubscribeNewsletter(newsletter);
 
       setStepSelect(7);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }

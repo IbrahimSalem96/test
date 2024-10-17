@@ -95,6 +95,8 @@ function PropertyInvestment({
       setEstimatedBudgetToSave(budgetTo);
 
       setStepSelect(5);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }

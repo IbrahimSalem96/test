@@ -91,6 +91,8 @@ function NextPropertyInvestment({
       setMortgagePreApproval(mortgageStatus);
 
       setStepSelect(6);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       console.log("Validation Failed");
     }
