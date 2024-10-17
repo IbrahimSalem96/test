@@ -1,6 +1,6 @@
 @use "../../../../css/functions" as c;
 
-.stepField {
+.stepField.buyingPageQnextContactInformation {
     .salutationSection {
         margin-bottom: c.vw375(24);
 
@@ -253,7 +253,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .stepField {
+    .stepField.buyingPageQnextContactInformation {
         &.marginStep{
             margin-bottom: c.vw1920(150);
         }
@@ -364,7 +364,7 @@
 }
 
 @media (min-width: 1024px) {
-    .stepField {
+    .stepField.buyingPageQnextContactInformation {
         padding-top: c.vw1920(100);
         width: c.vw1920(800);
 

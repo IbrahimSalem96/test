@@ -9,7 +9,9 @@ import logo from "../../assets/LogoSite.svg";
 import InstagramIcon from "../../assets/Instagram.svg";
 import LinkedinIcon from "../../assets/LinkedinFill.svg";
 import FacebookIcon from "../../assets/FacebookFooter.svg";
- 
+import phoneIcon from "../../assets/phonesIcon.svg";
+import emailIcon from "../../assets/emailIcon.svg";
+
 
 const Footer = () => {
   return (
@@ -26,60 +28,28 @@ const Footer = () => {
                 <Image className="logoFooter" src={arrow} alt="Logo footer" />
               </span> */}
 
-<Link to={"/the-genuine/joiningForm"}>Join Us</Link>
+              <Link to={"/the-genuine/joiningForm"}>Join Us</Link>
 
             </div>
           </div>
 
           <div className="LinkSite LinkSiteMobile">
-            <div className="contentBox">
+            <div className="contentBox contentBoxContentPhones">
               <h5>contact us</h5>
               <ul>
                 <li>
-                  <h6>Hotline : </h6>
+                <Image src={phoneIcon} alt="Telephone Icon" />
                   <p>+971 58 594 6084</p>
                 </li>
 
                 <li>
-                  <h6>Telephone : </h6>
+                <Image src={phoneIcon} alt="Telephone Icon" />
                   <p>+971 4 835 2500</p>
                 </li>
 
                 <li>
-                  <h6>Email : </h6>
+                <Image src={emailIcon} alt="Email Icon" />
                   <p>info@thegenuine.ae</p>
-                </li>
-              </ul>
-            </div>
-
-            <div className="contentBox">
-              <h5>social media</h5>
-              <ul>
-                <li>
-                  <Link
-                    to={"https://www.instagram.com/thegenuine.ae/"}
-                    target="_blank"
-                  >
-                    Instagram
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to={"https://www.linkedin.com/company/thegenuine/"}
-                    target="_blank"
-                  >
-                    Linked in
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to={"https://www.facebook.com/TheGenuine.Ae"}
-                    target="_blank"
-                  >
-                    Facebook
-                  </Link>
                 </li>
               </ul>
             </div>
@@ -96,7 +66,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <p>Dubai, United Arab</p>
+                  <p>Dubai, United Arab Emirates</p>
                 </li>
               </ul>
             </div>
@@ -139,38 +109,6 @@ const Footer = () => {
               </div>
 
               <div className="contentBox">
-                <h5>social media</h5>
-                <ul>
-                  <li>
-                    <Link
-                      to={"https://www.instagram.com/thegenuine.ae/"}
-                      target="_blank"
-                    >
-                      Instagram
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to={"https://www.linkedin.com/company/thegenuine/"}
-                      target="_blank"
-                    >
-                      Linked in
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to={"https://www.facebook.com/TheGenuine.Ae"}
-                      target="_blank"
-                    >
-                      Facebook
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="contentBox">
                 <h5>Head Office</h5>
                 <ul>
                 <li>
@@ -188,20 +126,20 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="contentBoxDeskTop">
+            <div className="contentBoxDeskTop contentBoxContentPhones">
               <ul>
                 <li>
-                  <h6>Hotline : </h6>
+                <Image src={phoneIcon} alt="Telephone Icon" />
                   <p>+971 58 594 6084</p>
                 </li>
 
                 <li>
-                  <h6>Telephone : </h6>
+                <Image src={phoneIcon} alt="Telephone Icon" />
                   <p>+971 4 835 2500</p>
                 </li>
 
                 <li>
-                  <h6>Email : </h6>
+                <Image src={emailIcon} alt="Email Icon" />
                   <p>info@thegenuine.ae</p>
                 </li>
               </ul>
@@ -232,7 +170,7 @@ const Footer = () => {
 
           <p className="sectionCopyright">The Genuine Website.</p>
           <p className="sectionCopyright">
-            Copyright © 2024 Genuine. Powered by Genuine
+            Copyright © 2024 The Genuine.
           </p>
         </div>
       </Container>

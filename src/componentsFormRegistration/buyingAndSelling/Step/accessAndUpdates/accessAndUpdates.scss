@@ -1,6 +1,6 @@
 @use "../../../../css/functions" as c;
 
-.stepField {
+.stepField.buyingAndSellingQaccessAndUpdates {
     .salutationSection {
         margin-bottom: c.vw375(24);
 
@@ -283,7 +283,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .stepField {
+    .stepField.buyingAndSellingQaccessAndUpdates {
         .salutationSection {
             margin-bottom: c.vw834(24);
 
@@ -400,7 +400,7 @@
 }
 
 @media (min-width: 1024px) {
-    .stepField {
+    .stepField.buyingAndSellingQaccessAndUpdates {
         padding-top: c.vw1920(100);
         width: c.vw1920(800);
 

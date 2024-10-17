@@ -9,8 +9,34 @@ import buyForm from "../../assets/JoiningFormBuyer.svg";
 import JoiningFormSeller from "../../assets/JoiningFormSeller.svg";
 import JoiningFormpurchasing from "../../assets/JoiningFormpurchasing.svg";
 import JoiningFormAgent from "../../assets/JoiningFormAgent.svg";
+import { useState , useEffect} from "react";
 
 const JoiningFormSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null); // للاحتفاظ بمؤشر العنصر النشط
+
+  const showActive = (index) => {
+    // تعيين العنصر النشط أو إزالته إذا كان هو نفسه
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
+  const handleClickOutside = (e) => {
+    if (!e.target.closest('.cardItems')) { 
+      setActiveIndex(null);  
+    }
+  };
+
+ useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+
   return (
     <div className="joiningFormSection">
       <div className="mobileView">
@@ -21,183 +47,88 @@ const JoiningFormSection = () => {
           </div>
 
           <div className="cardItems">
-            <div className="contentBox">
-              <div className="notHover">
-                <p className="title">Joining Form</p>
-                <Image
-                  className="mainImageSection"
-                  src={buyForm}
-                  alt="image section"
-                />
-                <p className="title">Buyer</p>
-                <p className="btnFormSection">Open Buyer Form</p>
-              </div>
+            <div className="cardItems">
+              {[
+                {
+                  title: "Buyer",
+                  img: buyForm,
+                  link: "/the-genuine/registration/buyer",
+                  description: "Open Buyer Form",
+                },
+                {
+                  title: "Seller",
+                  img: JoiningFormSeller,
+                  link: "/the-genuine/registration/seller",
+                  description: "Open Seller Form",
+                },
+                {
+                  title: "Buyer and Seller",
+                  img: JoiningFormpurchasing,
+                  link: "/the-genuine/registration/buying-and-selling",
+                  description: "Open Buyer & Seller Form",
+                },
+                {
+                  title: "Agent",
+                  img: JoiningFormAgent,
+                  link: "/the-genuine/registration/agent",
+                  description: "Open Agent Form",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className={
+                    activeIndex === index
+                      ? "contentBox activeSection"
+                      : "contentBox"
+                  }
+                  onClick={() => showActive(index)}
+                >
+                  <div className="notHover">
+                    <p className="title">Joining Form</p>
+                    <Image
+                      className="mainImageSection"
+                      src={item.img}
+                      alt="image section"
+                    />
+                    <p className="title">{item.title}</p>
+                    <p className="btnFormSection">{item.description}</p>
+                  </div>
 
-              <div className="hoverSection">
-                <p>
-                  <span>Enjoy a Lifetime of Savings!</span>
-                </p>
+                  <div className="hoverSection">
+                    <p>
+                      <span>Enjoy a Lifetime of Savings!</span>
+                    </p>
 
-                <p className="sectionCenter">
-                  Register today and secure
-                  <span> 50% off the market standard commission </span> for life
-                  on all your property purchases. This exclusive offer is our
-                  way of welcoming you to a smarter, more cost-effective buying
-                  experience.
-                </p>
+                    <p className="sectionCenter">
+                      Register today and secure
+                      <span> 50% off the market standard commission </span> for
+                      life on all your property purchases. This exclusive offer
+                      is our way of welcoming you to a smarter, more
+                      cost-effective buying experience.
+                    </p>
 
-                <p className="sectionDown">
-                  <span>
-                    Don't Miss Out—These Offers Won't Last! Terms and Conditions
-                    apply.
-                  </span>
-                </p>
+                    <p className="sectionDown">
+                      <span>
+                        Don't Miss Out—These Offers Won't Last! Terms and
+                        Conditions apply.
+                      </span>
+                    </p>
 
-                <p className="termsAndConditions">
-                  Terms and Conditions apply.
-                </p>
+                    <p className="termsAndConditions">
+                      Terms and Conditions apply.
+                    </p>
 
-                <div className="btnSectionNext">
-                  <Link to={"/the-genuine/registration/buyer"}>Open Buyer Form</Link>
-                  <Image
-                    className="mainImageSection"
-                    src={arrowNextForm}
-                    alt="arrow next page"
-                  />
+                    <div className="btnSectionNext">
+                      <Link to={item.link}>{item.description}</Link>
+                      <Image
+                        className="mainImageSection"
+                        src={arrowNextForm}
+                        alt="arrow next page"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="contentBox">
-              <div className="notHover">
-                <p className="title">Joining Form</p>
-                <Image
-                  className="mainImageSection"
-                  src={JoiningFormSeller}
-                  alt="image section"
-                />
-                <p className="title">Seller</p>
-                <p className="btnFormSection">Open Seller Form</p>
-              </div>
-
-              <div className="hoverSection">
-                <p>
-                  <span>Sell Your Property with Zero Fees—Forever!</span>
-                </p>
-
-                <p className="sectionCenter">
-                  Sign up now and take advantage of our{" "}
-                  <span>00% fee and commission waiver</span>1for life. Sell your
-                  property without the usual costs, and maximize your returns
-                  with our genuine and transparent platform.
-                </p>
-
-                <p className="sectionDown">
-                  <span>Don’t Miss Out—These Offers Won’t Last!</span>
-                </p>
-
-                <p className="termsAndConditions">
-                  Terms and Conditions apply.
-                </p>
-
-                <div className="btnSectionNext">
-                  <Link to={"/the-genuine/registration/seller"}>Open Seller Form</Link>
-                  <Image
-                    className="mainImageSection"
-                    src={arrowNextForm}
-                    alt="arrow next page"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="contentBox">
-              <div className="notHover">
-                <p className="title">Joining Form</p>
-                <Image
-                  className="mainImageSection"
-                  src={JoiningFormpurchasing}
-                  alt="image section"
-                />
-                <p className="title">Buyer and Seller</p>
-                <p className="btnFormSection">Open Buyer & Seller Form</p>
-              </div>
-
-              <div className="hoverSection">
-                <p>
-                  <span>Enjoy a Lifetime of Savings!</span>
-                </p>
-
-                <p className="sectionCenter">
-                  Register today and secure
-                  <span> 50% off the market standard commission </span> for life
-                  on all your property purchases. This exclusive offer is our
-                  way of welcoming you to a smarter, more cost-effective buying
-                  experience.
-                </p>
-
-                <p className="sectionDown">
-                  <span>
-                    Don't Miss Out—These Offers Won't Last! Terms and Conditions
-                    apply.
-                  </span>
-                </p>
-
-                <p className="termsAndConditions">
-                  Terms and Conditions apply.
-                </p>
-
-                <div className="btnSectionNext">
-                  <Link to={"/the-genuine/registration/buying-and-selling"}>Open Buyer & Seller Form</Link>
-                  <Image
-                    className="mainImageSection"
-                    src={arrowNextForm}
-                    alt="arrow next page"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="contentBox">
-              <div className="notHover">
-                <p className="title">Joining Form</p>
-                <Image
-                  className="mainImageSection"
-                  src={JoiningFormAgent}
-                  alt="image section"
-                />
-                <p className="title">Agent</p>
-                <p className="btnFormSection">Open Agent Form</p>
-              </div>
-
-              <div className="hoverSection">
-                <p>
-                  <span>Join to The Genuine now for zero fees forever! </span>
-                </p>
-
-                <p className="sectionCenter">
-                  Access our property listings and schedule viewings within
-                  hours. Share commissions, bring your buyers, and close more
-                  deals. Join us today and grow your business at no cost!
-                </p>
-
-                <p className="sectionDown">
-                  <span>Don’t Miss Out—These Offers Won’t Last!</span>
-                </p>
-
-                <p className="termsAndConditions">
-                  Terms and Conditions apply.
-                </p>
-
-                <div className="btnSectionNext">
-                  <Link to={"/the-genuine/registration/agent"}>Open Agent Form</Link>
-                  <Image
-                    className="mainImageSection"
-                    src={arrowNextForm}
-                    alt="arrow next page"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </Container>
@@ -219,7 +150,10 @@ const JoiningFormSection = () => {
                 alt="image section"
               />
               <p className="title">Buyer</p>
-              <Link to={"/the-genuine/registration/buyer"} className="btnFormSection">
+              <Link
+                to={"/the-genuine/registration/buyer"}
+                className="btnFormSection"
+              >
                 Open Buyer Form
               </Link>
             </div>
@@ -257,7 +191,10 @@ const JoiningFormSection = () => {
                 alt="image section"
               />
               <p className="title">Seller</p>
-              <Link to={"/the-genuine/registration/seller"} className="btnFormSection">
+              <Link
+                to={"/the-genuine/registration/seller"}
+                className="btnFormSection"
+              >
                 Open Seller Form
               </Link>
             </div>
@@ -291,7 +228,10 @@ const JoiningFormSection = () => {
                 alt="image section"
               />
               <p className="title">Open Buyer & Seller Form</p>
-              <Link to={"/the-genuine/registration/buying-and-selling"} className="btnFormSection">
+              <Link
+                to={"/the-genuine/registration/buying-and-selling"}
+                className="btnFormSection"
+              >
                 Open Buyer & Seller Form
               </Link>
             </div>
@@ -348,7 +288,10 @@ const JoiningFormSection = () => {
                 alt="image section"
               />
               <p className="title">Agent</p>
-              <Link to={"/the-genuine/registration/agent"} className="btnFormSection">
+              <Link
+                to={"/the-genuine/registration/agent"}
+                className="btnFormSection"
+              >
                 Open Agent Form
               </Link>
             </div>

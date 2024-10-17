@@ -57,6 +57,7 @@
                 font-weight: 700;
                 width: c.vw375(240);
                 margin: 0 auto;
+                margin-bottom: c.vw375(20);
 
                 span {
                     font-size: c.vw375(28);
@@ -72,6 +73,8 @@
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
+                //box-shadow: 0px 35px 63.5px rgba(76, 41, 181, 0.33);
+
                 &::before{
                     position: absolute;
                     content: " ";
@@ -102,6 +105,7 @@
                 font-weight: 700;
                 width: c.vw375(250);
                 margin: 0 auto;
+                margin-top: c.vw375(40);
             }
 
             p {

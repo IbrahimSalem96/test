@@ -175,7 +175,7 @@
             //     }
             // }
 
-            &:hover {
+            &.activeSection {
                 &.contentBox {
                     border: transparent;
                 }
@@ -354,8 +354,8 @@
 
                         p {
                             width: c.vw1920(280);
-                            font-size: c.vw1920(14);
-                            line-height: c.vw1920(16.8);
+                            font-size: c.vw1920(16);
+                            line-height: c.vw1920(22);
 
                             &.sectionCenter {
                                 padding: c.vw1920(20) 0;

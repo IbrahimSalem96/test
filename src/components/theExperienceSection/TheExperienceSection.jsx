@@ -99,14 +99,14 @@ const TheExperienceSection = () => {
               </div>
 
               <div className="boxShadow">
-                <div className="sectionTop" style={{ visibility: "hidden" }}>
+                {/* <div className="sectionTop" style={{ visibility: "hidden" }}>
                   <span>The Experience</span>
                   <h2>Tailored Experience</h2>
                   <p>
                     Choose between a tech-driven or human-touch experience,
                     based on your preference
                   </p>
-                </div>
+                </div> */}
 
                 <div className="sectionCenter">
                   <span>The Tech-Driven</span>

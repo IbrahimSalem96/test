@@ -54,9 +54,9 @@
             // }
             display: flex;
             justify-content: center;
-            
+
             a {
-                color: rgba(137, 69, 236, 1);;
+                color: rgba(137, 69, 236, 1);
                 text-decoration: none;
                 width: c.vw375(200);
                 height: c.vw375(48);
@@ -79,7 +79,7 @@
         margin: 0 auto;
         margin-bottom: c.vw375(60);
         .contentBox {
-            margin-bottom: c.vw375(22);
+            margin-bottom: c.vw375(50);
 
             h5 {
                 color: white;
@@ -118,6 +118,21 @@
                         font-size: c.vw375(16);
                         font-weight: 300;
                         margin: 0;
+                    }
+                }
+            }
+
+            &.contentBoxContentPhones {
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: c.vw375(12);
+
+                        img {
+                            width: c.vw375(18);
+                            height: auto;
+                        }
                     }
                 }
             }
@@ -208,7 +223,7 @@
             margin-bottom: c.vw834(20);
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            // justify-content: center;
             gap: c.vw834(20) c.vw834(200);
 
             .contentBox {
@@ -233,6 +248,18 @@
 
                         a {
                             font-size: c.vw834(14);
+                        }
+                    }
+                }
+
+                &.contentBoxContentPhones {
+                    ul {
+                        li {
+                            gap: c.vw834(12);
+
+                            img {
+                                width: c.vw834(18);
+                            }
                         }
                     }
                 }
@@ -280,7 +307,7 @@
             }
 
             p {
-                margin: c.vw1920(34) 0;
+                margin: c.vw1920(30) 0;
                 font-size: c.vw1920(16);
                 width: c.vw1920(211);
                 line-height: c.vw1920(28);
@@ -307,14 +334,14 @@
                 // }
 
                 a {
-                    width: c.vw1920(200);
+                    width: 100%;
                     height: c.vw1920(48);
                     font-size: c.vw1920(20);
                     border-radius: c.vw1920(12);
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
-                        background: linear-gradient(to top left, rgba(137, 69, 236, 1), rgba(137, 69, 236, 0.4));;
+                        background: linear-gradient(to top left, rgba(137, 69, 236, 1), rgba(137, 69, 236, 0.4));
                         color: white;
                         transition: all 0.3s ease-in-out;
                     }
@@ -370,14 +397,14 @@
 
             .sectionTop {
                 display: flex;
-                justify-content: space-between;
+                justify-content: start;
                 width: 100%;
             }
 
             .contentBoxDeskTop {
                 width: 100%;
                 border-top: 1px solid white;
-                padding: c.vw1920(40) 0 c.vw1920(20);
+                padding: c.vw1920(50) 0;
                 ul {
                     padding: 0;
                     display: flex;
@@ -402,6 +429,25 @@
                             line-height: c.vw1920(22);
                             // color: #a799d5;
                             color: white;
+                        }
+                    }
+                }
+
+                
+                &.contentBoxContentPhones {
+                    ul {
+                        li {
+                            display: flex;
+                           // align-items: center;
+                            gap: c.vw1920(12);
+
+                            img {
+                                width: c.vw1920(24);
+                            }
+
+                            p{
+                                margin: 0;
+                            }
                         }
                     }
                 }

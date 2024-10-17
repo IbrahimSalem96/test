@@ -115,7 +115,7 @@ function ContactInformation({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingPageQcontactInformation">
       <div className="salutationSection">
         <label>Salutation</label>
         <Select
@@ -136,6 +136,7 @@ function ContactInformation({
           <input
             type="text"
             name="firstName"
+            autoComplete="name"
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleInputChange}
@@ -150,6 +151,7 @@ function ContactInformation({
           <input
             type="text"
             name="lastName"
+            autoComplete="name"
             placeholder="Last Name"
             value={formData.lastName}
             onChange={handleInputChange}
@@ -165,6 +167,8 @@ function ContactInformation({
           <label>Mobile Number</label>
           <div className="boxContnet">
             <PhoneInput
+              name="mobileNumber"
+              autoComplete="tel"
               country={"ae"}
               value={formData.mobileNumber}
               onChange={(value) => handlePhoneChange(value, "mobileNumber")}
@@ -184,6 +188,8 @@ function ContactInformation({
           <label>WhatsApp Number</label>
           <div className="boxContnet">
             <PhoneInput
+              name="whatsappNumber"
+              autoComplete="tel"
               country={"ae"}
               value={formData.whatsappNumber}
               onChange={(value) => handlePhoneChange(value, "whatsappNumber")}
@@ -205,6 +211,7 @@ function ContactInformation({
         <input
           type="text"
           name="email"
+          autoComplete="email"
           placeholder="Email"
           value={formData.email}
           className="emailSection"
@@ -216,10 +223,6 @@ function ContactInformation({
       </div>
 
       <div className="approvalsSection">
-        <p className="titleSection">
-          By submitting this form, I agree to provide my contact information for
-          communication and updates related to THE GENUINE PLATFORM.
-        </p>
         <label className="custom-checkbox">
           <input
             className="checkbox-input"
@@ -230,8 +233,10 @@ function ContactInformation({
           />
           <span className="checkbox"></span>
           <p>
-            I consent to being contacted via email, phone, or other
-            communication channels.
+            By submitting this form, I agree to provide my contact details for
+            communication and updates regarding THE GENUINE PLATFORM, and I
+            consent to being contacted via email, phone, or other communication
+            methods.
           </p>
         </label>
         {showErrors && errors.consent1 && (

@@ -20,9 +20,9 @@ const financingOptions = [
 ];
 
 const mortgageOptions = [
-  { value: true, label: "Yes, I already have it" },
-  { value: false, label: "No, I need your free assistance" },
-  { value: false, label: "I want to apply for it" },
+  { value: "Yes, I already have it", label: "Yes, I already have it" },
+  { value: "No, I need your free assistance", label: "No, I need your free assistance" },
+  { value: "I want to apply for it", label: "I want to apply for it" },
 ];
 
 function NextPropertyInvestment({
@@ -91,7 +91,7 @@ function NextPropertyInvestment({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQnextPropertyInvestment">
       {/* Primary Reason for Buying */}
       <div className="salutationSection">
         <label>What is your primary reason for buying?</label>

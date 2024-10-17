@@ -1,5 +1,5 @@
 .transparentCommunicationSection {
-  padding: 13.3333333333vw 0;
+  padding: 5.3333333333vw 0;
 }
 .transparentCommunicationSection p.subTitle {
   font-family: Inter;
@@ -43,7 +43,7 @@
 }
 .transparentCommunicationSection .list {
   box-shadow: 0 0 67px rgba(137, 69, 236, 0.17);
-  height: 213.3333333333vw;
+  height: 186.6666666667vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +160,7 @@
     font-size: 2.6378896882vw;
   }
   .transparentCommunicationSection .list {
-    height: 89.928057554vw;
+    height: 77.9376498801vw;
   }
   .transparentCommunicationSection .list ul {
     width: 71.9424460432vw;

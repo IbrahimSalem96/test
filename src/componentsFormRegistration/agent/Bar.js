@@ -8,13 +8,28 @@ const Bar = ({ stepSelect }) => {
         <div className="mobileSection">
           <div className="barStepMobile">
             <ul>
-              <li className={stepSelect >= 1 ? "aciveStep activeSelect" : " "}>
+              <li
+                className={
+                  (stepSelect > 1 ? "aciveStep" : "") +
+                  (stepSelect === 1 ? "aciveStep activeSelect" : "")
+                }
+              >
                 <p>Contact Information</p>
               </li>
-              <li className={stepSelect >= 3 ? "aciveStep activeSelect" : " "}>
+              <li
+                className={
+                  (stepSelect > 3 ? "aciveStep" : "") +
+                  (stepSelect === 3 ? "aciveStep activeSelect" : "")
+                }
+              >
                 <p>Access and Updates</p>
               </li>
-              <li className={stepSelect >= 4 ? "aciveStep activeSelect" : " "}>
+              <li
+                className={
+                  (stepSelect > 4 ? "aciveStep" : "") +
+                  (stepSelect === 4 ? "aciveStep activeSelect" : "")
+                }
+              >
                 <p>Almost There</p>
               </li>
             </ul>

@@ -91,7 +91,7 @@ function AccessAndUpdates({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQaccessAndUpdates">
       {/* Contact Preference */}
       <div className="salutationSection">
         <label>Our platform is launching soon! May we contact you?</label>

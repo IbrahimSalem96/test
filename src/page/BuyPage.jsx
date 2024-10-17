@@ -11,6 +11,8 @@ import {
   GenuineSection,
   TheExperienceSection,
   ScrollSown,
+  JoinUs,
+  SellYourFeesForever,
   Footer,
 } from "../components/index";
 
@@ -19,6 +21,7 @@ const buyingAndSelling = () => {
     <>
       <div className="SellPageBox">
         <Header />
+        <JoinUs />
 
         <ScrollSown />
 
@@ -33,6 +36,8 @@ const buyingAndSelling = () => {
         <AuthenticListings />
 
         <AdvancedFiltering />
+
+        <SellYourFeesForever />
 
         <TheExperienceSection />
 

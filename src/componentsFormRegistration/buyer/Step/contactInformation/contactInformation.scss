@@ -1,12 +1,12 @@
 @use "../../../../css/functions" as c;
 
-.stepField {
+.stepField.buyingPageQcontactInformation {
     .salutationSection {
         margin-bottom: c.vw375(24);
 
         label {
             font-family: Inter;
-            font-size: c.vw375(18);
+            font-size: c.vw375(13);
             font-weight: 400;
             color: rgba(115, 80, 159, 1);
             margin-bottom: c.vw375(6);
@@ -235,7 +235,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .stepField {
+    .stepField.buyingPageQcontactInformation {
         .salutationSection {
             margin-bottom: c.vw834(24);
 
@@ -336,7 +336,7 @@
 }
 
 @media (min-width: 1024px) {
-    .stepField {
+    .stepField.buyingPageQcontactInformation {
         padding-top: c.vw1920(100);
         width: c.vw1920(800);
 
@@ -396,14 +396,13 @@
                 margin-bottom: c.vw1920(6);
             }
 
-            input:not(.emailSection) {
-                font-size: c.vw1920(18);
-                height: c.vw1920(80);
-                padding: 0 c.vw1920(16);
-            }
+
 
             input.emailSection {
                 width: auto;
+                font-size: c.vw1920(18);
+                height: c.vw1920(80);
+                padding: 0 c.vw1920(16);
             }
 
             input:not(.emailSection) {

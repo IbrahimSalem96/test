@@ -131,17 +131,17 @@
   height: auto;
   margin: 0 3.2vw;
 }
-.joiningFormSection .cardItems .contentBox:hover.contentBox {
+.joiningFormSection .cardItems .contentBox.activeSection.contentBox {
   border: transparent;
 }
-.joiningFormSection .cardItems .contentBox:hover .notHover {
+.joiningFormSection .cardItems .contentBox.activeSection .notHover {
   display: none;
 }
-.joiningFormSection .cardItems .contentBox:hover .hoverSection {
+.joiningFormSection .cardItems .contentBox.activeSection .hoverSection {
   display: flex;
   border-radius: 10px;
 }
-.joiningFormSection .cardItems .contentBox:hover img.mainImageSection {
+.joiningFormSection .cardItems .contentBox.activeSection img.mainImageSection {
   filter: opacity(1);
 }
 .joiningFormSection .desktopView {
@@ -278,8 +278,8 @@
   }
   .joiningFormSection .desktopView .cardItems .contentBox .hoverSection p {
     width: 14.5833333333vw;
-    font-size: 0.7291666667vw;
-    line-height: 0.875vw;
+    font-size: 0.8333333333vw;
+    line-height: 1.1458333333vw;
   }
   .joiningFormSection .desktopView .cardItems .contentBox .hoverSection p.sectionCenter {
     padding: 1.0416666667vw 0;

@@ -1,6 +1,6 @@
 @use "../../../../css/functions" as c;
 
-.stepField {
+.stepField.buyingPageQpropertyInvestment {
     .salutationSection {
         margin-bottom: c.vw375(24);
 
@@ -138,6 +138,17 @@
             &::placeholder {
                 color: rgba(76, 41, 181, 0.2);
             }
+        }
+
+        
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
     }
 
@@ -286,7 +297,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .stepField {
+    .stepField.buyingPageQpropertyInvestment{
         .salutationSection {
             margin-bottom: c.vw834(24);
 
@@ -403,7 +414,7 @@
 }
 
 @media (min-width: 1024px) {
-    .stepField {
+    .stepField.buyingPageQpropertyInvestment {
         padding-top: c.vw1920(100);
         width: c.vw1920(800);
 

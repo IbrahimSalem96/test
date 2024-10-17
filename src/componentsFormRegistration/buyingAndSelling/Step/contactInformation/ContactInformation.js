@@ -36,7 +36,7 @@ function ContactInformation({
     consent1: false,
     consent2: false,
   });
-
+ 
   const [activeNextStep, setActiveNextStep] = useState(false);
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false); // State to control error visibility
@@ -115,7 +115,7 @@ function ContactInformation({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQcontactInformation">
       <div className="salutationSection">
         <label>Salutation</label>
         <Select
@@ -136,6 +136,7 @@ function ContactInformation({
           <input
             type="text"
             name="firstName"
+            autoComplete="name"
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleInputChange}
@@ -150,6 +151,7 @@ function ContactInformation({
           <input
             type="text"
             name="lastName"
+            autoComplete="name"
             placeholder="Last Name"
             value={formData.lastName}
             onChange={handleInputChange}
@@ -165,8 +167,10 @@ function ContactInformation({
           <label>Mobile Number</label>
           <div className="boxContnet">
             <PhoneInput
+              name="mobileNumber"
               country={"ae"}
               value={formData.mobileNumber}
+              autoComplete="tel"
               onChange={(value) => handlePhoneChange(value, "mobileNumber")}
             />
             <Image
@@ -184,9 +188,11 @@ function ContactInformation({
           <label>WhatsApp Number</label>
           <div className="boxContnet">
             <PhoneInput
+              name="whatsappNumber"
               country={"ae"}
               value={formData.whatsappNumber}
               onChange={(value) => handlePhoneChange(value, "whatsappNumber")}
+              autoComplete="tel"
             />
             <Image
               src={arrowDown}
@@ -216,10 +222,6 @@ function ContactInformation({
       </div>
 
       <div className="approvalsSection">
-        <p className="titleSection">
-          By submitting this form, I agree to provide my contact information for
-          communication and updates related to THE GENUINE PLATFORM.
-        </p>
         <label className="custom-checkbox">
           <input
             className="checkbox-input"
@@ -230,8 +232,9 @@ function ContactInformation({
           />
           <span className="checkbox"></span>
           <p>
-            I consent to being contacted via email, phone, or other
-            communication channels.
+            I understand that my information will remain confidential, will not
+            be shared or sold to any third party, and will be managed in
+            compliance with THE GENUINE PLATFORM’s Privacy Policy.
           </p>
         </label>
         {showErrors && errors.consent1 && (
@@ -248,9 +251,10 @@ function ContactInformation({
           />
           <span className="checkbox"></span>
           <p>
-            I understand that my information will be kept confidential, will not
-            be shared with or sold to any third party, and will be handled in
-            accordance with THE GENUINE PLATFORM’s Privacy Policy.
+            By submitting this form, I agree to provide my contact details for
+            communication and updates regarding THE GENUINE PLATFORM, and I
+            consent to being contacted via email, phone, or other communication
+            methods.
           </p>
         </label>
         {showErrors && errors.consent2 && (

@@ -1,6 +1,6 @@
 @use "../../../../css/functions" as c;
 
-.stepField {
+.stepField.buyingAndSellingQpropertyInvestment {
     .salutationSection {
         margin-bottom: c.vw375(24);
 
@@ -46,8 +46,6 @@
             width: c.vw375(61);
             justify-content: center;
         }
-
-
     }
 
     .phonNmberSection {
@@ -138,6 +136,16 @@
             &::placeholder {
                 color: rgba(76, 41, 181, 0.2);
             }
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
     }
 
@@ -286,7 +294,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .stepField {
+    .stepField.buyingAndSellingQpropertyInvestment {
         .salutationSection {
             margin-bottom: c.vw834(24);
 
@@ -295,7 +303,8 @@
                 margin-bottom: c.vw834(6);
             }
 
-            .css-hlgwow,.css-1dyz3mf {
+            .css-hlgwow,
+            .css-1dyz3mf {
                 height: c.vw834(80);
                 padding: 0 c.vw834(16);
             }
@@ -403,7 +412,7 @@
 }
 
 @media (min-width: 1024px) {
-    .stepField {
+    .stepField.buyingAndSellingQpropertyInvestment {
         padding-top: c.vw1920(100);
         width: c.vw1920(800);
 
@@ -415,7 +424,8 @@
                 margin-bottom: c.vw1920(6);
             }
 
-            .css-hlgwow, .css-1dyz3mf {
+            .css-hlgwow,
+            .css-1dyz3mf {
                 height: c.vw1920(80);
                 padding: 0 c.vw1920(16);
             }

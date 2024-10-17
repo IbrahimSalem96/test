@@ -57,6 +57,7 @@
   text-align: left;
   border: 3px solid white;
   cursor: pointer;
+  margin: 0 auto;
 }
 .fixedSellingPriceBuySection .cardItems .contentBox .imageSectiom {
   display: none;
@@ -92,6 +93,9 @@
   width: 80vw;
   height: auto;
   margin: 13.3333333333vw auto 0;
+}
+.fixedSellingPriceBuySection .contentBoxAll .fullImage img {
+  width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

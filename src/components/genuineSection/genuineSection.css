@@ -1,5 +1,5 @@
 .genuineSectionSection {
-  padding: 26.6666666667vw 0;
+  padding: 8vw 0 26.6666666667vw;
 }
 .genuineSectionSection p.subTitle {
   font-family: Inter;
@@ -53,9 +53,9 @@
   border-radius: 40px;
   box-shadow: 0px 4px 60px 6px rgba(137, 69, 236, 0.14);
   border: 2px solid rgb(233, 233, 233);
-  height: 141.3333333333vw;
+  height: 106.6666666667vw;
   text-align: center;
-  padding: 16vw 0;
+  padding: 10.6666666667vw 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +82,7 @@
   font-weight: 400;
   line-height: 8vw;
   color: rgb(158, 157, 157);
-  width: 62.6666666667vw;
+  width: 80vw;
 }
 .genuineSectionSection .sliders .swiper-pagination-bullet {
   display: none;

@@ -13,7 +13,7 @@ function AlmostThere({ setStepSelect, setComments, comments,  sendDataAll }) {
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQAlmostThere">
       <div className="inputSection">
         <label>Please write down any comments or feedback if applicable</label>
         <textarea

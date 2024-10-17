@@ -43,7 +43,7 @@ const GenuineSection = () => {
         <p className="subTitle">The Genuine</p>
 
         <div className="titleSection">
-          <h2>Genuine</h2>
+          <h2>Being Genuine</h2>
           <Image src={titleIcon} alt="image Your Trusted Partner" />
         </div>
 

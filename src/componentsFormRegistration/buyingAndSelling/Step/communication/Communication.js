@@ -93,7 +93,7 @@ function Communication({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQcommunication">
       {/* Preferred Method of Communication */}
       <div className="salutationSection">
         <label>Select Your Preferred Method of Communication:</label>
@@ -102,6 +102,8 @@ function Communication({
           value={preferredMethod}
           onChange={setPreferredMethod}
           placeholder="Select Method"
+          isMulti
+          components={customComponents}
         />
         {showErrors && errors.preferredMethod && (
           <span className="error">{errors.preferredMethod}</span>

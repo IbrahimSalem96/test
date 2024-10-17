@@ -98,7 +98,7 @@ function NextContactInformation({
   }, [selectedCountry, selectedLanguage]); // Trigger effect when selectedCountry or selectedLanguage changes
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQnextContactInformation">
       <div className="salutationSection">
         <label>Country of Residence</label>
         <Select
@@ -108,6 +108,8 @@ function NextContactInformation({
           getOptionLabel={(option) => option.label}
           getOptionValue={(option) => option.value}
           placeholder="Select a country..."
+          name="countryOfResidence"
+          autoComplete="Country"
         />
         {showErrors && errors.country && (
           <span className="error">{errors.country}</span>

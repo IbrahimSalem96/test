@@ -96,6 +96,7 @@
   100% {
     opacity: 0;
     transform: translateY(0);
+    display: none;
   }
 }
 .authenticListingsSection .cardItems .contentBox .imageSectiom {

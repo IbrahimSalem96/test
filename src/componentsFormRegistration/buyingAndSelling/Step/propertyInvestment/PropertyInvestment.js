@@ -98,7 +98,7 @@ function PropertyInvestment({
   };
 
   return (
-    <div className="stepField">
+    <div className="stepField buyingAndSellingQpropertyInvestment">
       {/* Property Type */}
       <div className="salutationSection">
         <label>What type of property are you interested in?</label>
@@ -151,7 +151,7 @@ function PropertyInvestment({
           <label>Estimated investment amount (Budget Range) ?</label>
           <div className="boxSpan">
             <input
-              type="text"
+              type="number"
               value={budgetFrom}
               onChange={(e) => setBudgetFrom(e.target.value)}
               placeholder="From"
@@ -167,11 +167,12 @@ function PropertyInvestment({
         <div className="inputSection">
           <div className="boxSpan">
             <input
-              type="text"
+              type="number"
               value={budgetTo}
               onChange={(e) => setBudgetTo(e.target.value)}
               placeholder="To"
               maxLength={12}
+
             />
             <span>AED</span>
           </div>

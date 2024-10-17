@@ -1,89 +1,89 @@
-.stepField .salutationSection {
+.stepField.buyingAndSellingQcontactInformation .salutationSection {
   margin-bottom: 6.4vw;
 }
-.stepField .salutationSection label {
+.stepField.buyingAndSellingQcontactInformation .salutationSection label {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 400;
   color: rgb(115, 80, 159);
   margin-bottom: 1.6vw;
 }
-.stepField .salutationSection .css-hlgwow {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-hlgwow {
   height: 21.3333333333vw;
   border-radius: 15px;
   padding: 0 4.2666666667vw;
 }
-.stepField .salutationSection .css-13cymwt-control {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-13cymwt-control {
   border-radius: 15px;
 }
-.stepField .salutationSection .css-13cymwt-control {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-13cymwt-control {
   border-color: rgba(76, 41, 181, 0.2);
 }
-.stepField .salutationSection .css-1xc3v61-indicatorContainer {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-1xc3v61-indicatorContainer {
   padding: 0 4.2666666667vw;
   color: rgb(76, 41, 181);
 }
-.stepField .salutationSection .css-1u9des2-indicatorSeparator {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-1u9des2-indicatorSeparator {
   display: none;
 }
-.stepField .salutationSection .css-t3ipsp-control {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-t3ipsp-control {
   box-shadow: none;
   border: 1px solid rgb(76, 41, 181);
   border-radius: 15px;
 }
-.stepField .salutationSection .css-1wy0on6 {
+.stepField.buyingAndSellingQcontactInformation .salutationSection .css-1wy0on6 {
   width: 16.2666666667vw;
   justify-content: center;
 }
-.stepField .phonNmberSection input.form-control {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection input.form-control {
   width: 100%;
   border-radius: 15px;
   border: 1px solid rgba(76, 41, 181, 0.2);
   padding: 0 21.3333333333vw;
 }
-.stepField .phonNmberSection input.form-control:focus {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection input.form-control:focus {
   box-shadow: none;
 }
-.stepField .phonNmberSection .selected-flag {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .selected-flag {
   background-color: white;
   width: 14.9333333333vw;
 }
-.stepField .phonNmberSection .selected-flag .arrow {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .selected-flag .arrow {
   display: none;
 }
-.stepField .phonNmberSection .react-tel-input .flag-dropdown {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .react-tel-input .flag-dropdown {
   padding: 0 5.3333333333vw;
   background-color: transparent;
   border: none;
   top: 50%;
   transform: translateY(-50%);
 }
-.stepField .phonNmberSection .react-tel-input .flag-dropdown.open .selected-flag {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .react-tel-input .flag-dropdown.open .selected-flag {
   background-color: transparent;
   position: relative;
 }
-.stepField .phonNmberSection .boxContnet {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet {
   position: relative;
 }
-.stepField .phonNmberSection .boxContnet img {
+.stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet img {
   position: absolute;
   top: 50%;
   left: 15%;
   transform: translateY(-50%);
 }
-.stepField .inputSection {
+.stepField.buyingAndSellingQcontactInformation .inputSection {
   display: flex;
   flex-direction: column;
   margin-bottom: 6.4vw;
 }
-.stepField .inputSection label {
+.stepField.buyingAndSellingQcontactInformation .inputSection label {
   font-family: Inter;
-  font-size: 4.8vw;
+  font-size: 3.4666666667vw;
   font-weight: 400;
   color: rgb(115, 80, 159);
   margin-bottom: 1.6vw;
 }
-.stepField .inputSection input {
+.stepField.buyingAndSellingQcontactInformation .inputSection input {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 400;
@@ -93,20 +93,20 @@
   height: 21.3333333333vw;
   padding: 0 4.2666666667vw;
 }
-.stepField .inputSection input:focus {
+.stepField.buyingAndSellingQcontactInformation .inputSection input:focus {
   border: 1px solid rgb(76, 41, 181);
   outline: none;
 }
-.stepField .inputSection input::-moz-placeholder {
+.stepField.buyingAndSellingQcontactInformation .inputSection input::-moz-placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .inputSection input:-ms-input-placeholder {
+.stepField.buyingAndSellingQcontactInformation .inputSection input:-ms-input-placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .inputSection input::placeholder {
+.stepField.buyingAndSellingQcontactInformation .inputSection input::placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .approvalsSection p.titleSection {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection p.titleSection {
   font-family: Inter;
   font-weight: 400;
   font-size: 4.8vw;
@@ -114,15 +114,15 @@
   text-align: left;
   color: rgb(115, 80, 159);
 }
-.stepField .approvalsSection .custom-checkbox {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection .custom-checkbox {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.stepField .approvalsSection .checkbox-input {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection .checkbox-input {
   display: none;
 }
-.stepField .approvalsSection .checkbox {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection .checkbox {
   width: 20px;
   height: 20px;
   border: 2px solid rgb(225, 225, 226);
@@ -132,10 +132,10 @@
   transition: background-color 0.3s;
   margin-right: 10px;
 }
-.stepField .approvalsSection .checkbox-input:checked + .checkbox {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection .checkbox-input:checked + .checkbox {
   background-color: rgb(76, 41, 181);
 }
-.stepField .approvalsSection .checkbox-input:checked + .checkbox::after {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection .checkbox-input:checked + .checkbox::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -146,22 +146,22 @@
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(-45deg) scaleX(-1);
 }
-.stepField .approvalsSection label {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection label {
   display: flex;
   align-items: center;
   gap: 3.2vw;
   margin-bottom: 5.3333333333vw;
 }
-.stepField .approvalsSection label p {
+.stepField.buyingAndSellingQcontactInformation .approvalsSection label p {
   margin: 0;
   font-family: Inter;
   font-weight: 400;
-  font-size: 4.5333333333vw;
+  font-size: 3.4666666667vw;
   line-height: 5.3333333333vw;
   color: rgb(115, 80, 159);
   width: 90%;
 }
-.stepField .btnSection .btnNext {
+.stepField.buyingAndSellingQcontactInformation .btnSection .btnNext {
   width: 100%;
   height: 21.3333333333vw;
   background-color: rgba(76, 41, 181, 0.3);
@@ -171,186 +171,186 @@
   align-items: center;
   padding: 0 8vw;
 }
-.stepField .btnSection .btnNext p {
+.stepField.buyingAndSellingQcontactInformation .btnSection .btnNext p {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 600;
   color: white;
   margin: 0;
 }
-.stepField .btnSection .btnNext.activeNext {
+.stepField.buyingAndSellingQcontactInformation .btnSection .btnNext.activeNext {
   background-color: rgb(76, 41, 181);
 }
-.stepField .error {
+.stepField.buyingAndSellingQcontactInformation .error {
   font-size: 3.2vw;
   font-family: "Inter";
   color: #ef5350;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .stepField .salutationSection {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection {
     margin-bottom: 2.8776978417vw;
   }
-  .stepField .salutationSection label {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection label {
     font-size: 2.1582733813vw;
     margin-bottom: 0.7194244604vw;
   }
-  .stepField .salutationSection .css-hlgwow {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-hlgwow {
     height: 9.5923261391vw;
     padding: 0 1.9184652278vw;
   }
-  .stepField .salutationSection .css-1xc3v61-indicatorContainer {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-1xc3v61-indicatorContainer {
     padding: 0 1.9184652278vw;
   }
-  .stepField .salutationSection .css-1wy0on6 {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-1wy0on6 {
     width: 7.3141486811vw;
   }
-  .stepField .phonNmberSection input.form-control {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection input.form-control {
     padding: 0 9.5923261391vw;
   }
-  .stepField .phonNmberSection .selected-flag {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .selected-flag {
     width: 6.7146282974vw;
   }
-  .stepField .phonNmberSection .react-tel-input .flag-dropdown {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .react-tel-input .flag-dropdown {
     padding: 0 2.3980815348vw;
   }
-  .stepField .phonNmberSection .boxContnet {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet {
     position: relative;
   }
-  .stepField .phonNmberSection .boxContnet img {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet img {
     position: absolute;
     top: 50%;
     left: 7%;
     transform: translateY(-50%);
   }
-  .stepField .inputSection {
+  .stepField.buyingAndSellingQcontactInformation .inputSection {
     margin-bottom: 2.8776978417vw;
   }
-  .stepField .inputSection label {
+  .stepField.buyingAndSellingQcontactInformation .inputSection label {
     font-size: 2.1582733813vw;
     margin-bottom: 0.7194244604vw;
   }
-  .stepField .inputSection input {
+  .stepField.buyingAndSellingQcontactInformation .inputSection input {
     font-size: 2.1582733813vw;
     height: 9.5923261391vw;
     padding: 0 1.9184652278vw;
   }
-  .stepField .approvalsSection p.titleSection {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection p.titleSection {
     font-size: 2.1582733813vw;
     line-height: 2.6378896882vw;
   }
-  .stepField .approvalsSection label {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection label {
     display: flex;
     align-items: center;
     gap: 1.4388489209vw;
     margin-bottom: 5.3333333333vw;
   }
-  .stepField .approvalsSection label p {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection label p {
     font-size: 2.0383693046vw;
     line-height: 2.3980815348vw;
     width: 90%;
   }
-  .stepField .btnSection .btnNext {
+  .stepField.buyingAndSellingQcontactInformation .btnSection .btnNext {
     height: 9.5923261391vw;
     padding: 0 3.5971223022vw;
   }
-  .stepField .btnSection .btnNext p {
+  .stepField.buyingAndSellingQcontactInformation .btnSection .btnNext p {
     font-size: 2.1582733813vw;
   }
-  .stepField .error {
+  .stepField.buyingAndSellingQcontactInformation .error {
     font-size: 1.4388489209vw;
   }
 }
 @media (min-width: 1024px) {
-  .stepField {
+  .stepField.buyingAndSellingQcontactInformation {
     padding-top: 5.2083333333vw;
     width: 41.6666666667vw;
   }
-  .stepField .salutationSection {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection {
     margin-bottom: 1.25vw;
   }
-  .stepField .salutationSection label {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection label {
     font-size: 0.9375vw;
     margin-bottom: 0.3125vw;
   }
-  .stepField .salutationSection .css-hlgwow {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-hlgwow {
     height: 4.1666666667vw;
     padding: 0 0.8333333333vw;
   }
-  .stepField .salutationSection .css-1xc3v61-indicatorContainer {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-1xc3v61-indicatorContainer {
     padding: 0 0.8333333333vw;
   }
-  .stepField .salutationSection .css-1wy0on6 {
+  .stepField.buyingAndSellingQcontactInformation .salutationSection .css-1wy0on6 {
     width: 3.1770833333vw;
   }
-  .stepField .phonNmberSection input.form-control {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection input.form-control {
     padding: 0 4.1666666667vw;
     width: 18.2291666667vw;
   }
-  .stepField .phonNmberSection .selected-flag {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .selected-flag {
     width: 2.9166666667vw;
   }
-  .stepField .phonNmberSection .react-tel-input .flag-dropdown {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .react-tel-input .flag-dropdown {
     padding: 0 1.0416666667vw;
   }
-  .stepField .phonNmberSection .boxContnet {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet {
     position: relative;
   }
-  .stepField .phonNmberSection .boxContnet img {
+  .stepField.buyingAndSellingQcontactInformation .phonNmberSection .boxContnet img {
     position: absolute;
     top: 50%;
     left: 17%;
     transform: translateY(-50%);
   }
-  .stepField .inputSection {
+  .stepField.buyingAndSellingQcontactInformation .inputSection {
     margin-bottom: 1.25vw;
   }
-  .stepField .inputSection label {
+  .stepField.buyingAndSellingQcontactInformation .inputSection label {
     font-size: 0.9375vw;
     margin-bottom: 0.3125vw;
   }
-  .stepField .inputSection input:not(.emailSection) {
-    font-size: 0.9375vw;
+  .stepField.buyingAndSellingQcontactInformation .inputSection input {
     height: 4.1666666667vw;
+    font-size: 0.9375vw;
     padding: 0 0.8333333333vw;
   }
-  .stepField .inputSection input.emailSection {
+  .stepField.buyingAndSellingQcontactInformation .inputSection input.emailSection {
     width: auto;
   }
-  .stepField .inputSection input:not(.emailSection) {
+  .stepField.buyingAndSellingQcontactInformation .inputSection input:not(.emailSection) {
     width: 18.2291666667vw;
   }
-  .stepField .approvalsSection p.titleSection {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection p.titleSection {
     font-size: 0.9375vw;
     line-height: 1.1458333333vw;
     width: 100%;
   }
-  .stepField .approvalsSection label {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection label {
     display: flex;
     align-items: center;
     gap: 0.625vw;
     margin-bottom: 1.0416666667vw;
   }
-  .stepField .approvalsSection label p {
+  .stepField.buyingAndSellingQcontactInformation .approvalsSection label p {
     font-size: 0.8854166667vw;
     line-height: 1.0416666667vw;
     width: 80%;
   }
-  .stepField .btnSection {
+  .stepField.buyingAndSellingQcontactInformation .btnSection {
     cursor: pointer;
   }
-  .stepField .btnSection .btnNext {
+  .stepField.buyingAndSellingQcontactInformation .btnSection .btnNext {
     height: 4.1666666667vw;
     padding: 0 1.5625vw;
   }
-  .stepField .btnSection .btnNext p {
+  .stepField.buyingAndSellingQcontactInformation .btnSection .btnNext p {
     font-size: 0.9375vw;
   }
-  .stepField .flexSection {
+  .stepField.buyingAndSellingQcontactInformation .flexSection {
     display: flex;
     justify-content: space-between;
   }
-  .stepField .error {
+  .stepField.buyingAndSellingQcontactInformation .error {
     font-size: 0.625vw;
   }
 }

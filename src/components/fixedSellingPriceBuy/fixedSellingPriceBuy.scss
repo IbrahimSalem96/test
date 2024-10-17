@@ -65,6 +65,7 @@
             text-align: left;
             border: 3px solid white;
             cursor: pointer;
+            margin: 0 auto;
 
             .imageSectiom {
                 display: none;
@@ -108,6 +109,10 @@
             width: c.vw375(300);
             height: auto;
             margin: c.vw375(50) auto 0;
+
+            img{
+                width: 100%;
+            }
         }
     }
 }

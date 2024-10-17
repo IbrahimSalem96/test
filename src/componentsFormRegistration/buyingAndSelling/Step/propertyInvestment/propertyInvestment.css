@@ -1,90 +1,90 @@
-.stepField .salutationSection {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection {
   margin-bottom: 6.4vw;
 }
-.stepField .salutationSection label {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection label {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 400;
   color: rgb(115, 80, 159);
   margin-bottom: 1.6vw;
 }
-.stepField .salutationSection .css-hlgwow,
-.stepField .salutationSection .css-1dyz3mf {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-hlgwow,
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1dyz3mf {
   height: 21.3333333333vw;
   border-radius: 15px;
   padding: 0 4.2666666667vw;
 }
-.stepField .salutationSection .css-13cymwt-control {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-13cymwt-control {
   border-radius: 15px;
 }
-.stepField .salutationSection .css-13cymwt-control {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-13cymwt-control {
   border-color: rgba(76, 41, 181, 0.2);
 }
-.stepField .salutationSection .css-1xc3v61-indicatorContainer {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1xc3v61-indicatorContainer {
   padding: 0 4.2666666667vw;
   color: rgb(76, 41, 181);
 }
-.stepField .salutationSection .css-1u9des2-indicatorSeparator {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1u9des2-indicatorSeparator {
   display: none;
 }
-.stepField .salutationSection .css-t3ipsp-control {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-t3ipsp-control {
   box-shadow: none;
   border: 1px solid rgb(76, 41, 181);
   border-radius: 15px;
 }
-.stepField .salutationSection .css-1wy0on6 {
+.stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1wy0on6 {
   width: 16.2666666667vw;
   justify-content: center;
 }
-.stepField .phonNmberSection input.form-control {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection input.form-control {
   width: 100%;
   border-radius: 15px;
   border: 1px solid rgba(76, 41, 181, 0.2);
   padding: 0 21.3333333333vw;
 }
-.stepField .phonNmberSection input.form-control:focus {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection input.form-control:focus {
   box-shadow: none;
 }
-.stepField .phonNmberSection .selected-flag {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .selected-flag {
   background-color: white;
   width: 14.9333333333vw;
 }
-.stepField .phonNmberSection .selected-flag .arrow {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .selected-flag .arrow {
   display: none;
 }
-.stepField .phonNmberSection .react-tel-input .flag-dropdown {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .react-tel-input .flag-dropdown {
   padding: 0 5.3333333333vw;
   background-color: transparent;
   border: none;
   top: 50%;
   transform: translateY(-50%);
 }
-.stepField .phonNmberSection .react-tel-input .flag-dropdown.open .selected-flag {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .react-tel-input .flag-dropdown.open .selected-flag {
   background-color: transparent;
   position: relative;
 }
-.stepField .phonNmberSection .boxContnet {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet {
   position: relative;
 }
-.stepField .phonNmberSection .boxContnet img {
+.stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet img {
   position: absolute;
   top: 50%;
   left: 15%;
   transform: translateY(-50%);
 }
-.stepField .inputSection {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection {
   display: flex;
   flex-direction: column;
   margin-bottom: 6.4vw;
 }
-.stepField .inputSection label {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection label {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 400;
   color: rgb(115, 80, 159);
   margin-bottom: 1.6vw;
 }
-.stepField .inputSection input {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 400;
@@ -94,20 +94,28 @@
   height: 21.3333333333vw;
   padding: 0 4.2666666667vw;
 }
-.stepField .inputSection input:focus {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input:focus {
   border: 1px solid rgb(76, 41, 181);
   outline: none;
 }
-.stepField .inputSection input::-moz-placeholder {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input::-moz-placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .inputSection input:-ms-input-placeholder {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input:-ms-input-placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .inputSection input::placeholder {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input::placeholder {
   color: rgba(76, 41, 181, 0.2);
 }
-.stepField .approvalsSection p.titleSection {
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input[type=number]::-webkit-outer-spin-button,
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.stepField.buyingAndSellingQpropertyInvestment .inputSection input[type=number] {
+  -moz-appearance: textfield;
+}
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection p.titleSection {
   font-family: Inter;
   font-weight: 400;
   font-size: 4.8vw;
@@ -115,15 +123,15 @@
   text-align: left;
   color: rgb(115, 80, 159);
 }
-.stepField .approvalsSection .custom-checkbox {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection .custom-checkbox {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.stepField .approvalsSection .checkbox-input {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection .checkbox-input {
   display: none;
 }
-.stepField .approvalsSection .checkbox {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection .checkbox {
   width: 20px;
   height: 20px;
   border: 2px solid rgb(225, 225, 226);
@@ -133,10 +141,10 @@
   transition: background-color 0.3s;
   margin-right: 10px;
 }
-.stepField .approvalsSection .checkbox-input:checked + .checkbox {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection .checkbox-input:checked + .checkbox {
   background-color: rgb(76, 41, 181);
 }
-.stepField .approvalsSection .checkbox-input:checked + .checkbox::after {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection .checkbox-input:checked + .checkbox::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -147,13 +155,13 @@
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(-45deg) scaleX(-1);
 }
-.stepField .approvalsSection label {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection label {
   display: flex;
   align-items: center;
   gap: 3.2vw;
   margin-bottom: 5.3333333333vw;
 }
-.stepField .approvalsSection label p {
+.stepField.buyingAndSellingQpropertyInvestment .approvalsSection label p {
   margin: 0;
   font-family: Inter;
   font-weight: 400;
@@ -162,13 +170,13 @@
   color: rgb(115, 80, 159);
   width: 90%;
 }
-.stepField .flexSection.budgetRange .boxSpan {
+.stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan {
   position: relative;
 }
-.stepField .flexSection.budgetRange .boxSpan input {
+.stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan input {
   width: 100%;
 }
-.stepField .flexSection.budgetRange .boxSpan span {
+.stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan span {
   font-family: Inter;
   position: absolute;
   top: 50%;
@@ -176,7 +184,7 @@
   right: 4.2666666667vw;
   color: rgb(211, 211, 211);
 }
-.stepField .btnSection .btnNext {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext {
   margin-bottom: 5.3333333333vw;
   width: 100%;
   height: 21.3333333333vw;
@@ -187,17 +195,17 @@
   align-items: center;
   padding: 0 8vw;
 }
-.stepField .btnSection .btnNext p {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext p {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 600;
   color: white;
   margin: 0;
 }
-.stepField .btnSection .btnNext.activeNext {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext.activeNext {
   background-color: rgb(76, 41, 181);
 }
-.stepField .btnSection .btnback {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback {
   width: 100%;
   height: 21.3333333333vw;
   background-color: rgb(0, 0, 0);
@@ -207,204 +215,206 @@
   align-items: center;
   padding: 0 8vw;
 }
-.stepField .btnSection .btnback p {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback p {
   font-family: Inter;
   font-size: 4.8vw;
   font-weight: 600;
   color: white;
   margin: 0;
 }
-.stepField .btnSection .btnback img {
+.stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback img {
   transform: rotate(180deg);
 }
-.stepField .flexSection.budgetRange .boxSpan span {
+.stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan span {
   right: 1.9184652278vw;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .stepField .salutationSection {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection {
     margin-bottom: 2.8776978417vw;
   }
-  .stepField .salutationSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection label {
     font-size: 2.1582733813vw;
     margin-bottom: 0.7194244604vw;
   }
-  .stepField .salutationSection .css-hlgwow, .stepField .salutationSection .css-1dyz3mf {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-hlgwow,
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1dyz3mf {
     height: 9.5923261391vw;
     padding: 0 1.9184652278vw;
   }
-  .stepField .salutationSection .css-1xc3v61-indicatorContainer {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1xc3v61-indicatorContainer {
     padding: 0 1.9184652278vw;
   }
-  .stepField .salutationSection .css-1wy0on6 {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1wy0on6 {
     width: 7.3141486811vw;
   }
-  .stepField .phonNmberSection input.form-control {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection input.form-control {
     padding: 0 9.5923261391vw;
   }
-  .stepField .phonNmberSection .selected-flag {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .selected-flag {
     width: 6.7146282974vw;
   }
-  .stepField .phonNmberSection .react-tel-input .flag-dropdown {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .react-tel-input .flag-dropdown {
     padding: 0 2.3980815348vw;
   }
-  .stepField .phonNmberSection .boxContnet {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet {
     position: relative;
   }
-  .stepField .phonNmberSection .boxContnet img {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet img {
     position: absolute;
     top: 50%;
     left: 7%;
     transform: translateY(-50%);
   }
-  .stepField .inputSection {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection {
     margin-bottom: 2.8776978417vw;
   }
-  .stepField .inputSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection label {
     font-size: 2.1582733813vw;
     margin-bottom: 0.7194244604vw;
   }
-  .stepField .inputSection input {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection input {
     font-size: 2.1582733813vw;
     height: 9.5923261391vw;
     padding: 0 1.9184652278vw;
   }
-  .stepField .approvalsSection p.titleSection {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection p.titleSection {
     font-size: 2.1582733813vw;
     line-height: 2.6378896882vw;
   }
-  .stepField .approvalsSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection label {
     display: flex;
     align-items: center;
     gap: 1.4388489209vw;
     margin-bottom: 5.3333333333vw;
   }
-  .stepField .approvalsSection label p {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection label p {
     font-size: 2.0383693046vw;
     line-height: 2.3980815348vw;
     width: 90%;
   }
-  .stepField .btnSection .btnNext {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext {
     margin-bottom: 2.3980815348vw;
     height: 9.5923261391vw;
     padding: 0 3.5971223022vw;
   }
-  .stepField .btnSection .btnNext p {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext p {
     font-size: 2.1582733813vw;
   }
-  .stepField .btnSection .btnback {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback {
     height: 9.5923261391vw;
     padding: 0 3.5971223022vw;
   }
-  .stepField .btnSection .btnback p {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback p {
     font-size: 2.1582733813vw;
   }
-  .stepField .flexSection.budgetRange .boxSpan span {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan span {
     right: 0.8333333333vw;
   }
 }
 @media (min-width: 1024px) {
-  .stepField {
+  .stepField.buyingAndSellingQpropertyInvestment {
     padding-top: 5.2083333333vw;
     width: 41.6666666667vw;
   }
-  .stepField .salutationSection {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection {
     margin-bottom: 1.25vw;
   }
-  .stepField .salutationSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection label {
     font-size: 0.9375vw;
     margin-bottom: 0.3125vw;
   }
-  .stepField .salutationSection .css-hlgwow, .stepField .salutationSection .css-1dyz3mf {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-hlgwow,
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1dyz3mf {
     height: 4.1666666667vw;
     padding: 0 0.8333333333vw;
   }
-  .stepField .salutationSection .css-1xc3v61-indicatorContainer {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1xc3v61-indicatorContainer {
     padding: 0 0.8333333333vw;
   }
-  .stepField .salutationSection .css-1wy0on6 {
+  .stepField.buyingAndSellingQpropertyInvestment .salutationSection .css-1wy0on6 {
     width: 3.1770833333vw;
   }
-  .stepField .phonNmberSection input.form-control {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection input.form-control {
     padding: 0 4.1666666667vw;
     width: 18.2291666667vw;
   }
-  .stepField .phonNmberSection .selected-flag {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .selected-flag {
     width: 2.9166666667vw;
   }
-  .stepField .phonNmberSection .react-tel-input .flag-dropdown {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .react-tel-input .flag-dropdown {
     padding: 0 1.0416666667vw;
   }
-  .stepField .phonNmberSection .boxContnet {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet {
     position: relative;
   }
-  .stepField .phonNmberSection .boxContnet img {
+  .stepField.buyingAndSellingQpropertyInvestment .phonNmberSection .boxContnet img {
     position: absolute;
     top: 50%;
     left: 17%;
     transform: translateY(-50%);
   }
-  .stepField .inputSection {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection {
     margin-bottom: 1.25vw;
   }
-  .stepField .inputSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection label {
     font-size: 0.9375vw;
     margin-bottom: 0.3125vw;
   }
-  .stepField .inputSection input {
+  .stepField.buyingAndSellingQpropertyInvestment .inputSection input {
     font-size: 0.9375vw;
     height: 4.1666666667vw;
     padding: 0 0.8333333333vw;
     width: 18.2291666667vw;
   }
-  .stepField .approvalsSection p.titleSection {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection p.titleSection {
     font-size: 0.9375vw;
     line-height: 1.1458333333vw;
     width: 100%;
   }
-  .stepField .approvalsSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection label {
     display: flex;
     align-items: center;
     gap: 0.625vw;
     margin-bottom: 1.0416666667vw;
   }
-  .stepField .approvalsSection label p {
+  .stepField.buyingAndSellingQpropertyInvestment .approvalsSection label p {
     font-size: 0.8854166667vw;
     line-height: 1.0416666667vw;
     width: 80%;
   }
-  .stepField .btnSection .btnNext {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext {
     margin-bottom: 1.0416666667vw;
     cursor: pointer;
     height: 4.1666666667vw;
     padding: 0 1.5625vw;
   }
-  .stepField .btnSection .btnNext p {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnNext p {
     font-size: 0.9375vw;
   }
-  .stepField .btnSection .btnback {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback {
     cursor: pointer;
     height: 4.1666666667vw;
     padding: 0 1.5625vw;
   }
-  .stepField .btnSection .btnback p {
+  .stepField.buyingAndSellingQpropertyInvestment .btnSection .btnback p {
     font-size: 0.9375vw;
   }
-  .stepField .flexSection {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection {
     display: flex;
     justify-content: space-between;
   }
-  .stepField .flexSection.budgetRange {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange {
     align-items: end;
     gap: 20px;
   }
-  .stepField .flexSection.budgetRange .inputSection {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .inputSection {
     width: 50%;
   }
-  .stepField .flexSection.budgetRange .inputSection label {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .inputSection label {
     width: 32.4479166667vw;
   }
-  .stepField .flexSection.budgetRange .boxSpan span {
+  .stepField.buyingAndSellingQpropertyInvestment .flexSection.budgetRange .boxSpan span {
     right: 0.8333333333vw;
   }
 }

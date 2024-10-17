@@ -54,7 +54,7 @@ const EffortlessSelfListing = () => {
         <div className="descSection descDownSection">
           <p>
             Our team will then validate your listing , Provide a comprehensive
-            report and agreement , And offer advice on price adjustments to set
+            report and agreement And offer advice on price adjustments to set
             the final fixed price.
           </p>
         </div>

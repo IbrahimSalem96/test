@@ -1,7 +1,7 @@
 @use "../../css/functions" as c;
 
 .transparentCommunicationSection {
-    padding: c.vw375(50) 0;
+    padding: c.vw375(20) 0;
 
     p.subTitle {
         font-family: Inter;
@@ -51,7 +51,7 @@
 
     .list {
         box-shadow: 0 0 67px rgba(137, 69, 236, 0.17);
-        height: c.vw375(800);
+        height: c.vw375(700);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -189,7 +189,7 @@
         }
 
         .list {
-            height: c.vw834(750);
+            height: c.vw834(650);
 
             ul {
                 width: c.vw834(600);
