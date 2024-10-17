@@ -77,7 +77,6 @@ function NextContactInformation({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-
       setCountryOfResidence(selectedCountry);
       setPreferredLanguage(selectedLanguage);
 
@@ -86,6 +85,11 @@ function NextContactInformation({
       console.log("Validation Failed");
     }
   };
+
+  const customComponents = {
+    ClearIndicator: () => null,
+  };
+  
 
   const handleBackPage = () => {
     setStepSelect(1);
@@ -110,7 +114,12 @@ function NextContactInformation({
           placeholder="Select a country..."
           name="countryOfResidence"
           autoComplete="Country"
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.country && (
           <span className="error">{errors.country}</span>
         )}
@@ -123,7 +132,12 @@ function NextContactInformation({
           value={selectedLanguage}
           onChange={handleChangeLanguage}
           placeholder="Select a language..."
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.language && (
           <span className="error">{errors.language}</span>
         )}

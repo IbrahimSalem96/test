@@ -111,6 +111,15 @@
         font-family: "Inter";
         color: #ef5350;
     }
+
+    p.labelSelectMultiOptions {
+        font-family: Inter;
+        font-size: c.vw375(12);
+        font-weight: 300;
+        color: gray;
+        margin: 0;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -187,7 +196,9 @@
         .error {
             font-size: c.vw834(12);
         }
-
+        p.labelSelectMultiOptions {
+            font-size: c.vw834(14);
+        }
     }
 }
 
@@ -332,6 +343,10 @@
         }
 
         .error {
+            font-size: c.vw1920(14);
+        }
+
+        p.labelSelectMultiOptions {
             font-size: c.vw1920(14);
         }
     }

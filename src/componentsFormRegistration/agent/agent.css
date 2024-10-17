@@ -93,6 +93,13 @@
   font-family: "Inter";
   color: #ef5350;
 }
+.buyingAndSellingSection.agentPage p.labelSelectMultiOptions {
+  font-family: Inter;
+  font-size: 3.2vw;
+  font-weight: 300;
+  color: gray;
+  margin: 0;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .buyingAndSellingSection.agentPage .titleSection {
@@ -154,6 +161,9 @@
     font-size: 3.2vw;
     font-family: "Inter";
     color: #ef5350;
+  }
+  .buyingAndSellingSection.agentPage p.labelSelectMultiOptions {
+    font-size: 1.6786570743vw;
   }
 }
 @media (min-width: 1024px) {
@@ -251,6 +261,9 @@
     margin-bottom: 3.125vw;
   }
   .buyingAndSellingSection.agentPage .error {
+    font-size: 0.7291666667vw;
+  }
+  .buyingAndSellingSection.agentPage p.labelSelectMultiOptions {
     font-size: 0.7291666667vw;
   }
 }

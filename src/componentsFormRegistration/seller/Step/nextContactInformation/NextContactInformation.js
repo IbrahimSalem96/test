@@ -96,6 +96,12 @@ function NextContactInformation({
     setActiveNextStep(isValid);
   }, [selectedCountry, selectedLanguage]); // Trigger effect when selectedCountry or selectedLanguage changes
 
+
+  
+  const customComponents = {
+    ClearIndicator: () => null,
+  };
+
   return (
     <div className="stepField buyingPageQnextContactInformation">
       <div className="salutationSection">
@@ -109,7 +115,12 @@ function NextContactInformation({
           placeholder="Select a country..."
           name="countryOfResidence"
           autoComplete="Country"
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.country && (
           <span className="error">{errors.country}</span>
         )}
@@ -122,7 +133,12 @@ function NextContactInformation({
           value={selectedLanguage}
           onChange={handleChangeLanguage}
           placeholder="Select a language..."
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.language && (
           <span className="error">{errors.language}</span>
         )}

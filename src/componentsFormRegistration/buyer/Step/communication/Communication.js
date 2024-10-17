@@ -119,6 +119,9 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.preferredMethod && (
           <span className="error">{errors.preferredMethod}</span>
         )}
@@ -135,6 +138,9 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.preferredDays && (
           <span className="error">{errors.preferredDays}</span>
         )}
@@ -151,6 +157,9 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.preferredTimes && (
           <span className="error">{errors.preferredTimes}</span>
         )}

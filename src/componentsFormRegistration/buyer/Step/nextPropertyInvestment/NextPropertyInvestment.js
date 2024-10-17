@@ -21,7 +21,6 @@ const reasonOptions = [
   { value: "Other", label: "Other" },
 ];
 
-
 const financingOptions = [
   { value: "Cash", label: "Cash" },
   { value: "Mortgage", label: "Mortgage" },
@@ -109,6 +108,11 @@ function NextPropertyInvestment({
     setStepSelect(4);
   };
 
+  
+  const customComponents = {
+    ClearIndicator: () => null,
+  };
+
   return (
     <div className="stepField buyingPageQnextContactInformation">
       {/* Primary Reason for Buying */}
@@ -119,7 +123,12 @@ function NextPropertyInvestment({
           value={reason}
           onChange={setReason}
           placeholder="Select Reason"
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.reason && (
           <span className="error">{errors.reason}</span>
         )}

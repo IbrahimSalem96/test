@@ -93,6 +93,13 @@
   font-family: "Inter";
   color: #ef5350;
 }
+.buyingAndSellingSection.buyingAndSelling p.labelSelectMultiOptions {
+  font-family: Inter;
+  font-size: 3.2vw;
+  font-weight: 300;
+  color: gray;
+  margin: 0;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .buyingAndSellingSection.buyingAndSelling .titleSection {
@@ -152,6 +159,9 @@
   }
   .buyingAndSellingSection.buyingAndSelling .error {
     font-size: 1.4388489209vw;
+  }
+  .buyingAndSellingSection.buyingAndSelling p.labelSelectMultiOptions {
+    font-size: 1.6786570743vw;
   }
 }
 @media (min-width: 1024px) {
@@ -249,6 +259,9 @@
     margin-bottom: 3.125vw;
   }
   .buyingAndSellingSection.buyingAndSelling .error {
+    font-size: 0.7291666667vw;
+  }
+  .buyingAndSellingSection.buyingAndSelling p.labelSelectMultiOptions {
     font-size: 0.7291666667vw;
   }
 }

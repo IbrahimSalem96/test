@@ -15,7 +15,7 @@ const methodOptions = [
   { value: "Call", label: "Call" },
   { value: "SMS", label: "SMS" },
 ];
- 
+
 const daysOptions = [
   { value: "monday", label: "Monday" },
   { value: "tuesday", label: "Tuesday" },
@@ -25,7 +25,6 @@ const daysOptions = [
   { value: "saturday", label: "Saturday" },
   { value: "sunday", label: "Sunday" },
 ];
-
 
 const timesOptions = [
   { value: "8-9", label: "8-9" },
@@ -42,7 +41,7 @@ const timesOptions = [
   { value: "19-20", label: "19-20" },
   { value: "After 20", label: "After 20" },
 ];
- 
+
 const customComponents = {
   ClearIndicator: () => null,
 };
@@ -120,6 +119,9 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.preferredMethod && (
           <span className="error">{errors.preferredMethod}</span>
         )}
@@ -136,6 +138,9 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.preferredDays && (
           <span className="error">{errors.preferredDays}</span>
         )}
@@ -152,6 +157,10 @@ function Communication({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
+
         {showErrors && errors.preferredTimes && (
           <span className="error">{errors.preferredTimes}</span>
         )}

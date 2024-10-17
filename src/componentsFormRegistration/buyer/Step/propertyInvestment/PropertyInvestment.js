@@ -17,13 +17,11 @@ const propertyTypeOptions = [
   { value: "Other", label: "Other" },
 ];
 
-
 const emirateOptions = [
   { value: "Dubai", label: "Dubai" },
   { value: "Ras Al Khaimah", label: "Ras Al Khaimah" },
   { value: "Other", label: "Other" },
 ];
-
 
 const customComponents = {
   ClearIndicator: () => null, // Hide the "Close" indicator that appears on open
@@ -32,10 +30,12 @@ const customComponents = {
 const propertyStatusOptions = [
   { value: "Rented and Ready", label: "Rented and Ready" },
   { value: "Off-plan (Almost Ready)", label: "Off-plan (Almost Ready)" },
-  { value: "Off-plan (Under Development)", label: "Off-plan (Under Development)" },
+  {
+    value: "Off-plan (Under Development)",
+    label: "Off-plan (Under Development)",
+  },
   { value: "Other", label: "Other" },
 ];
- 
 
 function PropertyInvestment({
   setStepSelect,
@@ -105,6 +105,12 @@ function PropertyInvestment({
     setStepSelect(3);
   };
 
+  
+  
+  const customComponents = {
+    ClearIndicator: () => null,
+  };
+  
   return (
     <div className="stepField buyingPageQpropertyInvestment">
       {/* Property Type */}
@@ -115,7 +121,12 @@ function PropertyInvestment({
           value={propertyType}
           onChange={setPropertyType}
           placeholder="Select Property Type"
+          isMulti
+          components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.propertyType && (
           <span className="error">{errors.propertyType}</span>
         )}
@@ -132,6 +143,12 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.emirate && (
           <span className="error">{errors.emirate}</span>
         )}
@@ -148,6 +165,9 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
+        <p className="labelSelectMultiOptions">
+          You can choose more than one option.
+        </p>
         {showErrors && errors.propertyStatus && (
           <span className="error">{errors.propertyStatus}</span>
         )}
