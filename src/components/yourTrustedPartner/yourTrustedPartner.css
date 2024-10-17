@@ -44,7 +44,7 @@
 }
 .yourTrustedPartnerSection .towerImage {
   position: absolute;
-  top: 112.5333333333vw;
+  bottom: 0;
   height: auto;
   left: 0vw;
   z-index: -1;

@@ -12,8 +12,12 @@
   overflow: hidden;
 }
 .theExperienceSection .sliders .contentBox .imageLeftSlider {
+  width: 100%;
   position: absolute;
   z-index: -1;
+}
+.theExperienceSection .sliders .contentBox .imageLeftSlider img {
+  width: 100%;
 }
 .theExperienceSection .sliders .contentBox .boxShadow {
   border-radius: 10px;
@@ -182,6 +186,7 @@
     background: unset;
   }
   .theExperienceSection .sliders .contentBox .imageLeftSlider {
+    width: auto;
     position: relative;
   }
   .theExperienceSection .sliders .contentBox .imageLeftSlider img {

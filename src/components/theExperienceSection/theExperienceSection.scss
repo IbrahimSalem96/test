@@ -26,8 +26,13 @@
 
             .imageLeftSlider {
                 //display: none;
+                width: 100%;
                 position: absolute;
                 z-index: -1;
+
+                img{
+                    width: 100%;
+                }
             }
 
             .boxShadow {
@@ -202,6 +207,7 @@
                 background: unset;
 
                 .imageLeftSlider {
+                    width: auto;
                     position: relative;
 
                     img {
