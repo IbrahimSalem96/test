@@ -24,7 +24,7 @@ const emirateOptions = [
 ];
 
 const customComponents = {
-  ClearIndicator: () => null, // Hide the "Close" indicator that appears on open
+  ClearIndicator: () => null,  
 };
 
 const propertyStatusOptions = [
