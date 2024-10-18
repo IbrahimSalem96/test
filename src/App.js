@@ -19,13 +19,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<ComingSoon />} />
-        <Route path="/the-genuine/sell" element={<SellPage />} />
-        <Route path="/the-genuine/buy" element={<BuyPage />} />
-        <Route path="/the-genuine/joiningForm" element={<JoiningForm />} />
-        <Route path="/the-genuine/registration/buying-and-selling" element={<BuyingAndSelling />} />
-        <Route path="/the-genuine/registration/buyer" element={<Buyer />} />
-        <Route path="/the-genuine/registration/seller" element={<Seller />} />
-        <Route path="/the-genuine/registration/agent" element={<Agent />} />
+        <Route path="/sell" element={<SellPage />} />
+        <Route path="/buy" element={<BuyPage />} />
+        <Route path="/joiningForm" element={<JoiningForm />} />
+        <Route path="/registration/buying-and-selling" element={<BuyingAndSelling />} />
+        <Route path="/registration/buyer" element={<Buyer />} />
+        <Route path="/registration/seller" element={<Seller />} />
+        <Route path="/registration/agent" element={<Agent />} />
       </Routes>
 
     </>

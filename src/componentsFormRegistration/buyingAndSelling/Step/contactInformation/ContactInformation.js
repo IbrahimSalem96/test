@@ -105,7 +105,6 @@ function ContactInformation({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-
       setSalutation(formData.salutation);
       setFirstName(formData.firstName);
       setLastName(formData.lastName);
@@ -147,7 +146,7 @@ function ContactInformation({
         <Select
           options={options}
           placeholder="Select"
-          value={salutation !== "" ? options[salutation.id] : ""}
+          value={formData.salutation}  
           onChange={(selectedOption) =>
             setFormData({ ...formData, salutation: selectedOption })
           }

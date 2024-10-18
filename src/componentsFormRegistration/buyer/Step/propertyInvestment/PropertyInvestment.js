@@ -67,17 +67,25 @@ function PropertyInvestment({
     } else {
       setActiveNextStep(false);
     }
-  }, [propertyTypeSave, interestedEmirateSave, propertyStatusSave, estimatedBudgetFromSave, estimatedBudgetToSave]);
+  }, [
+    propertyTypeSave,
+    interestedEmirateSave,
+    propertyStatusSave,
+    estimatedBudgetFromSave,
+    estimatedBudgetToSave,
+  ]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!propertyTypeSave) tempErrors.propertyTypeSave = "Property type is required.";
+    if (!propertyTypeSave)
+      tempErrors.propertyTypeSave = "Property type is required.";
     if (interestedEmirateSave.length === 0)
       tempErrors.interestedEmirateSave = "Emirate selection is required.";
     if (propertyStatusSave.length === 0)
       tempErrors.propertyStatusSave = "Property status is required.";
-    if (!estimatedBudgetFromSave) tempErrors.estimatedBudgetFromSave = "Budget From is required.";
+    if (!estimatedBudgetFromSave)
+      tempErrors.estimatedBudgetFromSave = "Budget From is required.";
     if (!estimatedBudgetToSave) tempErrors.budgetTo = "Budget To is required.";
 
     setErrors(tempErrors);
@@ -113,6 +121,7 @@ function PropertyInvestment({
       <div className="salutationSection">
         <label>What type of property are you interested in?</label>
         <Select
+          closeMenuOnSelect={false}
           options={propertyTypeOptions}
           value={propertyTypeSave}
           onChange={(selectedOptions) => setPropertyTypeSave(selectedOptions)}
@@ -120,9 +129,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.propertyTypeSave && (
           <span className="error">{errors.propertyTypeSave}</span>
         )}
@@ -132,16 +138,16 @@ function PropertyInvestment({
       <div className="salutationSection salutationSectionMultiplSelect">
         <label>In which emirate are you interested to buy?</label>
         <Select
+          closeMenuOnSelect={false}
           options={emirateOptions}
           value={interestedEmirateSave}
-          onChange={(selectedOptions) => setInterestedEmirateSave(selectedOptions)}
+          onChange={(selectedOptions) =>
+            setInterestedEmirateSave(selectedOptions)
+          }
           placeholder="Select Emirate"
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.interestedEmirateSave && (
           <span className="error">{errors.interestedEmirateSave}</span>
         )}
@@ -151,6 +157,7 @@ function PropertyInvestment({
       <div className="salutationSection">
         <label>What is your preferred property status?</label>
         <Select
+          closeMenuOnSelect={false}
           options={propertyStatusOptions}
           value={propertyStatusSave}
           onChange={(selectedOptions) => setPropertyStatusSave(selectedOptions)}
@@ -158,9 +165,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.propertyStatusSave && (
           <span className="error">{errors.propertyStatusSave}</span>
         )}

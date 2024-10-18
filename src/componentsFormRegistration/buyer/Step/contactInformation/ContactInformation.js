@@ -147,7 +147,7 @@ function ContactInformation({
         <Select
           options={options}
           placeholder="Select"
-          value={salutation !== "" ? options[salutation.id] : ""}
+          value={formData.salutation}  
           onChange={(selectedOption) =>
             setFormData({ ...formData, salutation: selectedOption })
           }

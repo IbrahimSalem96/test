@@ -50,35 +50,9 @@ const Agent = () => {
   //Send Data
   //Send Data
   const sendDataAll = async () => {
-
-    console.log(
-      "Step 1",
-      salutation,
-      firstName,
-      lastName,
-      mobileNumber,
-      whatsappNumber,
-      email,
-      checkbox1,
-      checkbox2
-    );
-
-    console.log("Step 2", countryOfResidence, preferredLanguage);
-
-    console.log(
-      "step 3",
-      contactPermission,
-      earlyAccessSave,
-      referralSource,
-      subscribeNewsletter,
-      whatsAppGroup
-    );
-
-    console.log("step 4", comments);
-
     try {
       const requestData = {
-        salutation: salutation,
+        salutation: salutation.value,
         firstname: firstName,
         lastname: lastName,
         mobilenumber: mobileNumber,
@@ -86,14 +60,15 @@ const Agent = () => {
         email: email,
         checkbox1: checkbox1,
         checkbox2: checkbox2,
-        countryofresidence: countryOfResidence.label,
-        preferredlanguage: preferredLanguage.label,
+        countryofresidence: countryOfResidence.map((country) => country.label),
+        preferredlanguage: preferredLanguage.map((lang) => lang.label),
         contactpermission: contactPermission.value,
         comments: comments,
         subscribenewsletter: subscribeNewsletter.value,
+        subscribenewsletterconfirm: subscribeNewsletterConfirm.value,
         referralsource: referralSource.label,
         earlyaccess: earlyAccessSave.value,
-        subscribenewsletterconfirm: subscribeNewsletterConfirm.value,
+        whatsappgroup: whatsAppGroup.value, 
       };
 
       await axios.post(`${request.defaults.baseURL}agent`, requestData);
@@ -135,7 +110,7 @@ const Agent = () => {
         didOpen: () => {
           const footerElement = Swal.getFooter();
           footerElement.innerHTML =
-            '<a href="/the-genuine/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
+            '<a href="/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
 
           footerElement
             .querySelector("a")
@@ -147,7 +122,7 @@ const Agent = () => {
 
           const closeButton = Swal.getCloseButton();
           closeButton.addEventListener("click", () => {
-            navigate("/");
+            // navigate("/");
           });
         },
       });

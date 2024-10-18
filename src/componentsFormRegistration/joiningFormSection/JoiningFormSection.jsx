@@ -51,25 +51,25 @@ const JoiningFormSection = () => {
                 {
                   title: "Buyer",
                   img: buyForm,
-                  link: "/the-genuine/registration/buyer",
+                  link: "/registration/buyer",
                   description: "Open Buyer Form",
                 },
                 {
                   title: "Seller",
                   img: JoiningFormSeller,
-                  link: "/the-genuine/registration/seller",
+                  link: "/registration/seller",
                   description: "Open Seller Form",
                 },
                 {
                   title: "Buyer and Seller",
                   img: JoiningFormpurchasing,
-                  link: "/the-genuine/registration/buying-and-selling",
+                  link: "/registration/buying-and-selling",
                   description: "Open Buyer & Seller Form",
                 },
                 {
                   title: "Agent",
                   img: JoiningFormAgent,
-                  link: "/the-genuine/registration/agent",
+                  link: "/registration/agent",
                   description: "Open Agent Form",
                 },
               ].map((item, index) => (
@@ -150,7 +150,7 @@ const JoiningFormSection = () => {
               />
               <p className="title">Buyer</p>
               <Link
-                to={"/the-genuine/registration/buyer"}
+                to={"/registration/buyer"}
                 className="btnFormSection"
               >
                 Open Buyer Form
@@ -191,7 +191,7 @@ const JoiningFormSection = () => {
               />
               <p className="title">Seller</p>
               <Link
-                to={"/the-genuine/registration/seller"}
+                to={"/registration/seller"}
                 className="btnFormSection"
               >
                 Open Seller Form
@@ -228,7 +228,7 @@ const JoiningFormSection = () => {
               />
               <p className="title">Open Buyer & Seller Form</p>
               <Link
-                to={"/the-genuine/registration/buying-and-selling"}
+                to={"/registration/buying-and-selling"}
                 className="btnFormSection"
               >
                 Open Buyer & Seller Form
@@ -288,7 +288,7 @@ const JoiningFormSection = () => {
               />
               <p className="title">Agent</p>
               <Link
-                to={"/the-genuine/registration/agent"}
+                to={"/registration/agent"}
                 className="btnFormSection"
               >
                 Open Agent Form

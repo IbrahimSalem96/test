@@ -82,8 +82,10 @@ function NextPropertyInvestment({
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!primaryReason) tempErrors.primaryReason = "Reason for buying is required.";
-    if (!financingMethod) tempErrors.financingMethod = "Financing method is required.";
+    if (!primaryReason)
+      tempErrors.primaryReason = "Reason for buying is required.";
+    if (!financingMethod)
+      tempErrors.financingMethod = "Financing method is required.";
     if (financingMethod?.value === "Mortgage" && !mortgagePreApproval)
       tempErrors.mortgagePreApproval = "Mortgage status is required.";
 
@@ -129,6 +131,7 @@ function NextPropertyInvestment({
       <div className="salutationSection">
         <label>What is your primary reason for buying?</label>
         <Select
+          closeMenuOnSelect={false}
           options={reasonOptions}
           value={primaryReason}
           onChange={(selectedOptions) => setPrimaryReason(selectedOptions)}
@@ -136,9 +139,6 @@ function NextPropertyInvestment({
           components={customComponents}
           isMulti
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.primaryReason && (
           <span className="error">{errors.primaryReason}</span>
         )}

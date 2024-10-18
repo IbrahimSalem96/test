@@ -23,7 +23,7 @@ const SellYourFeesForever = () => {
       <div className="mobileViewDownSection">
         <h2>Don’t Miss Out—These Offers Won’t Last!</h2>
 
-        <Link to={"/the-genuine/joiningForm"}>Join Now</Link>
+        <Link to={"/joiningForm"}>Join Now</Link>
 
         <p>Terms and Conditions apply.</p>
       </div>
@@ -40,7 +40,7 @@ const SellYourFeesForever = () => {
 
           <h3>Don’t Miss Out—These Offers Won’t Last!</h3>
 
-          <Link to={"/the-genuine/joiningForm"}>Join Now</Link>
+          <Link to={"/joiningForm"}>Join Now</Link>
 
           <p className="termsAndConditions">Terms and Conditions apply.</p>
         </div>

@@ -55,11 +55,11 @@ function NextContactInformation({
 
   const handleChangeCountry = (selectedOption) => {
     setCountryOfResidence(selectedOption);
-   };
+  };
 
   const handleChangeLanguage = (selectedOption) => {
     setPreferredLanguage(selectedOption);
-   };
+  };
 
   const validateForm = () => {
     let tempErrors = {};
@@ -77,7 +77,6 @@ function NextContactInformation({
     if (validateForm()) {
       setCountryOfResidence(countryOfResidence);
       setPreferredLanguage(preferredLanguage);
-
 
       setStepSelect(3);
 
@@ -106,6 +105,7 @@ function NextContactInformation({
       <div className="salutationSection">
         <label>Country of Residence</label>
         <Select
+          closeMenuOnSelect={false}
           options={countries}
           value={countryOfResidence}
           onChange={handleChangeCountry}
@@ -117,9 +117,6 @@ function NextContactInformation({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.country && (
           <span className="error">{errors.country}</span>
         )}
@@ -128,6 +125,7 @@ function NextContactInformation({
       <div className="salutationSection">
         <label>Preferred Language</label>
         <Select
+          closeMenuOnSelect={false}
           options={languages}
           value={preferredLanguage}
           onChange={handleChangeLanguage}
@@ -135,9 +133,6 @@ function NextContactInformation({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.language && (
           <span className="error">{errors.language}</span>
         )}

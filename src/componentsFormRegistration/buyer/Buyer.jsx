@@ -67,59 +67,10 @@ const Buyer = () => {
 
   //Send Data
   const sendDataAll = async () => {
-
-    console.log(
-      "Step 1",
-      salutation,
-      firstName,
-      lastName,
-      mobileNumber,
-      whatsappNumber,
-      email,
-      checkbox1,
-      checkbox2
-    );
-
-    console.log("Step 2", countryOfResidence, preferredLanguage);
-
-    console.log(
-      "Step 3",
-      preferredMethodSave,
-      preferredDaysSave,
-      preferredTimesSave
-    );
-
-    console.log(
-      "Step 4",
-      preferredMethodSave,
-      preferredDaysSave,
-      preferredTimesSave
-    );
-
-    console.log(
-      "step 5",
-      propertyTypeSave,
-      interestedEmirateSave,
-      propertyStatusSave,
-      estimatedBudgetFromSave,
-      estimatedBudgetToSave
-    );
-
-    console.log(
-      "step 6",
-      contactPermission,
-      earlyAccessSave,
-      referralSource,
-      subscribeNewsletter,
-      whatsAppGroup
-    );
-
-    console.log("step 7", comments);
-
     
     try {
       const requestData = {
-        salutation: salutation,
+        salutation: salutation.value,
         firstname: firstName,
         lastname: lastName,
         mobilenumber: mobileNumber,
@@ -127,19 +78,19 @@ const Buyer = () => {
         email: email,
         checkbox1: checkbox1,
         checkbox2: checkbox2,
-        countryofresidence: countryOfResidence.label,
-        preferredlanguage: preferredLanguage.label,
-        preferredmethod: preferredMethodSave.value,
+        countryofresidence: countryOfResidence.map((country) => country.label),
+        preferredlanguage: preferredLanguage.map((lang) => lang.label),
+        preferredmethod: preferredMethodSave.map((method) => method.value),
         preferreddays: preferredDaysSave.map((day) => day.value),
         preferredtimes: preferredTimesSave.map((time) => time.value),
-        propertytype: propertyTypeSave.label,
+        propertytype: propertyTypeSave.map((type) => type.value),
         interestedemirates: interestedEmirateSave.map(
           (emirate) => emirate.value
         ),
         propertystatus: propertyStatusSave.map((status) => status.value),
         estimatedbudgetfrom: estimatedBudgetFromSave,
         estimatedbudgetto: estimatedBudgetToSave,
-        primaryreason: primaryReason.value,
+        primaryreason: primaryReason.map((reason) => reason.value),
         financingmethod: financingMethod.value,
         contactpermission: contactPermission.value,
         comments: comments,
@@ -147,6 +98,7 @@ const Buyer = () => {
         referralsource: referralSource.label,
         earlyaccess: earlyAccessSave.value,
         mortgagepreapproval: mortgagePreApproval.value,
+        whatsappgroup: whatsAppGroup.value,
       };
 
       await axios.post(`${request.defaults.baseURL}buyers`, requestData);
@@ -188,7 +140,7 @@ const Buyer = () => {
         didOpen: () => {
           const footerElement = Swal.getFooter();
           footerElement.innerHTML =
-            '<a href="/the-genuine/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
+            '<a href="/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
 
           footerElement
             .querySelector("a")
@@ -200,7 +152,7 @@ const Buyer = () => {
 
           const closeButton = Swal.getCloseButton();
           closeButton.addEventListener("click", () => {
-            navigate("/");
+            //navigate("/");
           });
         },
       });

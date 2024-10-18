@@ -121,6 +121,7 @@ function PropertyInvestment({
       <div className="salutationSection">
         <label>What type of property are you interested in?</label>
         <Select
+          closeMenuOnSelect={false}
           options={propertyTypeOptions}
           value={propertyTypeSave}
           onChange={(selectedOptions) => setPropertyTypeSave(selectedOptions)}
@@ -128,9 +129,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.propertyTypeSave && (
           <span className="error">{errors.propertyTypeSave}</span>
         )}
@@ -140,6 +138,7 @@ function PropertyInvestment({
       <div className="salutationSection salutationSectionMultiplSelect">
         <label>In which emirate are you interested to buy?</label>
         <Select
+          closeMenuOnSelect={false}
           options={emirateOptions}
           value={interestedEmirateSave}
           onChange={(selectedOptions) =>
@@ -149,9 +148,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.interestedEmirateSave && (
           <span className="error">{errors.interestedEmirateSave}</span>
         )}
@@ -161,6 +157,7 @@ function PropertyInvestment({
       <div className="salutationSection">
         <label>What is your preferred property status?</label>
         <Select
+          closeMenuOnSelect={false}
           options={propertyStatusOptions}
           value={propertyStatusSave}
           onChange={(selectedOptions) => setPropertyStatusSave(selectedOptions)}
@@ -168,9 +165,6 @@ function PropertyInvestment({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.propertyStatusSave && (
           <span className="error">{errors.propertyStatusSave}</span>
         )}

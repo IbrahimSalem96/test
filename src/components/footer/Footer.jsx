@@ -28,7 +28,7 @@ const Footer = () => {
                 <Image className="logoFooter" src={arrow} alt="Logo footer" />
               </span> */}
 
-              <Link to={"/the-genuine/joiningForm"}>Join Us</Link>
+              <Link to={"/joiningForm"}>Join Us</Link>
 
             </div>
           </div>
@@ -79,11 +79,11 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <Link to={"/the-genuine/sell"}>Sell</Link>
+                  <Link to={"/sell"}>Sell</Link>
                 </li>
 
                 <li>
-                    <Link to={"/the-genuine/buy"}>Buy</Link>
+                    <Link to={"/buy"}>Buy</Link>
                 </li>
               </ul>
             </div>
@@ -99,11 +99,11 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link to={"/the-genuine/sell"}>Sell</Link>
+                    <Link to={"/sell"}>Sell</Link>
                   </li>
 
                   <li>
-                    <Link to={"/the-genuine/buy"}>Buy</Link>
+                    <Link to={"/buy"}>Buy</Link>
                   </li>
                 </ul>
               </div>

@@ -37,10 +37,10 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/the-genuine/buy">Buy</Link>
+              <Link to="/buy">Buy</Link>
             </li>
             <li>
-              <Link to="/the-genuine/sell">Sell</Link>
+              <Link to="/sell">Sell</Link>
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@ const Header = () => {
 
             <li>
               <NavLink
-                to="/the-genuine/buy"
+                to="/buy"
                 className={({ isActive }) => (isActive ? "activeLink" : "")}
               >
                 Buy
@@ -72,7 +72,7 @@ const Header = () => {
 
             <li>
               <NavLink
-                to="/the-genuine/sell"
+                to="/sell"
                 className={({ isActive }) => (isActive ? "activeLink" : "")}
               >
                 Sell

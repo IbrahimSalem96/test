@@ -19,7 +19,7 @@ const BackPage = ({ stepSelect , setStepSelect }) => {
       showCloseButton: true,
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate("/the-genuine/joiningForm");
+        navigate("/joiningForm");
       } else if (result.isDismissed && stepSelect > 1) {
         if (result.dismiss === Swal.DismissReason.cancel) {
           setStepSelect(stepSelect - 1);

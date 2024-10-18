@@ -116,6 +116,7 @@ function Communication({
       <div className="salutationSection">
         <label>Select Your Preferred Method of Communication:</label>
         <Select
+          closeMenuOnSelect={false}
           options={methodOptions}
           value={preferredMethodSave}
           onChange={(selectedOptions) =>
@@ -125,9 +126,6 @@ function Communication({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.setPreferredMethodSave && (
           <span className="error">{errors.setPreferredMethodSave}</span>
         )}
@@ -137,6 +135,7 @@ function Communication({
       <div className="salutationSection">
         <label>Preferred Communication Days:</label>
         <Select
+          closeMenuOnSelect={false}
           options={daysOptions}
           value={preferredDaysSave}
           onChange={(selectedOptions) => setPreferredDaysSave(selectedOptions)}
@@ -144,9 +143,6 @@ function Communication({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
         {showErrors && errors.preferredDaysSave && (
           <span className="error">{errors.preferredDaysSave}</span>
         )}
@@ -156,6 +152,7 @@ function Communication({
       <div className="salutationSection">
         <label>Preferred Communication Times:</label>
         <Select
+          closeMenuOnSelect={false}
           options={timesOptions}
           value={preferredTimesSave}
           onChange={(selectedOptions) => setPreferredTimesSave(selectedOptions)}
@@ -163,10 +160,6 @@ function Communication({
           isMulti
           components={customComponents}
         />
-        <p className="labelSelectMultiOptions">
-          You can choose more than one option.
-        </p>
-
         {showErrors && errors.preferredTimesSave && (
           <span className="error">{errors.preferredTimesSave}</span>
         )}

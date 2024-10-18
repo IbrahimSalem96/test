@@ -97,14 +97,14 @@ const ComingSoon = () => {
             </h1>
 
             <div className="btnLinkBuyAndSell">
-              <Link to="/the-genuine/buy">Buy</Link>
-              <Link to="/the-genuine/sell">Sell</Link>
+              <Link to="/buy">Buy</Link>
+              <Link to="/sell">Sell</Link>
             </div>
 
             <h3>Join Now Before Launching and Unlock Exclusive Benefits!</h3>
 
             <div className="btnLinkBuyAndSell">
-              <Link to="/the-genuine/joiningForm" className="joinNowStyle">
+              <Link to="/joiningForm" className="joinNowStyle">
                 Join Now
               </Link>
             </div>

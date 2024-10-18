@@ -53,48 +53,9 @@ const Seller = () => {
 
   //Send Data
   const sendDataAll = async () => {
-
-    console.log(
-      "Step 1",
-      salutation,
-      firstName,
-      lastName,
-      mobileNumber,
-      whatsappNumber,
-      email,
-      checkbox1,
-      checkbox2
-    );
-
-    console.log("Step 2", countryOfResidence, preferredLanguage);
-
-    console.log(
-      "Step 3",
-      preferredMethodSave,
-      preferredDaysSave,
-      preferredTimesSave
-    );
-
-    console.log(
-      "Step 4",
-      preferredMethodSave,
-      preferredDaysSave,
-      preferredTimesSave
-    );
- 
-
-    console.log(
-      "step 5",
-      contactPermission,
-      earlyAccessSave,
-      referralSource,
-      subscribeNewsletter,
-      whatsAppGroup
-    );
-
     try {
       const requestData = {
-        salutation: salutation,
+        salutation: salutation.value,
         firstname: firstName,
         lastname: lastName,
         mobilenumber: mobileNumber,
@@ -102,9 +63,9 @@ const Seller = () => {
         email: email,
         checkbox1: checkbox1,
         checkbox2: checkbox2,
-        countryofresidence: countryOfResidence.label,
-        preferredlanguage: preferredLanguage.label,
-        preferredmethod: preferredMethodSave.value,
+        countryofresidence: countryOfResidence.map((country) => country.label),
+        preferredlanguage: preferredLanguage.map((lang) => lang.label),
+        preferredmethod: preferredMethodSave.map((method) => method.value),
         preferreddays: preferredDaysSave.map((day) => day.value),
         preferredtimes: preferredTimesSave.map((time) => time.value),
         contactpermission: contactPermission.value,
@@ -112,6 +73,7 @@ const Seller = () => {
         subscribenewsletter: subscribeNewsletter.value,
         referralsource: referralSource.label,
         earlyaccess: earlyAccessSave.value,
+        whatsappgroup: whatsAppGroup.value,
       };
 
       await axios.post(`${request.defaults.baseURL}seller`, requestData);
@@ -153,7 +115,7 @@ const Seller = () => {
         didOpen: () => {
           const footerElement = Swal.getFooter();
           footerElement.innerHTML =
-            '<a href="/the-genuine/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
+            '<a href="/registration/buying-and-selling" style="color: #3085d6; text-decoration: none;">Try again</a>';
 
           footerElement
             .querySelector("a")
@@ -165,7 +127,7 @@ const Seller = () => {
 
           const closeButton = Swal.getCloseButton();
           closeButton.addEventListener("click", () => {
-            setStepSelect(1);
+           // setStepSelect(1);
           });
         },
       });
