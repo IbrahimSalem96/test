@@ -48,35 +48,44 @@ function NextPropertyInvestment({
   setPrimaryReason,
   setFinancingMethod,
   setMortgagePreApproval,
+  primaryReason,
+  financingMethod,
+  mortgagePreApproval,
 }) {
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
-  const [reason, setReason] = useState(null);
-  const [financing, setFinancing] = useState(null);
-  const [mortgageStatus, setMortgageStatus] = useState(false);
   const [showMortgageOptions, setShowMortgageOptions] = useState(false);
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   // Check if all required fields are filled to activate the Next button
   useEffect(() => {
     if (
-      reason &&
-      financing &&
-      (financing.value !== "Mortgage" || mortgageStatus)
+      primaryReason &&
+      financingMethod &&
+      (financingMethod.value !== "Mortgage" || mortgagePreApproval)
     ) {
       setActiveNextStep(true);
     } else {
       setActiveNextStep(false);
     }
-  }, [reason, financing, mortgageStatus]);
+  }, [primaryReason, financingMethod, mortgagePreApproval]);
+
+  // Ensure mortgage options remain visible if financing method is Mortgage
+  useEffect(() => {
+    if (financingMethod?.value === "Mortgage") {
+      setShowMortgageOptions(true);
+    } else {
+      setShowMortgageOptions(false);
+    }
+  }, [financingMethod]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!reason) tempErrors.reason = "Reason for buying is required.";
-    if (!financing) tempErrors.financing = "Financing method is required.";
-    if (financing?.value === "Mortgage" && !mortgageStatus)
-      tempErrors.mortgageStatus = "Mortgage status is required.";
+    if (!primaryReason) tempErrors.primaryReason = "Reason for buying is required.";
+    if (!financingMethod) tempErrors.financingMethod = "Financing method is required.";
+    if (financingMethod?.value === "Mortgage" && !mortgagePreApproval)
+      tempErrors.mortgagePreApproval = "Mortgage status is required.";
 
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -86,13 +95,13 @@ function NextPropertyInvestment({
   const handleSubmit = () => {
     setShowErrors(true);
     if (validateForm()) {
-      setPrimaryReason(reason);
-      setFinancingMethod(financing);
-      setMortgagePreApproval(mortgageStatus);
+      setPrimaryReason(primaryReason);
+      setFinancingMethod(financingMethod);
+      setMortgagePreApproval(mortgagePreApproval);
 
       setStepSelect(6);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
@@ -100,8 +109,8 @@ function NextPropertyInvestment({
 
   // Handle financing option change and display mortgage options if needed
   const handleFinancingChange = (selectedOption) => {
-    setFinancing(selectedOption);
-    setMortgageStatus(false);
+    setFinancingMethod(selectedOption);
+    setMortgagePreApproval(false);
     setShowMortgageOptions(selectedOption?.value === "Mortgage");
   };
 
@@ -121,17 +130,17 @@ function NextPropertyInvestment({
         <label>What is your primary reason for buying?</label>
         <Select
           options={reasonOptions}
-          value={reason}
-          onChange={setReason}
+          value={primaryReason}
+          onChange={(selectedOptions) => setPrimaryReason(selectedOptions)}
           placeholder="Select Reason"
-          isMulti
           components={customComponents}
+          isMulti
         />
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.reason && (
-          <span className="error">{errors.reason}</span>
+        {showErrors && errors.primaryReason && (
+          <span className="error">{errors.primaryReason}</span>
         )}
       </div>
 
@@ -140,12 +149,12 @@ function NextPropertyInvestment({
         <label>How will you be financing the purchase?</label>
         <Select
           options={financingOptions}
-          value={financing}
+          value={financingMethod}
           onChange={handleFinancingChange}
           placeholder="Select Financing Method"
         />
-        {showErrors && errors.financing && (
-          <span className="error">{errors.financing}</span>
+        {showErrors && errors.financingMethod && (
+          <span className="error">{errors.financingMethod}</span>
         )}
       </div>
 
@@ -158,12 +167,12 @@ function NextPropertyInvestment({
           </label>
           <Select
             options={mortgageOptions}
-            value={mortgageStatus}
-            onChange={setMortgageStatus}
+            value={mortgagePreApproval}
+            onChange={setMortgagePreApproval}
             placeholder="Select Mortgage Status"
           />
-          {showErrors && errors.mortgageStatus && (
-            <span className="error">{errors.mortgageStatus}</span>
+          {showErrors && errors.mortgagePreApproval && (
+            <span className="error">{errors.mortgagePreApproval}</span>
           )}
         </div>
       )}
