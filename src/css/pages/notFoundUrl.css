@@ -1,0 +1,122 @@
+.notFoundPage {
+  background-image: url("../../assets/bgNotFoundPage.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10.6666666667vw;
+}
+.notFoundPage .sectionImagesLogo {
+  width: 70%;
+}
+.notFoundPage .message-box {
+  text-align: center;
+}
+.notFoundPage .message-box h1 {
+  font-size: 21.3333333333vw;
+  line-height: 6.9333333333vw;
+  margin-bottom: 8vw;
+  color: white;
+  font-family: Inter;
+}
+.notFoundPage .message-box p {
+  font-size: 4.8vw;
+  line-height: 6.4vw;
+  margin-bottom: 10.6666666667vw;
+  color: white;
+  font-family: Inter;
+}
+.notFoundPage .buttons-con .action-link-wrap {
+  margin-top: 10.6666666667vw;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.notFoundPage .buttons-con .action-link-wrap a, .notFoundPage button {
+  color: white;
+  text-decoration: none;
+  width: auto;
+  padding: 5.3333333333vw;
+  height: 9.0666666667vw;
+  font-size: 3.7333333333vw;
+  font-family: Inter;
+  border: 1px solid rgb(137, 69, 236);
+  background: linear-gradient(to top left, rgb(137, 69, 236), rgba(137, 69, 236, 0.4));
+  border-radius: 2.1333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(105, 81, 255, 0.05);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .notFoundPage {
+    gap: 11.9904076739vw;
+  }
+  .notFoundPage .sectionImagesLogo {
+    width: 50%;
+  }
+  .notFoundPage .message-box h1 {
+    font-size: 14.3884892086vw;
+    line-height: 5.51558753vw;
+    margin-bottom: 4.7961630695vw;
+  }
+  .notFoundPage .message-box p {
+    font-size: 3.5971223022vw;
+    line-height: 2.8776978417vw;
+    margin-bottom: 4.7961630695vw;
+  }
+  .notFoundPage .buttons-con .action-link-wrap {
+    margin-top: 4.7961630695vw;
+  }
+  .notFoundPage .buttons-con .action-link-wrap a, .notFoundPage button {
+    width: auto;
+    padding: 2.3980815348vw;
+    height: 4.0767386091vw;
+    font-size: 2.3980815348vw;
+    border-radius: 0.9592326139vw;
+  }
+}
+@media (min-width: 1024px) {
+  .notFoundPage {
+    gap: 1.0416666667vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-size: cover;
+  }
+  .notFoundPage .sectionImagesLogo {
+    width: auto;
+  }
+  .notFoundPage .sectionImagesLogo img {
+    width: 31.25vw;
+    height: auto;
+  }
+  .notFoundPage .message-box {
+    width: auto;
+    text-align: left;
+  }
+  .notFoundPage .message-box h1 {
+    font-size: 6.25vw;
+    line-height: 2.3958333333vw;
+    margin-bottom: 2.0833333333vw;
+  }
+  .notFoundPage .message-box p {
+    font-size: 1.1458333333vw;
+    line-height: 1.25vw;
+    margin-bottom: 2.0833333333vw;
+  }
+  .notFoundPage .buttons-con .action-link-wrap {
+    margin-top: 2.0833333333vw;
+  }
+  .notFoundPage .buttons-con .action-link-wrap a, .notFoundPage button {
+    width: auto;
+    padding: 1.3541666667vw;
+    height: 2.2916666667vw;
+    font-size: 1.0416666667vw;
+    border-radius: 0.4166666667vw;
+  }
+}
