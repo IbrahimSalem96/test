@@ -10,9 +10,9 @@ import iconNextStep from "../../../../assets/arrowIconNextStep.svg";
 import arrowDown from "../../../../assets/arrowDown.svg";
 
 const options = [
-  { value: "Mr", label: "Mr" },
-  { value: "Mrs", label: "Mrs" },
-  { value: "Other", label: "Other" },
+  { id: 0, value: "Mr", label: "Mr" },
+  { id: 1, value: "Mrs", label: "Mrs" },
+  { id: 2, value: "Other", label: "Other" },
 ];
 
 function ContactInformation({
@@ -25,16 +25,24 @@ function ContactInformation({
   setCheckbox1,
   setCheckbox2,
   setStepSelect,
+  salutation,
+  firstName,
+  lastName,
+  mobileNumber,
+  whatsappNumber,
+  email,
+  checkbox1,
+  checkbox2,
 }) {
   const [formData, setFormData] = useState({
-    salutation: null,
-    firstName: "",
-    lastName: "",
-    mobileNumber: "",
-    whatsappNumber: "",
-    email: "",
-    consent1: false,
-    consent2: false,
+    salutation: salutation,
+    firstName: firstName,
+    lastName: lastName,
+    mobileNumber: mobileNumber,
+    whatsappNumber: whatsappNumber,
+    email: email,
+    consent1: checkbox1,
+    consent2: checkbox2,
   });
 
   const [activeNextStep, setActiveNextStep] = useState(false);
@@ -97,7 +105,6 @@ function ContactInformation({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-      //console.log("Form Data:", formData);
 
       setSalutation(formData.salutation);
       setFirstName(formData.firstName);
@@ -110,35 +117,39 @@ function ContactInformation({
 
       setStepSelect(2);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
   };
 
-  
-  const [countryCodeValidation, setCountryCodeValidation] = useState('+971'); 
-  const [whatsappNumberValidation, setWhatsappNumberValidation] = useState('+971'); 
+  const [countryCodeValidation, setCountryCodeValidation] = useState("+971");
+  const [whatsappNumberValidation, setWhatsappNumberValidation] =
+    useState("+971");
   const handleCountryChange = (country) => {
-    const newCountryCode = country ? `+${country.dialCode}` : countryCodeValidation;
+    const newCountryCode = country
+      ? `+${country.dialCode}`
+      : countryCodeValidation;
     setCountryCodeValidation(newCountryCode);
   };
 
   const handleWhatsappNumberChange = (country) => {
-    const newWhatsappNumber= country ? `+${country.dialCode}` : whatsappNumberValidation;
+    const newWhatsappNumber = country
+      ? `+${country.dialCode}`
+      : whatsappNumberValidation;
     setWhatsappNumberValidation(newWhatsappNumber);
   };
 
-  
   return (
-    <div className="stepField buyingPageQcontactInformation">
+    <div className="stepField buyingAndSellingQcontactInformation">
       <div className="salutationSection">
         <label>Salutation</label>
         <Select
           options={options}
           placeholder="Select"
+          value={salutation !== "" ? options[salutation.id] : ""}
           onChange={(selectedOption) =>
-            setFormData({ ...formData, salutation: selectedOption.value })
+            setFormData({ ...formData, salutation: selectedOption })
           }
         />
         {showErrors && errors.salutation && (
@@ -182,13 +193,13 @@ function ContactInformation({
         <div className="inputSection phonNmberSection">
           <label>Mobile Number</label>
           <div className="boxContnet">
-          <PhoneInput
+            <PhoneInput
               name="mobileNumber"
               country={"ae"}
               value={formData.mobileNumber}
               autoComplete="tel"
               onChange={(value) => handlePhoneChange(value, "mobileNumber")}
-              onCountryChange={handleCountryChange} 
+              onCountryChange={handleCountryChange}
               countryCodeEditable={false}
             />
             <Image
@@ -205,13 +216,13 @@ function ContactInformation({
         <div className="inputSection phonNmberSection">
           <label>WhatsApp Number</label>
           <div className="boxContnet">
-          <PhoneInput
+            <PhoneInput
               name="whatsappNumber"
               country={"ae"}
               value={formData.whatsappNumber}
               onChange={(value) => handlePhoneChange(value, "whatsappNumber")}
               autoComplete="tel"
-              onCountryChange={handleWhatsappNumberChange} 
+              onCountryChange={handleWhatsappNumberChange}
               countryCodeEditable={false}
             />
             <Image
@@ -231,7 +242,6 @@ function ContactInformation({
         <input
           type="text"
           name="email"
-          autoComplete="email"
           placeholder="Email"
           value={formData.email}
           className="emailSection"
@@ -253,10 +263,9 @@ function ContactInformation({
           />
           <span className="checkbox"></span>
           <p>
-            By submitting this form, I agree to provide my contact details for
-            communication and updates regarding THE GENUINE PLATFORM, and I
-            consent to being contacted via email, phone, or other communication
-            methods.
+            I understand that my information will remain confidential, will not
+            be shared or sold to any third party, and will be managed in
+            compliance with THE GENUINE PLATFORM’s Privacy Policy.
           </p>
         </label>
         {showErrors && errors.consent1 && (
@@ -273,9 +282,10 @@ function ContactInformation({
           />
           <span className="checkbox"></span>
           <p>
-            I understand that my information will be kept confidential, will not
-            be shared with or sold to any third party, and will be handled in
-            accordance with THE GENUINE PLATFORM’s Privacy Policy.
+            By submitting this form, I agree to provide my contact details for
+            communication and updates regarding THE GENUINE PLATFORM, and I
+            consent to being contacted via email, phone, or other communication
+            methods.
           </p>
         </label>
         {showErrors && errors.consent2 && (

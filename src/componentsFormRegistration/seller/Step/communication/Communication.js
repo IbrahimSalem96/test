@@ -9,37 +9,37 @@ import iconNextStep from "../../../../assets/arrowIconNextStep.svg";
 
 // Options for communication methods, days, and times
 const methodOptions = [
-  { value: "Email", label: "Email" },
-  { value: "Phone", label: "Phone" },
-  { value: "Message on WhatsApp", label: "Message on WhatsApp" },
-  { value: "Call", label: "Call" },
-  { value: "SMS", label: "SMS" },
+  { id: 0, value: "Email", label: "Email" },
+  { id: 1, value: "Phone", label: "Phone" },
+  { id: 2, value: "Message on WhatsApp", label: "Message on WhatsApp" },
+  { id: 3, value: "Call", label: "Call" },
+  { id: 4, value: "SMS", label: "SMS" },
 ];
 
 const daysOptions = [
-  { value: "monday", label: "Monday" },
-  { value: "tuesday", label: "Tuesday" },
-  { value: "wednesday", label: "Wednesday" },
-  { value: "thursday", label: "Thursday" },
-  { value: "friday", label: "Friday" },
-  { value: "saturday", label: "Saturday" },
-  { value: "sunday", label: "Sunday" },
+  { id: 0, value: "monday", label: "Monday" },
+  { id: 1, value: "tuesday", label: "Tuesday" },
+  { id: 2, value: "wednesday", label: "Wednesday" },
+  { id: 3, value: "thursday", label: "Thursday" },
+  { id: 4, value: "friday", label: "Friday" },
+  { id: 5, value: "saturday", label: "Saturday" },
+  { id: 6, value: "sunday", label: "Sunday" },
 ];
 
 const timesOptions = [
-  { value: "8-9", label: "8-9" },
-  { value: "9-10", label: "9-10" },
-  { value: "10-11", label: "10-11" },
-  { value: "11-12", label: "11-12" },
-  { value: "12-13", label: "12-13" },
-  { value: "13-14", label: "13-14" },
-  { value: "14-15", label: "14-15" },
-  { value: "15-16", label: "15-16" },
-  { value: "16-17", label: "16-17" },
-  { value: "17-18", label: "17-18" },
-  { value: "18-19", label: "18-19" },
-  { value: "19-20", label: "19-20" },
-  { value: "After 20", label: "After 20" },
+  { id: 0, value: "8-9", label: "8-9" },
+  { id: 1, value: "9-10", label: "9-10" },
+  { id: 2, value: "10-11", label: "10-11" },
+  { id: 3, value: "11-12", label: "11-12" },
+  { id: 4, value: "12-13", label: "12-13" },
+  { id: 5, value: "13-14", label: "13-14" },
+  { id: 6, value: "14-15", label: "14-15" },
+  { id: 7, value: "15-16", label: "15-16" },
+  { id: 8, value: "16-17", label: "16-17" },
+  { id: 9, value: "17-18", label: "17-18" },
+  { id: 10, value: "18-19", label: "18-19" },
+  { id: 11, value: "19-20", label: "19-20" },
+  { id: 12, value: "After 20", label: "After 20" },
 ];
 
 const customComponents = {
@@ -51,37 +51,39 @@ function Communication({
   setPreferredMethodSave,
   setPreferredDaysSave,
   setPreferredTimesSave,
+  preferredMethodSave,
+  preferredDaysSave,
+  preferredTimesSave,
 }) {
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
-  const [preferredMethod, setPreferredMethod] = useState(null);
-  const [preferredDays, setPreferredDays] = useState([]);
-  const [preferredTimes, setPreferredTimes] = useState([]);
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   // Check if all required fields are filled to activate the Next button
   useEffect(() => {
     if (
-      preferredMethod &&
-      preferredDays.length > 0 &&
-      preferredTimes.length > 0
+      preferredMethodSave &&
+      preferredDaysSave.length > 0 &&
+      preferredTimesSave.length > 0
     ) {
       setActiveNextStep(true);
     } else {
       setActiveNextStep(false);
     }
-  }, [preferredMethod, preferredDays, preferredTimes]);
+  }, [preferredMethodSave, preferredDaysSave, preferredTimesSave]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!preferredMethod)
-      tempErrors.preferredMethod =
+    if (!preferredMethodSave)
+      tempErrors.preferredMethodSave =
         "Preferred method of communication is required.";
-    if (preferredDays.length === 0)
-      tempErrors.preferredDays = "Preferred communication days are required.";
-    if (preferredTimes.length === 0)
-      tempErrors.preferredTimes = "Preferred communication times are required.";
+    if (preferredDaysSave.length === 0)
+      tempErrors.preferredDaysSave =
+        "Preferred communication days are required.";
+    if (preferredTimesSave.length === 0)
+      tempErrors.preferredTimesSave =
+        "Preferred communication times are required.";
 
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -91,13 +93,13 @@ function Communication({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-      setPreferredMethodSave(preferredMethod);
-      setPreferredDaysSave(preferredDays);
-      setPreferredTimesSave(preferredTimes);
+      setPreferredMethodSave(preferredMethodSave);
+      setPreferredDaysSave(preferredDaysSave);
+      setPreferredTimesSave(preferredTimesSave);
 
       setStepSelect(4);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
@@ -109,14 +111,16 @@ function Communication({
   };
 
   return (
-    <div className="stepField buyingPageQcommunication">
+    <div className="stepField buyingAndSellingQcommunication">
       {/* Preferred Method of Communication */}
       <div className="salutationSection">
         <label>Select Your Preferred Method of Communication:</label>
         <Select
           options={methodOptions}
-          value={preferredMethod}
-          onChange={setPreferredMethod}
+          value={preferredMethodSave}
+          onChange={(selectedOptions) =>
+            setPreferredMethodSave(selectedOptions)
+          }
           placeholder="Select Method"
           isMulti
           components={customComponents}
@@ -124,8 +128,8 @@ function Communication({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.preferredMethod && (
-          <span className="error">{errors.preferredMethod}</span>
+        {showErrors && errors.setPreferredMethodSave && (
+          <span className="error">{errors.setPreferredMethodSave}</span>
         )}
       </div>
 
@@ -134,8 +138,8 @@ function Communication({
         <label>Preferred Communication Days:</label>
         <Select
           options={daysOptions}
-          value={preferredDays}
-          onChange={setPreferredDays}
+          value={preferredDaysSave}
+          onChange={(selectedOptions) => setPreferredDaysSave(selectedOptions)}
           placeholder="Select Days"
           isMulti
           components={customComponents}
@@ -143,8 +147,8 @@ function Communication({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.preferredDays && (
-          <span className="error">{errors.preferredDays}</span>
+        {showErrors && errors.preferredDaysSave && (
+          <span className="error">{errors.preferredDaysSave}</span>
         )}
       </div>
 
@@ -153,8 +157,8 @@ function Communication({
         <label>Preferred Communication Times:</label>
         <Select
           options={timesOptions}
-          value={preferredTimes}
-          onChange={setPreferredTimes}
+          value={preferredTimesSave}
+          onChange={(selectedOptions) => setPreferredTimesSave(selectedOptions)}
           placeholder="Select Times"
           isMulti
           components={customComponents}
@@ -162,8 +166,9 @@ function Communication({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.preferredTimes && (
-          <span className="error">{errors.preferredTimes}</span>
+
+        {showErrors && errors.preferredTimesSave && (
+          <span className="error">{errors.preferredTimesSave}</span>
         )}
       </div>
 

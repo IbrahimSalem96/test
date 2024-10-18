@@ -67,17 +67,25 @@ function PropertyInvestment({
     } else {
       setActiveNextStep(false);
     }
-  }, [propertyTypeSave, interestedEmirateSave, propertyStatusSave, estimatedBudgetFromSave, estimatedBudgetToSave]);
+  }, [
+    propertyTypeSave,
+    interestedEmirateSave,
+    propertyStatusSave,
+    estimatedBudgetFromSave,
+    estimatedBudgetToSave,
+  ]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!propertyTypeSave) tempErrors.propertyTypeSave = "Property type is required.";
+    if (!propertyTypeSave)
+      tempErrors.propertyTypeSave = "Property type is required.";
     if (interestedEmirateSave.length === 0)
       tempErrors.interestedEmirateSave = "Emirate selection is required.";
     if (propertyStatusSave.length === 0)
       tempErrors.propertyStatusSave = "Property status is required.";
-    if (!estimatedBudgetFromSave) tempErrors.estimatedBudgetFromSave = "Budget From is required.";
+    if (!estimatedBudgetFromSave)
+      tempErrors.estimatedBudgetFromSave = "Budget From is required.";
     if (!estimatedBudgetToSave) tempErrors.budgetTo = "Budget To is required.";
 
     setErrors(tempErrors);
@@ -134,7 +142,9 @@ function PropertyInvestment({
         <Select
           options={emirateOptions}
           value={interestedEmirateSave}
-          onChange={(selectedOptions) => setInterestedEmirateSave(selectedOptions)}
+          onChange={(selectedOptions) =>
+            setInterestedEmirateSave(selectedOptions)
+          }
           placeholder="Select Emirate"
           isMulti
           components={customComponents}
@@ -176,7 +186,11 @@ function PropertyInvestment({
               value={estimatedBudgetFromSave}
               onChange={(e) => setEstimatedBudgetFromSave(e.target.value)}
               placeholder="From"
-              maxLength={12}
+              onInput={(e) => {
+                if (e.target.value.length > 14) {
+                  e.target.value = e.target.value.slice(0, 14);
+                }
+              }}
             />
             <span>AED</span>
           </div>
@@ -192,7 +206,11 @@ function PropertyInvestment({
               value={estimatedBudgetToSave}
               onChange={(e) => setEstimatedBudgetToSave(e.target.value)}
               placeholder="To"
-              maxLength={12}
+              onInput={(e) => {
+                if (e.target.value.length > 14) {
+                  e.target.value = e.target.value.slice(0, 14);
+                }
+              }}
             />
             <span>AED</span>
           </div>

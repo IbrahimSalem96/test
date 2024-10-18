@@ -1,6 +1,6 @@
 import "./seller.css";
 import Bar from "./Bar.js";
-import { BackPage } from '../index.js'
+import { BackPage } from "../index.js";
 
 import {
   ContactInformation,
@@ -46,12 +46,52 @@ const Seller = () => {
   const [earlyAccessSave, setEarlyAccessSave] = useState("");
   const [referralSource, setReferralSource] = useState("");
   const [subscribeNewsletter, setSubscribeNewsletter] = useState("");
+  const [whatsAppGroup, setWhatsAppGroup] = useState("");
 
   //Step 5
   const [comments, setComments] = useState("");
 
   //Send Data
   const sendDataAll = async () => {
+
+    console.log(
+      "Step 1",
+      salutation,
+      firstName,
+      lastName,
+      mobileNumber,
+      whatsappNumber,
+      email,
+      checkbox1,
+      checkbox2
+    );
+
+    console.log("Step 2", countryOfResidence, preferredLanguage);
+
+    console.log(
+      "Step 3",
+      preferredMethodSave,
+      preferredDaysSave,
+      preferredTimesSave
+    );
+
+    console.log(
+      "Step 4",
+      preferredMethodSave,
+      preferredDaysSave,
+      preferredTimesSave
+    );
+ 
+
+    console.log(
+      "step 5",
+      contactPermission,
+      earlyAccessSave,
+      referralSource,
+      subscribeNewsletter,
+      whatsAppGroup
+    );
+
     try {
       const requestData = {
         salutation: salutation,
@@ -74,10 +114,7 @@ const Seller = () => {
         earlyaccess: earlyAccessSave.value,
       };
 
-      await axios.post(
-        `${request.defaults.baseURL}seller`,
-        requestData
-      );
+      await axios.post(`${request.defaults.baseURL}seller`, requestData);
 
       Swal.fire({
         icon: "success",
@@ -136,7 +173,7 @@ const Seller = () => {
   };
   return (
     <>
-      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect} />
       <div className="buyingAndSellingSection selleringPage">
         <Bar stepSelect={stepSelect} />
 
@@ -152,6 +189,14 @@ const Seller = () => {
               setCheckbox1={setCheckbox1}
               setCheckbox2={setCheckbox2}
               setStepSelect={setStepSelect}
+              salutation={salutation}
+              firstName={firstName}
+              lastName={lastName}
+              mobileNumber={mobileNumber}
+              whatsappNumber={whatsappNumber}
+              email={email}
+              checkbox1={checkbox1}
+              checkbox2={checkbox2}
             />
           ) : (
             " "
@@ -161,6 +206,8 @@ const Seller = () => {
               setStepSelect={setStepSelect}
               setCountryOfResidence={setCountryOfResidence}
               setPreferredLanguage={setPreferredLanguage}
+              countryOfResidence={countryOfResidence}
+              preferredLanguage={preferredLanguage}
             />
           ) : (
             " "
@@ -172,6 +219,9 @@ const Seller = () => {
               setPreferredMethodSave={setPreferredMethodSave}
               setPreferredDaysSave={setPreferredDaysSave}
               setPreferredTimesSave={setPreferredTimesSave}
+              preferredMethodSave={preferredMethodSave}
+              preferredDaysSave={preferredDaysSave}
+              preferredTimesSave={preferredTimesSave}
             />
           ) : (
             " "
@@ -184,6 +234,12 @@ const Seller = () => {
               setEarlyAccessSave={setEarlyAccessSave}
               setReferralSource={setReferralSource}
               setSubscribeNewsletter={setSubscribeNewsletter}
+              setWhatsAppGroup={setWhatsAppGroup}
+              contactPermission={contactPermission}
+              earlyAccessSave={earlyAccessSave}
+              referralSource={referralSource}
+              subscribeNewsletter={subscribeNewsletter}
+              whatsAppGroup={whatsAppGroup}
             />
           ) : (
             " "

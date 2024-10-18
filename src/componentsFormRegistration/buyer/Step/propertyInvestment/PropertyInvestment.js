@@ -24,7 +24,7 @@ const emirateOptions = [
 ];
 
 const customComponents = {
-  ClearIndicator: () => null,  
+  ClearIndicator: () => null, // Hide the "Close" indicator that appears on open
 };
 
 const propertyStatusOptions = [
@@ -44,41 +44,41 @@ function PropertyInvestment({
   setPropertyStatusSave,
   setEstimatedBudgetFromSave,
   setEstimatedBudgetToSave,
+  propertyTypeSave,
+  interestedEmirateSave,
+  propertyStatusSave,
+  estimatedBudgetFromSave,
+  estimatedBudgetToSave,
 }) {
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
-  const [propertyType, setPropertyType] = useState(null);
-  const [emirate, setEmirate] = useState([]);
-  const [propertyStatus, setPropertyStatus] = useState([]);
-  const [budgetFrom, setBudgetFrom] = useState("");
-  const [budgetTo, setBudgetTo] = useState("");
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   // Check if all required fields are filled to activate the Next button
   useEffect(() => {
     if (
-      propertyType &&
-      emirate.length > 0 &&
-      propertyStatus.length > 0 &&
-      budgetFrom &&
-      budgetTo
+      propertyTypeSave &&
+      interestedEmirateSave.length > 0 &&
+      propertyStatusSave.length > 0 &&
+      estimatedBudgetFromSave &&
+      estimatedBudgetToSave
     ) {
       setActiveNextStep(true);
     } else {
       setActiveNextStep(false);
     }
-  }, [propertyType, emirate, propertyStatus, budgetFrom, budgetTo]);
+  }, [propertyTypeSave, interestedEmirateSave, propertyStatusSave, estimatedBudgetFromSave, estimatedBudgetToSave]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!propertyType) tempErrors.propertyType = "Property type is required.";
-    if (emirate.length === 0)
-      tempErrors.emirate = "Emirate selection is required.";
-    if (propertyStatus.length === 0)
-      tempErrors.propertyStatus = "Property status is required.";
-    if (!budgetFrom) tempErrors.budgetFrom = "Budget From is required.";
-    if (!budgetTo) tempErrors.budgetTo = "Budget To is required.";
+    if (!propertyTypeSave) tempErrors.propertyTypeSave = "Property type is required.";
+    if (interestedEmirateSave.length === 0)
+      tempErrors.interestedEmirateSave = "Emirate selection is required.";
+    if (propertyStatusSave.length === 0)
+      tempErrors.propertyStatusSave = "Property status is required.";
+    if (!estimatedBudgetFromSave) tempErrors.estimatedBudgetFromSave = "Budget From is required.";
+    if (!estimatedBudgetToSave) tempErrors.budgetTo = "Budget To is required.";
 
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -88,15 +88,15 @@ function PropertyInvestment({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-      setPropertyTypeSave(propertyType);
-      setInterestedEmirateSave(emirate);
-      setPropertyStatusSave(propertyStatus);
-      setEstimatedBudgetFromSave(budgetFrom);
-      setEstimatedBudgetToSave(budgetTo);
+      setPropertyTypeSave(propertyTypeSave);
+      setInterestedEmirateSave(interestedEmirateSave);
+      setPropertyStatusSave(propertyStatusSave);
+      setEstimatedBudgetFromSave(estimatedBudgetFromSave);
+      setEstimatedBudgetToSave(estimatedBudgetToSave);
 
       setStepSelect(5);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
@@ -107,16 +107,15 @@ function PropertyInvestment({
     setStepSelect(3);
   };
 
-
   return (
-    <div className="stepField buyingPageQpropertyInvestment">
+    <div className="stepField buyingAndSellingQpropertyInvestment">
       {/* Property Type */}
       <div className="salutationSection">
         <label>What type of property are you interested in?</label>
         <Select
           options={propertyTypeOptions}
-          value={propertyType}
-          onChange={setPropertyType}
+          value={propertyTypeSave}
+          onChange={(selectedOptions) => setPropertyTypeSave(selectedOptions)}
           placeholder="Select Property Type"
           isMulti
           components={customComponents}
@@ -124,8 +123,8 @@ function PropertyInvestment({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.propertyType && (
-          <span className="error">{errors.propertyType}</span>
+        {showErrors && errors.propertyTypeSave && (
+          <span className="error">{errors.propertyTypeSave}</span>
         )}
       </div>
 
@@ -134,8 +133,8 @@ function PropertyInvestment({
         <label>In which emirate are you interested to buy?</label>
         <Select
           options={emirateOptions}
-          value={emirate}
-          onChange={setEmirate}
+          value={interestedEmirateSave}
+          onChange={(selectedOptions) => setInterestedEmirateSave(selectedOptions)}
           placeholder="Select Emirate"
           isMulti
           components={customComponents}
@@ -143,8 +142,8 @@ function PropertyInvestment({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.emirate && (
-          <span className="error">{errors.emirate}</span>
+        {showErrors && errors.interestedEmirateSave && (
+          <span className="error">{errors.interestedEmirateSave}</span>
         )}
       </div>
 
@@ -153,8 +152,8 @@ function PropertyInvestment({
         <label>What is your preferred property status?</label>
         <Select
           options={propertyStatusOptions}
-          value={propertyStatus}
-          onChange={setPropertyStatus}
+          value={propertyStatusSave}
+          onChange={(selectedOptions) => setPropertyStatusSave(selectedOptions)}
           placeholder="Select Property Status"
           isMulti
           components={customComponents}
@@ -162,8 +161,8 @@ function PropertyInvestment({
         <p className="labelSelectMultiOptions">
           You can choose more than one option.
         </p>
-        {showErrors && errors.propertyStatus && (
-          <span className="error">{errors.propertyStatus}</span>
+        {showErrors && errors.propertyStatusSave && (
+          <span className="error">{errors.propertyStatusSave}</span>
         )}
       </div>
 
@@ -174,15 +173,19 @@ function PropertyInvestment({
           <div className="boxSpan">
             <input
               type="number"
-              value={budgetFrom}
-              onChange={(e) => setBudgetFrom(e.target.value)}
+              value={estimatedBudgetFromSave}
+              onChange={(e) => setEstimatedBudgetFromSave(e.target.value)}
               placeholder="From"
-              maxLength={12}
+              onInput={(e) => {
+                if (e.target.value.length > 14) {
+                  e.target.value = e.target.value.slice(0, 14);
+                }
+              }}
             />
             <span>AED</span>
           </div>
-          {showErrors && errors.budgetFrom && (
-            <span className="error">{errors.budgetFrom}</span>
+          {showErrors && errors.estimatedBudgetFromSave && (
+            <span className="error">{errors.estimatedBudgetFromSave}</span>
           )}
         </div>
 
@@ -190,15 +193,19 @@ function PropertyInvestment({
           <div className="boxSpan">
             <input
               type="number"
-              value={budgetTo}
-              onChange={(e) => setBudgetTo(e.target.value)}
+              value={estimatedBudgetToSave}
+              onChange={(e) => setEstimatedBudgetToSave(e.target.value)}
               placeholder="To"
-              maxLength={12}
+              onInput={(e) => {
+                if (e.target.value.length > 14) {
+                  e.target.value = e.target.value.slice(0, 14);
+                }
+              }}
             />
             <span>AED</span>
           </div>
-          {showErrors && errors.budgetTo && (
-            <span className="error">{errors.budgetTo}</span>
+          {showErrors && errors.estimatedBudgetToSave && (
+            <span className="error">{errors.estimatedBudgetToSave}</span>
           )}
         </div>
       </div>

@@ -47,36 +47,37 @@ function AccessAndUpdates({
   setEarlyAccessSave,
   setReferralSource,
   setSubscribeNewsletter,
+  setWhatsAppGroup,
+  contactPermission,
+  earlyAccessSave,
+  referralSource,
+  subscribeNewsletter,
+  whatsAppGroup,
 }) {
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
-  const [contact, setContact] = useState(null);
-  const [earlyAccess, setEarlyAccess] = useState(null);
-  const [source, setSource] = useState(null);
-  const [newsletter, setNewsletter] = useState(null);
-  const [whatsAppCommunity, setWhatsAppCommunity] = useState(null);
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   // Check if all required fields are filled to activate the Next button
   useEffect(() => {
-    if (contact && earlyAccess && source && newsletter && whatsAppCommunity) {
+    if (contactPermission && earlyAccessSave && referralSource && subscribeNewsletter && whatsAppGroup) {
       setActiveNextStep(true);
     } else {
       setActiveNextStep(false);
     }
-  }, [contact, earlyAccess, source, newsletter, whatsAppCommunity]);
+  }, [contactPermission, earlyAccessSave, referralSource, subscribeNewsletter, whatsAppGroup]);
 
   // Validate the form to ensure all required fields are filled
   const validateForm = () => {
     let tempErrors = {};
-    if (!contact) tempErrors.contact = "Contact preference is required.";
-    if (!earlyAccess)
-      tempErrors.earlyAccess = "Early access preference is required.";
-    if (!source) tempErrors.source = "Source of information is required.";
-    if (!newsletter)
+    if (!contactPermission) tempErrors.contactPermission = "Contact preference is required.";
+    if (!earlyAccessSave)
+      tempErrors.earlyAccessSave = "Early access preference is required.";
+    if (!referralSource) tempErrors.referralSource = "Source of information is required.";
+    if (!subscribeNewsletter)
       tempErrors.newsletter = "Newsletter subscription preference is required.";
-    if (!whatsAppCommunity)
-      tempErrors.whatsAppCommunity =
+    if (!whatsAppGroup)
+      tempErrors.whatsAppGroup =
         "WhatsApp Community subscription preference is required.";
 
     setErrors(tempErrors);
@@ -87,14 +88,8 @@ function AccessAndUpdates({
   const handleSubmit = () => {
     setShowErrors(true);
     if (validateForm()) {
-      setContactPermission(contact);
-      setEarlyAccessSave(earlyAccess);
-      setReferralSource(source);
-      setSubscribeNewsletter(newsletter);
-
-      setStepSelect(5);
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setStepSelect(5); // Move to the next step
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
@@ -106,18 +101,18 @@ function AccessAndUpdates({
   };
 
   return (
-    <div className="stepField buyingPageQaccessAndUpdates">
+    <div className="stepField buyingAndSellingQaccessAndUpdates">
       {/* Contact Preference */}
       <div className="salutationSection">
         <label>Our platform is launching soon! May we contact you?</label>
         <Select
           options={contactOptions}
-          value={contact}
-          onChange={setContact}
-          placeholder="Select Preference"
+          value={contactPermission}
+          onChange={(selectedOption) => setContactPermission(selectedOption)}
+          placeholder="Select"
         />
-        {showErrors && errors.contact && (
-          <span className="error">{errors.contact}</span>
+        {showErrors && errors.contactPermission && (
+          <span className="error">{errors.contactPermission}</span>
         )}
       </div>
 
@@ -126,12 +121,12 @@ function AccessAndUpdates({
         <label>Would you like early access to our platform?</label>
         <Select
           options={earlyAccessOptions}
-          value={earlyAccess}
-          onChange={setEarlyAccess}
+          value={earlyAccessSave}
+          onChange={(selectedOption) => setEarlyAccessSave(selectedOption)}
           placeholder="Select Preference"
         />
-        {showErrors && errors.earlyAccess && (
-          <span className="error">{errors.earlyAccess}</span>
+        {showErrors && errors.earlyAccessSave && (
+          <span className="error">{errors.earlyAccessSave}</span>
         )}
       </div>
 
@@ -140,12 +135,12 @@ function AccessAndUpdates({
         <label>How did you hear about us?</label>
         <Select
           options={sourceOptions}
-          value={source}
-          onChange={setSource}
-          placeholder="Select Source"
+          value={referralSource}
+          onChange={(selectedOption) => setReferralSource(selectedOption)}
+          placeholder="Select"
         />
-        {showErrors && errors.source && (
-          <span className="error">{errors.source}</span>
+        {showErrors && errors.referralSource && (
+          <span className="error">{errors.referralSource}</span>
         )}
       </div>
 
@@ -157,9 +152,9 @@ function AccessAndUpdates({
         </label>
         <Select
           options={newsletterOptions}
-          value={newsletter}
-          onChange={setNewsletter}
-          placeholder="Select Preference"
+          value={subscribeNewsletter}
+          onChange={(selectedOption) => setSubscribeNewsletter(selectedOption)}
+          placeholder="Select"
         />
         {showErrors && errors.newsletter && (
           <span className="error">{errors.newsletter}</span>
@@ -175,12 +170,12 @@ function AccessAndUpdates({
         </label>
         <Select
           options={whatsAppCommunityOptions}
-          value={whatsAppCommunity}
-          onChange={setWhatsAppCommunity}
+          value={whatsAppGroup}
+          onChange={(selectedOption) => setWhatsAppGroup(selectedOption)}
           placeholder="Select"
         />
-        {showErrors && errors.whatsAppCommunity && (
-          <span className="error">{errors.whatsAppCommunity}</span>
+        {showErrors && errors.whatsAppGroup && (
+          <span className="error">{errors.whatsAppGroup}</span>
         )}
       </div>
 

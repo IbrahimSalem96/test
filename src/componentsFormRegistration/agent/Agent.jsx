@@ -6,7 +6,7 @@ import {
   ContactInformation,
   AccessAndUpdates,
   AlmostThere,
-   NextContactInformation,
+  NextContactInformation,
 } from "./Step/index.js";
 
 import { FooterForm } from "../index.js";
@@ -41,7 +41,8 @@ const Agent = () => {
   const [earlyAccessSave, setEarlyAccessSave] = useState("");
   const [referralSource, setReferralSource] = useState("");
   const [subscribeNewsletter, setSubscribeNewsletter] = useState("");
-  const [subscribeNewsletterConfirm, setSubscribeNewsletterConfirm] = useState("")
+  const [subscribeNewsletterConfirm, setSubscribeNewsletterConfirm] = useState("");
+  const [whatsAppGroup, setWhatsAppGroup] = useState("");
 
   //Step 4
   const [comments, setComments] = useState("");
@@ -49,6 +50,32 @@ const Agent = () => {
   //Send Data
   //Send Data
   const sendDataAll = async () => {
+
+    console.log(
+      "Step 1",
+      salutation,
+      firstName,
+      lastName,
+      mobileNumber,
+      whatsappNumber,
+      email,
+      checkbox1,
+      checkbox2
+    );
+
+    console.log("Step 2", countryOfResidence, preferredLanguage);
+
+    console.log(
+      "step 3",
+      contactPermission,
+      earlyAccessSave,
+      referralSource,
+      subscribeNewsletter,
+      whatsAppGroup
+    );
+
+    console.log("step 4", comments);
+
     try {
       const requestData = {
         salutation: salutation,
@@ -66,14 +93,10 @@ const Agent = () => {
         subscribenewsletter: subscribeNewsletter.value,
         referralsource: referralSource.label,
         earlyaccess: earlyAccessSave.value,
-        subscribenewsletterconfirm : subscribeNewsletterConfirm.value
+        subscribenewsletterconfirm: subscribeNewsletterConfirm.value,
       };
 
-
-      await axios.post(
-        `${request.defaults.baseURL}agent`,
-        requestData
-      );
+      await axios.post(`${request.defaults.baseURL}agent`, requestData);
 
       Swal.fire({
         icon: "success",
@@ -91,13 +114,13 @@ const Agent = () => {
             .querySelector("a")
             .addEventListener("click", (event) => {
               event.preventDefault();
-             navigate("/");
+              navigate("/");
               Swal.close();
             });
 
           const closeButton = Swal.getCloseButton();
           closeButton.addEventListener("click", () => {
-           navigate("/");
+            navigate("/");
           });
         },
       });
@@ -119,7 +142,7 @@ const Agent = () => {
             .addEventListener("click", (event) => {
               event.preventDefault();
               setStepSelect(1);
-             Swal.close();
+              Swal.close();
             });
 
           const closeButton = Swal.getCloseButton();
@@ -131,10 +154,9 @@ const Agent = () => {
     }
   };
 
-
   return (
     <>
-      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect} />
       <div className="buyingAndSellingSection agentPage">
         <Bar stepSelect={stepSelect} />
 
@@ -150,6 +172,14 @@ const Agent = () => {
               setCheckbox1={setCheckbox1}
               setCheckbox2={setCheckbox2}
               setStepSelect={setStepSelect}
+              salutation={salutation}
+              firstName={firstName}
+              lastName={lastName}
+              mobileNumber={mobileNumber}
+              whatsappNumber={whatsappNumber}
+              email={email}
+              checkbox1={checkbox1}
+              checkbox2={checkbox2}
             />
           ) : (
             " "
@@ -159,6 +189,8 @@ const Agent = () => {
               setStepSelect={setStepSelect}
               setCountryOfResidence={setCountryOfResidence}
               setPreferredLanguage={setPreferredLanguage}
+              countryOfResidence={countryOfResidence}
+              preferredLanguage={preferredLanguage}
             />
           ) : (
             " "
@@ -172,6 +204,13 @@ const Agent = () => {
               setReferralSource={setReferralSource}
               setSubscribeNewsletter={setSubscribeNewsletter}
               setSubscribeNewsletterConfirm={setSubscribeNewsletterConfirm}
+              setWhatsAppGroup={setWhatsAppGroup}
+              contactPermission={contactPermission}
+              earlyAccessSave={earlyAccessSave}
+              referralSource={referralSource}
+              subscribeNewsletter={subscribeNewsletter}
+              subscribeNewsletterConfirm={subscribeNewsletterConfirm}
+              whatsAppGroup={whatsAppGroup}
             />
           ) : (
             " "

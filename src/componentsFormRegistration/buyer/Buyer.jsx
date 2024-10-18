@@ -1,6 +1,6 @@
 import "./buyer.css";
 import Bar from "./Bar.js";
-import { BackPage } from '../index.js'
+import { BackPage } from "../index.js";
 import {
   ContactInformation,
   Communication,
@@ -10,7 +10,7 @@ import {
   NextPropertyInvestment,
   NextContactInformation,
 } from "./Step/index.js";
-import ScrollToTop from "../../utils/ScrollToTop.js"
+import ScrollToTop from "../../utils/ScrollToTop.js";
 
 import { FooterForm } from "../index.js";
 import { useState } from "react";
@@ -60,12 +60,63 @@ const Buyer = () => {
   const [earlyAccessSave, setEarlyAccessSave] = useState("");
   const [referralSource, setReferralSource] = useState("");
   const [subscribeNewsletter, setSubscribeNewsletter] = useState("");
+  const [whatsAppGroup, setWhatsAppGroup] = useState("");
 
   //Step 7
   const [comments, setComments] = useState("");
 
   //Send Data
   const sendDataAll = async () => {
+
+    console.log(
+      "Step 1",
+      salutation,
+      firstName,
+      lastName,
+      mobileNumber,
+      whatsappNumber,
+      email,
+      checkbox1,
+      checkbox2
+    );
+
+    console.log("Step 2", countryOfResidence, preferredLanguage);
+
+    console.log(
+      "Step 3",
+      preferredMethodSave,
+      preferredDaysSave,
+      preferredTimesSave
+    );
+
+    console.log(
+      "Step 4",
+      preferredMethodSave,
+      preferredDaysSave,
+      preferredTimesSave
+    );
+
+    console.log(
+      "step 5",
+      propertyTypeSave,
+      interestedEmirateSave,
+      propertyStatusSave,
+      estimatedBudgetFromSave,
+      estimatedBudgetToSave
+    );
+
+    console.log(
+      "step 6",
+      contactPermission,
+      earlyAccessSave,
+      referralSource,
+      subscribeNewsletter,
+      whatsAppGroup
+    );
+
+    console.log("step 7", comments);
+
+    
     try {
       const requestData = {
         salutation: salutation,
@@ -98,10 +149,7 @@ const Buyer = () => {
         mortgagepreapproval: mortgagePreApproval.value,
       };
 
-      await axios.post(
-        `${request.defaults.baseURL}buyers`,
-        requestData
-      );
+      await axios.post(`${request.defaults.baseURL}buyers`, requestData);
 
       Swal.fire({
         icon: "success",
@@ -158,13 +206,12 @@ const Buyer = () => {
       });
     }
   };
-   
 
   return (
     <>
-    <ScrollToTop />
-    
-      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect}/>
+      <ScrollToTop />
+
+      <BackPage stepSelect={stepSelect} setStepSelect={setStepSelect} />
       <div className="buyingAndSellingSection buyingPage">
         <Bar stepSelect={stepSelect} />
 
@@ -180,6 +227,14 @@ const Buyer = () => {
               setCheckbox1={setCheckbox1}
               setCheckbox2={setCheckbox2}
               setStepSelect={setStepSelect}
+              salutation={salutation}
+              firstName={firstName}
+              lastName={lastName}
+              mobileNumber={mobileNumber}
+              whatsappNumber={whatsappNumber}
+              email={email}
+              checkbox1={checkbox1}
+              checkbox2={checkbox2}
             />
           ) : (
             " "
@@ -189,6 +244,8 @@ const Buyer = () => {
               setStepSelect={setStepSelect}
               setCountryOfResidence={setCountryOfResidence}
               setPreferredLanguage={setPreferredLanguage}
+              countryOfResidence={countryOfResidence}
+              preferredLanguage={preferredLanguage}
             />
           ) : (
             " "
@@ -199,6 +256,9 @@ const Buyer = () => {
               setPreferredMethodSave={setPreferredMethodSave}
               setPreferredDaysSave={setPreferredDaysSave}
               setPreferredTimesSave={setPreferredTimesSave}
+              preferredMethodSave={preferredMethodSave}
+              preferredDaysSave={preferredDaysSave}
+              preferredTimesSave={preferredTimesSave}
             />
           ) : (
             " "
@@ -211,6 +271,11 @@ const Buyer = () => {
               setPropertyStatusSave={setPropertyStatusSave}
               setEstimatedBudgetFromSave={setEstimatedBudgetFromSave}
               setEstimatedBudgetToSave={setEstimatedBudgetToSave}
+              propertyTypeSave={propertyTypeSave}
+              interestedEmirateSave={interestedEmirateSave}
+              propertyStatusSave={propertyStatusSave}
+              estimatedBudgetFromSave={estimatedBudgetFromSave}
+              estimatedBudgetToSave={estimatedBudgetToSave}
             />
           ) : (
             " "
@@ -222,6 +287,9 @@ const Buyer = () => {
               setPrimaryReason={setPrimaryReason}
               setFinancingMethod={setFinancingMethod}
               setMortgagePreApproval={setMortgagePreApproval}
+              primaryReason={primaryReason}
+              financingMethod={financingMethod}
+              mortgagePreApproval={mortgagePreApproval}
             />
           ) : (
             " "
@@ -234,6 +302,12 @@ const Buyer = () => {
               setEarlyAccessSave={setEarlyAccessSave}
               setReferralSource={setReferralSource}
               setSubscribeNewsletter={setSubscribeNewsletter}
+              setWhatsAppGroup={setWhatsAppGroup}
+              contactPermission={contactPermission}
+              earlyAccessSave={earlyAccessSave}
+              referralSource={referralSource}
+              subscribeNewsletter={subscribeNewsletter}
+              whatsAppGroup={whatsAppGroup}
             />
           ) : (
             " "
@@ -249,12 +323,6 @@ const Buyer = () => {
           ) : (
             " "
           )}
-
-          {/* {stepSelect === 5 ? (
-            <AlmostThere setStepSelect={setStepSelect} />
-          ) : (
-            " "
-          )} */}
         </div>
       </div>
       <FooterForm />

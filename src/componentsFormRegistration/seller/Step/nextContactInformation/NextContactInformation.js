@@ -45,29 +45,27 @@ function NextContactInformation({
   setStepSelect,
   setCountryOfResidence,
   setPreferredLanguage,
+  countryOfResidence,
+  preferredLanguage,
 }) {
-  const [selectedCountry, setSelectedCountry] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
   const countries = getCountries().getData();
   const [activeNextStep, setActiveNextStep] = useState(false);
 
   const handleChangeCountry = (selectedOption) => {
-    setSelectedCountry(selectedOption);
-    // console.log("Selected country:", selectedOption);
-  };
+    setCountryOfResidence(selectedOption);
+   };
 
   const handleChangeLanguage = (selectedOption) => {
-    setSelectedLanguage(selectedOption);
-    // console.log("Selected language:", selectedOption);
-  };
+    setPreferredLanguage(selectedOption);
+   };
 
   const validateForm = () => {
     let tempErrors = {};
-    if (!selectedCountry)
+    if (!countryOfResidence)
       tempErrors.country = "Country of residence is required.";
-    if (!selectedLanguage)
+    if (!preferredLanguage)
       tempErrors.language = "Preferred language is required.";
 
     setErrors(tempErrors);
@@ -77,15 +75,20 @@ function NextContactInformation({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-      setCountryOfResidence(selectedCountry);
-      setPreferredLanguage(selectedLanguage);
+      setCountryOfResidence(countryOfResidence);
+      setPreferredLanguage(preferredLanguage);
+
 
       setStepSelect(3);
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       console.log("Validation Failed");
     }
+  };
+
+  const customComponents = {
+    ClearIndicator: () => null,
   };
 
   const handleBackPage = () => {
@@ -94,23 +97,17 @@ function NextContactInformation({
 
   // Use useEffect to check the validity of the form and set the button state accordingly
   useEffect(() => {
-    const isValid = selectedCountry && selectedLanguage;
+    const isValid = countryOfResidence && preferredLanguage;
     setActiveNextStep(isValid);
-  }, [selectedCountry, selectedLanguage]); // Trigger effect when selectedCountry or selectedLanguage changes
-
-
-  
-  const customComponents = {
-    ClearIndicator: () => null,
-  };
+  }, [countryOfResidence, preferredLanguage]); // Trigger effect when selectedCountry or selectedLanguage changes
 
   return (
-    <div className="stepField buyingPageQnextContactInformation">
+    <div className="stepField buyingAndSellingQnextContactInformation">
       <div className="salutationSection">
         <label>Country of Residence</label>
         <Select
           options={countries}
-          value={selectedCountry}
+          value={countryOfResidence}
           onChange={handleChangeCountry}
           getOptionLabel={(option) => option.label}
           getOptionValue={(option) => option.value}
@@ -132,7 +129,7 @@ function NextContactInformation({
         <label>Preferred Language</label>
         <Select
           options={languages}
-          value={selectedLanguage}
+          value={preferredLanguage}
           onChange={handleChangeLanguage}
           placeholder="Select a language..."
           isMulti

@@ -86,7 +86,6 @@ function ContactInformation({
 
   const validateForm = () => {
     let tempErrors = {};
-    console.log(formData.salutation);
     if (!formData.salutation) tempErrors.salutation = "Salutation is required";
     if (!formData.firstName) tempErrors.firstName = "First name is required";
     if (!formData.lastName) tempErrors.lastName = "Last name is required";
@@ -106,7 +105,6 @@ function ContactInformation({
   const handleSubmit = () => {
     setShowErrors(true); // Show errors when button is clicked
     if (validateForm()) {
-      console.log("Form Data:", formData);
 
       setSalutation(formData.salutation);
       setFirstName(formData.firstName);
