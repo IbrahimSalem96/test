@@ -106,7 +106,7 @@
   width: 100%;
   height: 61.3333333333vw;
   bottom: -11.2vw;
-  background-color: white;
+  background-color: #fafafa;
   z-index: 2;
   animation: shrink 4s linear forwards;
   animation-delay: 1s;
@@ -181,7 +181,7 @@
     width: 100%;
     height: 31.175059952vw;
     bottom: -5.035971223vw;
-    background-color: white;
+    background-color: #fafafa;
     z-index: 2;
     animation: shrink 5s linear forwards;
     animation-delay: 1s;
@@ -276,7 +276,7 @@
     width: 100%;
     height: 18.75vw;
     bottom: -2.6041666667vw;
-    background-color: white;
+    background-color: #fafafa;
     z-index: 2;
     animation: shrink 4s linear forwards;
     animation-delay: 1s;

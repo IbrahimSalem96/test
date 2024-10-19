@@ -306,9 +306,10 @@
     margin: 0;
   }
   .footer .footerSocialMedia {
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
+    margin: 0;
   }
   .footer .footerSocialMedia ul {
     gap: 1.5625vw;

@@ -30,7 +30,7 @@ const SellYourFeesForever = () => {
 
       <div className="desktopView">
         <div className="contentBox">
-        <h2>Sell Your Property with <br /><span>0 Fees & 0% Comation Forever!</span></h2>
+        <h2>Sell Your Property with <br /><span>0 Fees & 0% Commission Forever!</span></h2>
 
           <p className="descOne">
             Sign up now and take advantage of our 100% fee and commission
